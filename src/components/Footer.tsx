@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <footer className="bg-muted/30 py-8 md:py-12 border-t border-border/50">
@@ -23,8 +25,8 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Legal</h4>
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
-                <li><a href="#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</a></li>
-                <li><a href="#terms" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</a></li>
+                <li><Link to="/privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
+                <li><Link to="/terms" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
               </ul>
             </div>
 
