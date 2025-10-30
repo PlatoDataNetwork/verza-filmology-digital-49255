@@ -6,37 +6,37 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Theme Toggle */}
-      <div className="absolute top-6 right-6 z-20">
+      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
         <ThemeToggle />
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 md:py-32 text-center">
-        <div className="max-w-5xl mx-auto space-y-6 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-32 text-center">
+        <div className="max-w-5xl mx-auto space-y-4 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
-          <p className="text-sm md:text-base font-medium text-muted-foreground tracking-tight">
+          <p className="text-xs sm:text-sm md:text-base font-medium text-muted-foreground tracking-tight">
             From the founder of E! Entertainment Television
           </p>
 
           {/* Main Headline - Apple style large text */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground tracking-tight leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground tracking-tight leading-none">
             Verza TV
           </h1>
           
-          <p className="text-xl md:text-3xl lg:text-4xl text-foreground/90 font-medium tracking-tight max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-foreground/90 font-medium tracking-tight max-w-4xl mx-auto px-2">
             The next generation of vertical shorts.
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed pt-4">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed pt-2 md:pt-4 px-2">
             Designed to elevate short-form storytelling. Built for the way you watch.
           </p>
 
           {/* CTA Buttons - Apple style */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 md:pt-8 w-full px-4 sm:px-0">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-6 text-base font-medium transition-all hover:scale-[1.02]"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-base font-medium transition-all hover:scale-[1.02] min-h-[48px]"
             >
               Learn more
               <ChevronRight className="ml-1 h-4 w-4" />
@@ -44,25 +44,25 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="rounded-full px-6 py-6 text-base font-medium border-2 transition-all hover:scale-[1.02] hover:border-foreground/30"
+              className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-medium border-2 transition-all hover:scale-[1.02] hover:border-foreground/30 min-h-[48px]"
             >
               Contact us
             </Button>
           </div>
 
           {/* Stats - Minimalist Apple style */}
-          <div className="grid grid-cols-3 gap-8 pt-20 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-12 md:pt-20 max-w-4xl mx-auto px-2">
             <div className="space-y-1">
-              <div className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
-              <div className="text-sm text-muted-foreground">Market size</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Market size</div>
             </div>
             <div className="space-y-1">
-              <div className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight">150M+</div>
-              <div className="text-sm text-muted-foreground">Downloads</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground tracking-tight">150M+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Downloads</div>
             </div>
             <div className="space-y-1">
-              <div className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight">18–65+</div>
-              <div className="text-sm text-muted-foreground">Demographics</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground tracking-tight">18–65+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Demographics</div>
             </div>
           </div>
         </div>
