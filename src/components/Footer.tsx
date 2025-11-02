@@ -24,7 +24,7 @@ export const Footer = () => {
                 Los Angeles CA 90038
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed flex items-center gap-1">
-                Made with <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in California
+                Made with <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in Hollywood
               </p>
             </div>
             
