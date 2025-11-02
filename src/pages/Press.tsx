@@ -27,11 +27,11 @@ const Press = () => {
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-4 md:mb-5 tracking-tight">
             Press & Media
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 leading-relaxed">
-            News, updates, and press resources
+            News, updates, and press resources.
           </p>
 
           <div className="space-y-8 md:space-y-10 text-foreground/90">
