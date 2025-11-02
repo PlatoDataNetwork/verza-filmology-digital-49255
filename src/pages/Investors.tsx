@@ -48,6 +48,15 @@ export default function Investors() {
               <Button
                 variant="outline"
                 size="sm"
+                asChild
+              >
+                <a href="https://verza-tv-launchpad.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  Verza TV Beta
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
                 onClick={handleLogout}
                 className="flex items-center gap-2"
               >
