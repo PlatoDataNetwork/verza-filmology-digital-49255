@@ -269,31 +269,35 @@ export default function Investors() {
                     <CardTitle>Phase 1</CardTitle>
                     <CardDescription>Announcement</CardDescription>
                   </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Strategic launch announcement with influencer partnerships and media coverage to build anticipation.</p>
+                  </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <CardTitle>Phase 2</CardTitle>
-                    <CardDescription>Alpha</CardDescription>
+                    <CardDescription>Alpha Testing</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Controlled content rollout + CPI testing in U.S. + Asia; initial creator panels</p>
+                    <p className="text-sm text-muted-foreground">Controlled content rollout with CPI testing in U.S. and Asia markets. Initial creator panel engagement.</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <CardTitle>Phase 3</CardTitle>
+                    <CardDescription>Beta Expansion</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Content expansion, localization</p>
+                    <p className="text-sm text-muted-foreground">Content library expansion with localization for key markets. Platform optimization and feature refinement.</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <CardTitle>Phase 4</CardTitle>
-                    <CardDescription>V2</CardDescription>
+                    <CardDescription>Full Launch</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Full-funnel marketing</p>
+                    <p className="text-sm text-muted-foreground">Full-funnel marketing activation across all channels. Scale operations and user acquisition nationwide.</p>
                   </CardContent>
                 </Card>
               </div>
