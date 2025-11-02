@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import verzaLogo from "@/assets/verza-logo.png";
 
 export const Hero = () => {
   return (
@@ -18,10 +19,14 @@ export const Hero = () => {
             From the founder of E! Entertainment Television
           </p>
 
-          {/* Main Headline - Apple style large text */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold text-foreground tracking-tight leading-none">
-            Verza TV
-          </h1>
+          {/* Main Headline - Logo */}
+          <div className="flex justify-center">
+            <img 
+              src={verzaLogo} 
+              alt="Verza TV" 
+              className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto"
+            />
+          </div>
           
           <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-foreground/90 font-medium tracking-tight max-w-4xl mx-auto px-2">
             The next generation of vertical shorts.
