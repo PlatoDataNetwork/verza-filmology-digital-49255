@@ -13,11 +13,11 @@ export const Footer = () => {
                 alt="Verza TV" 
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-3">
-                Microdramas, Reality & More.
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
+                Verza TV / Filmology Labs
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Verza TV, Los Angeles CA USA
+                5515 Melrose Ave, Los Angeles CA 90038
               </p>
             </div>
             
