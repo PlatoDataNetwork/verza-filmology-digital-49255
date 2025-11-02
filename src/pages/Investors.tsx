@@ -231,7 +231,7 @@ export default function Investors() {
                     <CardTitle>Demographics</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly scrollable entertainment.</p>
+                    <p className="text-muted-foreground">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly enjoyable and scrollable entertainment.</p>
                   </CardContent>
                 </Card>
                 <Card>
