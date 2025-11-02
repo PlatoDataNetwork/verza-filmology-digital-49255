@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Heart } from "lucide-react";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export const Footer = () => {
@@ -19,8 +20,11 @@ export const Footer = () => {
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
                 5515 Melrose Ave
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
                 Los Angeles CA 90038
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed flex items-center gap-1">
+                Made with <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in California
               </p>
             </div>
             
