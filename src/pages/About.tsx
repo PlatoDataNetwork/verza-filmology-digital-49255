@@ -130,12 +130,12 @@ const About = () => {
                 Whether you're a content creator, an industry professional, or someone who simply loves great entertainment, Verza TV welcomes you to be part of the vertical content revolution. Together, we're shaping the future of how stories are told and consumed.
               </p>
               <div className="pt-4">
-                <Link 
-                  to="/#contact" 
+                <a 
+                  href="/#contact" 
                   className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
                 >
                   Get in touch →
-                </Link>
+                </a>
               </div>
             </section>
           </div>
