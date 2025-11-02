@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
+import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
   const { isAuthenticated, logout } = useAuth();
@@ -68,6 +69,13 @@ export default function Investors() {
               <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
                 From the founder of E! Entertainment Television
               </p>
+              <div className="flex justify-center">
+                <img 
+                  src={verzaLogo} 
+                  alt="Verza TV" 
+                  className="h-20 md:h-24 lg:h-28 w-auto"
+                />
+              </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 The Next Generation of Vertical Shorts
               </h1>
