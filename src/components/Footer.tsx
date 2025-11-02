@@ -14,14 +14,19 @@ export const Footer = () => {
                 alt="Verza TV" 
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
                 Verza TV
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
                 5515 Melrose Ave
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-3">
                 Los Angeles CA 90038
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                <a href="mailto:hello@verzatv.com" className="hover:text-foreground transition-colors">
+                  hello@verzatv.com
+                </a>
               </p>
             </div>
             
