@@ -194,7 +194,7 @@ export default function Investors() {
                     <CardTitle className="text-xl">High Impact Partnerships</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">High-impact influencer partnerships across entertainment verticals. Studio-friendly formats ideal for film/talent promotion.</p>
+                    <p className="text-muted-foreground">High-impact influencer partnerships across entertainment verticals. Studio-friendly formats ideal for film and talent promotion. Creating authentic connections with audiences through trusted voices.</p>
                   </CardContent>
                 </Card>
                 <Card>
