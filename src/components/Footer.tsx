@@ -16,8 +16,11 @@ export const Footer = () => {
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
                 Verza TV / Filmology Labs
               </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
+                5515 Melrose Ave
+              </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                5515 Melrose Ave, Los Angeles CA 90038
+                Los Angeles CA 90038
               </p>
             </div>
             
