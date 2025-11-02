@@ -11,10 +11,10 @@ export const Footer = () => {
               <img 
                 src={verzaLogo} 
                 alt="Verza TV" 
-                className="h-5 md:h-6 w-auto mb-3 md:mb-4"
+                className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                The next generation of vertical shorts.
+                Microdramas, Reality & More.
               </p>
             </div>
             
