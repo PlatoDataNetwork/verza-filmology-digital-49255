@@ -14,7 +14,7 @@ export const Footer = () => {
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
-                Verza TV / Filmology Labs
+                Verza TV
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
                 5515 Melrose Ave
