@@ -34,7 +34,7 @@ const pressArticles = [
   {
     publication: "The Streamable",
     date: "October 16, 2025",
-    title: "New US-based microdrama streaming service on the way.",
+    title: "E! Channel Founder to Launch the First U.S. Platform for Microdramas.",
     url: "https://thestreamable.com/verza-tv-microdrama-streaming-service-launching?utm_source=newsletter&utm_medium=email&utm_campaign=sendgrid"
   }
 ];
