@@ -42,16 +42,20 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-base font-medium transition-all hover:scale-[1.02] min-h-[48px]"
+              asChild
             >
-              Learn more
-              <ChevronRight className="ml-1 h-4 w-4" />
+              <a href="/about">
+                Learn more
+                <ChevronRight className="ml-1 h-4 w-4" />
+              </a>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-medium border-2 transition-all hover:scale-[1.02] hover:border-foreground/30 min-h-[48px]"
+              asChild
             >
-              Contact us
+              <a href="#contact">Contact us</a>
             </Button>
           </div>
 
