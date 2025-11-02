@@ -117,9 +117,16 @@ const Press = () => {
               
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-6 py-2">
-                  <p className="text-sm text-muted-foreground mb-2">Coming Soon</p>
+                  <p className="text-sm text-muted-foreground mb-2">October 15th, 2025</p>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Verza TV Announces Launch of Revolutionary Vertical Content Platform
+                    <a 
+                      href="https://www.hollywoodreporter.com/tv/tv-news/microdramas-come-to-america-verza-tv-vertical-soap-operas-1236401254/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Verza TV Announces Launch of Revolutionary Vertical Content Platform
+                    </a>
                   </h3>
                   <p className="text-base text-muted-foreground">
                     Stay tuned for official announcements and updates about our platform launch.
