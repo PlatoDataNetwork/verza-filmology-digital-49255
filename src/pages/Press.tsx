@@ -21,16 +21,16 @@ const Press = () => {
             </Link>
             <div className="flex items-center gap-3">
               <Link 
-                to="/news" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                News
-              </Link>
-              <Link 
                 to="/login" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
                 Login
+              </Link>
+              <Link 
+                to="/news" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                News
               </Link>
               <ThemeToggle />
             </div>
