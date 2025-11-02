@@ -29,7 +29,7 @@ export const Hero = () => {
           </div>
           
           <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl text-foreground/90 font-medium tracking-tight max-w-4xl mx-auto px-2">
-            The next generation of vertical shorts.
+            Microdramas, Reality & More.
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
