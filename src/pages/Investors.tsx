@@ -231,7 +231,7 @@ export default function Investors() {
                     <CardTitle>Demographics</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly scrollable entertainment. Platforms like TikTok have trained users for this format perfectly.</p>
+                    <p className="text-muted-foreground">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly scrollable entertainment.</p>
                   </CardContent>
                 </Card>
                 <Card>
