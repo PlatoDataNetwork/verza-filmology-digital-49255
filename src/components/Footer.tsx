@@ -20,11 +20,8 @@ export const Footer = () => {
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
                 5515 Melrose Ave
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-2">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Los Angeles CA 90038
-              </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed flex items-center gap-1">
-                Made with <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in Hollywood
               </p>
             </div>
             
@@ -60,8 +57,11 @@ export const Footer = () => {
           </div>
 
           <div className="pt-6 md:pt-8 border-t border-border/50 text-center">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground mb-2">
               &copy; {new Date().getFullYear()} Filmology Labs. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
+              Made with <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in Hollywood
             </p>
           </div>
         </div>
