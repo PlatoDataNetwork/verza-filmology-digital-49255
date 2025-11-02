@@ -71,7 +71,7 @@ const Careers = () => {
       </section>
 
       {/* Why Join Section */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="pt-6 md:pt-10 pb-12 md:pb-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-8 md:mb-12 text-center tracking-tight">
             Why Join Verza TV?
