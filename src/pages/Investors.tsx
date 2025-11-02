@@ -202,7 +202,7 @@ export default function Investors() {
                     <CardTitle className="text-xl">Built for Mass Adoption</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Built for mass adoption with bingeable, vertical content under 1 minute. Perfect distribution vehicle in a world where late-night is fading.</p>
+                    <p className="text-muted-foreground">Built for mass adoption with bingeable, vertical content under 1 minute. Perfect distribution vehicle in a world where late-night is fading, replaced by creators on demand.</p>
                   </CardContent>
                 </Card>
               </div>
