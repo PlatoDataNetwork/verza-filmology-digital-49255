@@ -66,7 +66,7 @@ export default function Investors() {
       {/* Main Content */}
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
+        <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center space-y-6">
               <p className="text-sm md:text-base font-medium text-muted-foreground tracking-tight">
@@ -76,14 +76,14 @@ export default function Investors() {
                 The Next Generation of Vertical Shorts
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Revolutionizing short-form mobile entertainment with microdramas, reality, and more.
+                Short-form mobile entertainment network.
               </p>
             </div>
           </div>
         </section>
 
         {/* The Opportunity */}
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center gap-3 mb-8">
