@@ -22,8 +22,9 @@ export const Footer = () => {
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Company</h4>
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/about" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">About</Link></li>
-                <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</Link></li>
+                <li><Link to="/press" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Press</Link></li>
                 <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</Link></li>
+                <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</Link></li>
               </ul>
             </div>
 
@@ -32,6 +33,7 @@ export const Footer = () => {
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
                 <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
+                <li><Link to="/legal#licensing" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Licensing</Link></li>
                 <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Disclaimer</Link></li>
               </ul>
             </div>
@@ -39,9 +41,10 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Connect</h4>
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">TikTok</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Twitter</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Instagram</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Facebook</a></li>
               </ul>
             </div>
           </div>

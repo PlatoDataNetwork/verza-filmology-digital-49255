@@ -179,6 +179,66 @@ const Legal = () => {
             </div>
           </section>
 
+          {/* Licensing Section */}
+          <section id="licensing" className="mb-16 md:mb-24 scroll-mt-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
+              Licensing
+            </h2>
+            <div className="space-y-8 md:space-y-12 text-foreground/90">
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Content Licensing</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  All content available on Verza TV, including but not limited to microdramas, reality shows, videos, images, text, graphics, logos, and audio clips, is protected by copyright, trademark, and other intellectual property laws.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">User License</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Subject to your compliance with these terms, Verza TV grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and view content on the platform for your personal, non-commercial use only.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Restrictions</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  You may not:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-base md:text-lg leading-relaxed">
+                  <li>Copy, reproduce, distribute, or create derivative works from our content</li>
+                  <li>Use content for commercial purposes without explicit written permission</li>
+                  <li>Remove, alter, or obscure any copyright, trademark, or proprietary notices</li>
+                  <li>Circumvent any technological measures designed to protect the content</li>
+                  <li>Use automated systems or software to extract data from the platform</li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Third-Party Content</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Some content on Verza TV may be owned by third parties. Such content is licensed to Verza TV and is subject to the copyright and licensing terms of the respective owners.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Commercial Licensing Inquiries</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  For commercial licensing, partnership opportunities, or permission to use our content, please contact us at{" "}
+                  <a href="mailto:licensing@verzatv.com" className="text-primary hover:underline">
+                    licensing@verzatv.com
+                  </a>
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Trademark</h3>
+                <p className="text-base md:text-lg leading-relaxed">
+                  Verza TV, the Verza TV logo, and other marks are trademarks of Filmology Labs. You may not use these trademarks without our prior written consent.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Disclaimer Section */}
           <section id="disclaimer" className="mb-16 md:mb-24 scroll-mt-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
