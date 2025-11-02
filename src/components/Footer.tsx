@@ -40,7 +40,7 @@ export const Footer = () => {
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
                 <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
-                <li><Link to="/legal#licensing" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Licensing</Link></li>
+                <li><Link to="/licensing" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Licensing</Link></li>
                 <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Disclaimer</Link></li>
               </ul>
             </div>
