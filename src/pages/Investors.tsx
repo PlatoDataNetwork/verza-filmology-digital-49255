@@ -427,7 +427,7 @@ export default function Investors() {
                     <CardTitle>Coins & Gamification</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Digital coins to enhance retention, reward behaviors, and drive social sharing. Users earn coins for daily logins, shares, referrals, and more.</p>
+                    <p className="text-muted-foreground">Digital coins enhance retention and reward behaviors. Users earn via logins, shares, and referrals.</p>
                   </CardContent>
                 </Card>
               </div>
