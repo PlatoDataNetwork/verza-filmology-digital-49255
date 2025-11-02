@@ -12,7 +12,21 @@ const Licensing = () => {
             <Link to="/" className="flex items-center space-x-2">
               <img src={verzaLogo} alt="Verza TV" className="h-8 w-auto" />
             </Link>
-            <ThemeToggle />
+            <div className="flex items-center gap-3">
+              <Link 
+                to="/login" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Login
+              </Link>
+              <Link 
+                to="/news" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                News
+              </Link>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>

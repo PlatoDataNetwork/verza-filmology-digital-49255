@@ -19,7 +19,21 @@ const About = () => {
               <ChevronLeft className="h-5 w-5" />
               <span className="font-medium">Back</span>
             </Link>
-            <ThemeToggle />
+            <div className="flex items-center gap-3">
+              <Link 
+                to="/login" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                Login
+              </Link>
+              <Link 
+                to="/news" 
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                News
+              </Link>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
