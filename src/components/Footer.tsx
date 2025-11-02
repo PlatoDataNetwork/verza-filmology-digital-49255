@@ -13,14 +13,17 @@ export const Footer = () => {
                 alt="Verza TV" 
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-3">
                 Microdramas, Reality & More.
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                Verza TV, Los Angeles CA USA
               </p>
             </div>
             
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Company</h4>
-              <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+              <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/about" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">About</Link></li>
                 <li><Link to="/press" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Press</Link></li>
                 <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</Link></li>
@@ -30,7 +33,7 @@ export const Footer = () => {
 
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Legal</h4>
-              <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+              <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
                 <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
                 <li><Link to="/legal#licensing" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Licensing</Link></li>
@@ -40,7 +43,7 @@ export const Footer = () => {
 
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Connect</h4>
-              <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
+              <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">TikTok</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Twitter</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Instagram</a></li>
