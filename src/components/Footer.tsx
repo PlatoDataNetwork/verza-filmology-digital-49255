@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import verzaLogo from "@/assets/verza-logo.png";
 
 export const Footer = () => {
   return (
@@ -7,7 +8,11 @@ export const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-10">
             <div className="col-span-2 md:col-span-1">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight">Verza TV</h3>
+              <img 
+                src={verzaLogo} 
+                alt="Verza TV" 
+                className="h-5 md:h-6 w-auto mb-3 md:mb-4"
+              />
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 The next generation of vertical shorts.
               </p>
