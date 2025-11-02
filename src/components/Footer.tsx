@@ -30,7 +30,7 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Legal</h4>
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
-                <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms of Use</Link></li>
+                <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
                 <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
                 <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Disclaimer</Link></li>
               </ul>
