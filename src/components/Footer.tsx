@@ -23,7 +23,7 @@ export const Footer = () => {
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/about" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">About</Link></li>
                 <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</Link></li>
-                <li><a href="#careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</a></li>
+                <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</Link></li>
               </ul>
             </div>
 
