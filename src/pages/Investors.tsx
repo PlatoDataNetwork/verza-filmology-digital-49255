@@ -335,7 +335,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Strategic Partnerships</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Worldwide partnerships with leading talent agencies, management firms, film studios and streamers.</p>
+                    <p className="text-sm text-muted-foreground">Worldwide partnerships with leading artists, agencies, studios and streamers.</p>
                   </CardContent>
                 </Card>
                 <Card>
