@@ -188,7 +188,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">General Information</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  The information provided by Verza TV is for general informational purposes only. All information on the platform is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information.
+                  The information provided by Verza TV is for general entertainment purposes only. All information on the platform is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information.
                 </p>
               </div>
 
