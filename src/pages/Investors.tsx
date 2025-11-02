@@ -72,7 +72,7 @@ export default function Investors() {
               <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
                 From the founder of E! Entertainment Television
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 The Next Generation of Vertical Shorts
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
