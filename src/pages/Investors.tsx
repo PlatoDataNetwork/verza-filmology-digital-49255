@@ -319,7 +319,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Paid Media</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">TikTok, Instagram Reels, YouTube Shorts, Google, SEO, ASO, and SEM</p>
+                    <p className="text-sm text-muted-foreground">TikTok, Instagram Reels, YouTube Shorts, Google. Comprehensive SEO, ASO, and SEM strategies.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -327,7 +327,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Influencer Led</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Leveraging the massive built-in fanbases of top-tier creators</p>
+                    <p className="text-sm text-muted-foreground">Leveraging massive built-in fanbases of top-tier creators. Authentic content amplification.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -335,7 +335,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Strategic Partnerships</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Worldwide partnerships with leading talent agencies and management firms, film studios and streamers</p>
+                    <p className="text-sm text-muted-foreground">Worldwide partnerships with leading talent agencies, management firms, film studios and streamers.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -343,7 +343,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Creator Flywheel</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Building a curated team of top creators to form a founding cohort of platform advocates</p>
+                    <p className="text-sm text-muted-foreground">Building curated team of top creators. Forming a founding cohort of platform advocates.</p>
                   </CardContent>
                 </Card>
               </div>
