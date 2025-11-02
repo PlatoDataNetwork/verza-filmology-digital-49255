@@ -2,8 +2,13 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
