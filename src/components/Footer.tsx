@@ -22,7 +22,7 @@ export const Footer = () => {
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Company</h4>
               <ul className="space-y-2 text-xs md:text-sm text-muted-foreground">
                 <li><a href="#about" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">About</a></li>
-                <li><a href="#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</a></li>
+                <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</Link></li>
                 <li><a href="#careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</a></li>
               </ul>
             </div>
