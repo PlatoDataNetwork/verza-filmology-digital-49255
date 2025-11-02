@@ -9,31 +9,31 @@ const pressArticles = [
   {
     publication: "The Hollywood Reporter",
     date: "October 15, 2025",
-    title: "E! Channel Founder to Launch the First U.S. Platform for Microdramas (Exclusive)",
+    title: "E! Channel Founder to Launch the First U.S. Platform for Microdramas (Exclusive).",
     url: "https://www.hollywoodreporter.com/tv/tv-news/microdramas-come-to-america-verza-tv-vertical-soap-operas-1236401254/"
   },
   {
     publication: "IMDb News",
     date: "October 15, 2025",
-    title: "E! Channel Founder to Launch the First U.S. Platform for Microdramas",
+    title: "E! Channel Founder to Launch the First U.S. Platform for Microdramas.",
     url: "https://www.imdb.com/news/ni65523634/?ref_=nwc_art_perm"
   },
   {
     publication: "StageRunner",
     date: "October 15, 2025",
-    title: "Microdramas Go Mainstream: Fox Bets Big, Verza TV Launches, Unions Set the Rules",
+    title: "Microdramas Go Mainstream: Fox Bets Big, Verza TV Launches, Unions Set the Rules.",
     url: "https://stagerunner.net/microdramas-go-mainstream-fox-bets-big-verza-tv-launches-unions-set-the-rules/"
   },
   {
     publication: "MSN",
-    date: "October 2025",
-    title: "New US-based microdrama streaming service on the way",
+    date: "October 15, 2025",
+    title: "New US-based microdrama streaming service on the way.",
     url: "https://www.msn.com/en-us/tv/news/new-us-based-microdrama-streaming-service-on-the-way/ar-AA1OB9y4?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1"
   },
   {
     publication: "The Streamable",
     date: "October 16, 2025",
-    title: "New US-based microdrama streaming service on the way",
+    title: "New US-based microdrama streaming service on the way.",
     url: "https://thestreamable.com/verza-tv-microdrama-streaming-service-launching?utm_source=newsletter&utm_medium=email&utm_campaign=sendgrid"
   }
 ];
