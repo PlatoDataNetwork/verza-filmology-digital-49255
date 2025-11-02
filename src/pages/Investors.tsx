@@ -69,7 +69,7 @@ export default function Investors() {
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center space-y-6">
-              <p className="text-sm md:text-base font-medium text-muted-foreground tracking-tight">
+              <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
                 From the founder of E! Entertainment Television
               </p>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
