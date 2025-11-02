@@ -20,7 +20,7 @@ export const Opportunity = () => {
             <Card className="p-6 md:p-8 bg-muted/50 hover:bg-muted/70 transition-all border-0 rounded-2xl md:rounded-3xl">
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight">150M+</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Downloads for leading platforms. Global demand for snackable, serialized vertical content.
+                Downloads for leading platforms. Global demand for snackable, serialized microdrama content.
               </p>
             </Card>
 
@@ -34,7 +34,7 @@ export const Opportunity = () => {
             <Card className="p-6 md:p-8 bg-muted/50 hover:bg-muted/70 transition-all border-0 rounded-2xl md:rounded-3xl">
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight">First</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                The first platform to emerge in the U.S., tailored for Gen Z and Millennials.
+                The first U.S. platform for microdramas tailored for Gen Z and Millennials.
               </p>
             </Card>
           </div>
