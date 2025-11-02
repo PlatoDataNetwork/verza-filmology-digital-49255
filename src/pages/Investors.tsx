@@ -227,7 +227,7 @@ export default function Investors() {
                     <CardTitle>Demographics</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Ages 18–65+, entertainment consumers across Gen Z & Millennials</p>
+                    <p className="text-muted-foreground">Ages 18–65+, entertainment consumers across Gen Z & Millennials. Global audiences have shifted dramatically toward short-form content consumption. Platforms like TikTok have conditioned users to engage with vertical, rapid-fire entertainment. Content that is easily digestible and endlessly scrollable.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -235,7 +235,7 @@ export default function Investors() {
                     <CardTitle>Gen Z</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">58% influenced by social media for purchases</p>
+                    <p className="text-muted-foreground">58% influenced by social media for purchases. This generation values authenticity and creator-driven content. They seek entertainment that aligns with their values and interests. Mobile-first consumption is their default behavior.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -243,7 +243,7 @@ export default function Investors() {
                     <CardTitle>Millennials</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">85% prefer shopping via mobile apps/sites. Women 35+ are 86% more likely than men to buy via mobile apps</p>
+                    <p className="text-muted-foreground">85% prefer shopping via mobile apps and sites. Women 35+ are 86% more likely than men to buy via mobile apps. This demographic has significant purchasing power and brand loyalty. They appreciate convenience and quality content experiences.</p>
                   </CardContent>
                 </Card>
               </div>
