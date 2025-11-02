@@ -63,10 +63,10 @@ export const Hero = () => {
               className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-base font-medium transition-all hover:scale-[1.02] min-h-[48px]"
               asChild
             >
-              <a href="/about">
+              <Link to="/about">
                 Learn more
                 <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button 
               size="lg" 
