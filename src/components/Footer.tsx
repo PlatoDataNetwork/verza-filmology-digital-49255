@@ -1,8 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Heart } from "lucide-react";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export const Footer = () => {
+  const location = useLocation();
+
+  const handleLegalClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
+    if (location.pathname === "/legal") {
+      e.preventDefault();
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", `/legal${hash}`);
+      }
+    }
+  };
+
   return (
     <footer className="bg-muted/30 py-8 md:py-12 border-t border-border/50">
       <div className="container mx-auto px-4 sm:px-6">
@@ -38,10 +51,34 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Legal</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block">Terms</Link></li>
-                <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block">Privacy</Link></li>
+                <li>
+                  <Link 
+                    to="/legal#terms-of-use" 
+                    onClick={(e) => handleLegalClick(e, "#terms-of-use")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Terms
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/legal#privacy" 
+                    onClick={(e) => handleLegalClick(e, "#privacy")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Privacy
+                  </Link>
+                </li>
                 <li><Link to="/licensing" className="hover:text-foreground transition-colors inline-block">Licensing</Link></li>
-                <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block">Disclaimer</Link></li>
+                <li>
+                  <Link 
+                    to="/legal#disclaimer" 
+                    onClick={(e) => handleLegalClick(e, "#disclaimer")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Disclaimer
+                  </Link>
+                </li>
               </ul>
             </div>
 
