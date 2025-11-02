@@ -33,30 +33,30 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Company</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li><Link to="/about" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">About</Link></li>
-                <li><Link to="/press" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Press</Link></li>
-                <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Careers</Link></li>
-                <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Contact</Link></li>
+                <li><Link to="/about" className="hover:text-foreground transition-colors inline-block">About</Link></li>
+                <li><Link to="/press" className="hover:text-foreground transition-colors inline-block">Press</Link></li>
+                <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block">Careers</Link></li>
+                <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Legal</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Terms</Link></li>
-                <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Privacy</Link></li>
-                <li><Link to="/licensing" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Licensing</Link></li>
-                <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Disclaimer</Link></li>
+                <li><Link to="/legal#terms-of-use" className="hover:text-foreground transition-colors inline-block">Terms</Link></li>
+                <li><Link to="/legal#privacy" className="hover:text-foreground transition-colors inline-block">Privacy</Link></li>
+                <li><Link to="/licensing" className="hover:text-foreground transition-colors inline-block">Licensing</Link></li>
+                <li><Link to="/legal#disclaimer" className="hover:text-foreground transition-colors inline-block">Disclaimer</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Connect</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">TikTok</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Twitter</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Instagram</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors inline-block min-h-[44px] flex items-center">Facebook</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block">TikTok</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block">Twitter</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block">Instagram</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors inline-block">Facebook</a></li>
               </ul>
             </div>
           </div>
