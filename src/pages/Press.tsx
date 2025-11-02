@@ -37,7 +37,7 @@ const Press = () => {
           <div className="space-y-8 md:space-y-10 text-foreground/90">
             {/* Press Contact */}
             <section className="space-y-3">
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Press Contact</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Press Inquiries</h2>
               <p className="text-base md:text-lg leading-relaxed">
                 For press inquiries, media requests, or interview opportunities, please contact our media relations team:
               </p>
