@@ -362,7 +362,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Launch Plan</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Launch with TikTok-trending programming</p>
+                    <p className="text-sm text-muted-foreground">Launch with TikTok-trending programming.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -370,7 +370,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">More Genres</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Blend of genres: romance, horror, and reality TV</p>
+                    <p className="text-sm text-muted-foreground">Blend of genres: romance, horror, and reality TV.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -378,7 +378,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Licensing</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Feature movies and dramas from other platforms</p>
+                    <p className="text-sm text-muted-foreground">Feature movies and dramas from other platforms.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -386,7 +386,7 @@ export default function Investors() {
                     <CardTitle className="text-lg">Additional Medias</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">Podcasts, red carpet interviews, and more</p>
+                    <p className="text-sm text-muted-foreground">Podcasts, red carpet interviews, and more.</p>
                   </CardContent>
                 </Card>
               </div>
