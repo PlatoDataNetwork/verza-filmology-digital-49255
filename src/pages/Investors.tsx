@@ -153,7 +153,7 @@ export default function Investors() {
                     <CardTitle>Lacks Influencers</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Lack of influencer-driven content and celebrity involvement</p>
+                    <p className="text-muted-foreground text-justify">Limited influencer-driven content and celebrity involvement in platforms.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -161,7 +161,7 @@ export default function Investors() {
                     <CardTitle>Ability to Promote</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Studios lack a mobile-native platform for film promotion as late-night TV declines</p>
+                    <p className="text-muted-foreground text-justify">Studios lack mobile-native platforms as late-night TV declines rapidly.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -169,7 +169,7 @@ export default function Investors() {
                     <CardTitle>Lack Other Medias</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">No integration of podcasts, red carpet, or reality programming</p>
+                    <p className="text-muted-foreground text-justify">No integration of podcasts, red carpet events, or reality programming.</p>
                   </CardContent>
                 </Card>
               </div>
