@@ -1,20 +1,26 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LoginDialog } from "@/components/LoginDialog";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export const Hero = () => {
+  const [loginOpen, setLoginOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
+      
       {/* Theme Toggle and Navigation */}
       <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20 flex items-center gap-3">
-        <Link 
-          to="/login" 
-          className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+        <button 
+          onClick={() => setLoginOpen(true)}
+          className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
         >
           Login
-        </Link>
+        </button>
         <Link 
           to="/news" 
           className="text-sm font-medium text-foreground hover:text-primary transition-colors"

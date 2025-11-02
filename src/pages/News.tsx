@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { LoginDialog } from "@/components/LoginDialog";
 import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
@@ -39,12 +40,16 @@ const pressArticles = [
 ];
 
 export default function News() {
+  const [loginOpen, setLoginOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
+      
       {/* Header */}
       <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -60,12 +65,12 @@ export default function News() {
                 <ChevronLeft className="h-5 w-5" />
                 <span className="font-medium">Back</span>
               </Link>
-              <Link 
-                to="/login" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              <button 
+                onClick={() => setLoginOpen(true)}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Login
-              </Link>
+              </button>
               <ThemeToggle />
             </div>
           </div>

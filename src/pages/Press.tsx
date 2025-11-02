@@ -2,15 +2,20 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { LoginDialog } from "@/components/LoginDialog";
 
 const Press = () => {
+  const [loginOpen, setLoginOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
+      
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-4 sm:px-6 py-4">
@@ -20,12 +25,12 @@ const Press = () => {
               <span className="font-medium">Back</span>
             </Link>
             <div className="flex items-center gap-3">
-              <Link 
-                to="/login" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              <button 
+                onClick={() => setLoginOpen(true)}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Login
-              </Link>
+              </button>
               <Link 
                 to="/news" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"

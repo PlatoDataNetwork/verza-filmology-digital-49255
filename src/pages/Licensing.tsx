@@ -2,10 +2,16 @@ import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
 import verzaLogo from "@/assets/verza-logo.png";
+import { useState } from "react";
+import { LoginDialog } from "@/components/LoginDialog";
 
 const Licensing = () => {
+  const [loginOpen, setLoginOpen] = useState(false);
+  
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
+      
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between">
@@ -13,12 +19,12 @@ const Licensing = () => {
               <img src={verzaLogo} alt="Verza TV" className="h-8 w-auto" />
             </Link>
             <div className="flex items-center gap-3">
-              <Link 
-                to="/login" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              <button 
+                onClick={() => setLoginOpen(true)}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 Login
-              </Link>
+              </button>
               <Link 
                 to="/news" 
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"

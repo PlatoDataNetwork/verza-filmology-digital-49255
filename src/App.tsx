@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Press from "./pages/Press";
@@ -12,6 +13,7 @@ import News from "./pages/News";
 import Careers from "./pages/Careers";
 import Legal from "./pages/Legal";
 import Licensing from "./pages/Licensing";
+import Investors from "./pages/Investors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,24 +21,27 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/press" element={<Press />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/legal" element={<Legal />} />
-            <Route path="/licensing" element={<Licensing />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/legal" element={<Legal />} />
+              <Route path="/licensing" element={<Licensing />} />
+              <Route path="/investors" element={<Investors />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
     </ThemeProvider>
   </QueryClientProvider>
 );
