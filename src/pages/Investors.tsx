@@ -153,7 +153,7 @@ export default function Investors() {
                     <CardTitle>Lacks Influencers</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">Limited influencer-driven content and celebrity involvement in platforms.</p>
+                    <p className="text-muted-foreground">Limited influencer-driven content and celebrity involvement in platforms.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -161,7 +161,7 @@ export default function Investors() {
                     <CardTitle>Ability to Promote</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">Studios lack mobile-native platforms as late-night TV declines rapidly.</p>
+                    <p className="text-muted-foreground">Studios lack mobile-native platforms as late-night TV declines rapidly.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -169,7 +169,7 @@ export default function Investors() {
                     <CardTitle>Lack Other Medias</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">No integration of podcasts, red carpet events, or reality programming.</p>
+                    <p className="text-muted-foreground">No integration of podcasts, red carpet events, or reality programming.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -227,7 +227,7 @@ export default function Investors() {
                     <CardTitle>Demographics</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly scrollable entertainment.</p>
+                    <p className="text-muted-foreground">Ages 18–65+. Global audiences shifted to short-form, vertical content. Easily digestible and endlessly scrollable entertainment.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -235,7 +235,7 @@ export default function Investors() {
                     <CardTitle>Gen Z</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">58% influenced by social media for purchases. Value authenticity and creator-driven content. Mobile-first consumption is default.</p>
+                    <p className="text-muted-foreground">58% influenced by social media for purchases. Value authenticity and creator-driven content. Mobile-first consumption is default.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -243,7 +243,7 @@ export default function Investors() {
                     <CardTitle>Millennials</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-justify">85% prefer mobile apps/sites. Women 35+ are 86% more likely than men to buy via mobile apps. Significant purchasing power.</p>
+                    <p className="text-muted-foreground">85% prefer mobile apps/sites. Women 35+ are 86% more likely than men to buy via mobile apps. Significant purchasing power.</p>
                   </CardContent>
                 </Card>
               </div>
