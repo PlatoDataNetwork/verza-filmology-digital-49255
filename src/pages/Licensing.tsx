@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
-import verzaLogo from "@/assets/verza-logo.png";
+import { ChevronLeft } from "lucide-react";
 import { useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 
@@ -15,8 +15,9 @@ const Licensing = () => {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2">
-              <img src={verzaLogo} alt="Verza TV" className="h-8 w-auto" />
+            <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors min-h-[44px]">
+              <ChevronLeft className="h-5 w-5" />
+              <span className="font-medium">Back</span>
             </Link>
             <div className="flex items-center gap-3">
               <button 
