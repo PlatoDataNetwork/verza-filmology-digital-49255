@@ -76,7 +76,7 @@ export default function Investors() {
                 The Next Generation of Vertical Shorts
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Short-form mobile entertainment network.
+                Short Form Mobile Entertainment Network
               </p>
             </div>
           </div>
