@@ -5,6 +5,17 @@ import verzaLogo from "@/assets/verza-logo.png";
 export const Footer = () => {
   const location = useLocation();
 
+  const handlePageClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    // Extract pathname without hash
+    const targetPath = path.split('#')[0];
+    const currentPath = location.pathname;
+    
+    if (currentPath === targetPath) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   const handleLegalClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     if (location.pathname === "/legal") {
       e.preventDefault();
@@ -41,9 +52,33 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Company</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li><Link to="/about" className="hover:text-foreground transition-colors inline-block">About</Link></li>
-                <li><Link to="/press" className="hover:text-foreground transition-colors inline-block">Press</Link></li>
-                <li><Link to="/careers" className="hover:text-foreground transition-colors inline-block">Careers</Link></li>
+                <li>
+                  <Link 
+                    to="/about" 
+                    onClick={(e) => handlePageClick(e, "/about")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/press" 
+                    onClick={(e) => handlePageClick(e, "/press")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Press
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/careers" 
+                    onClick={(e) => handlePageClick(e, "/careers")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Careers
+                  </Link>
+                </li>
                 <li><Link to="/#contact" className="hover:text-foreground transition-colors inline-block">Contact</Link></li>
               </ul>
             </div>
@@ -69,7 +104,15 @@ export const Footer = () => {
                     Privacy
                   </Link>
                 </li>
-                <li><Link to="/licensing" className="hover:text-foreground transition-colors inline-block">Licensing</Link></li>
+                <li>
+                  <Link 
+                    to="/licensing" 
+                    onClick={(e) => handlePageClick(e, "/licensing")}
+                    className="hover:text-foreground transition-colors inline-block"
+                  >
+                    Licensing
+                  </Link>
+                </li>
                 <li>
                   <Link 
                     to="/legal#disclaimer" 
