@@ -6,11 +6,22 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
+import { useMeta } from "@/hooks/useMeta";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+
+  useMeta({
+    title: "Investor Information - VERZA TV",
+    description: "Explore VERZA TV's investment opportunity in the $6.5B short-form vertical content market. Learn about our market strategy, target audience, and growth plans.",
+    keywords: "VERZA TV investors, investment opportunity, vertical content market, microdramas, short-form video investment",
+    canonical: "https://verzatv.io/investors",
+    ogTitle: "Investor Information - VERZA TV",
+    ogDescription: "Explore VERZA TV's investment opportunity in the $6.5B short-form vertical content market.",
+    ogUrl: "https://verzatv.io/investors",
+  });
 
   useEffect(() => {
     if (!isAuthenticated) {

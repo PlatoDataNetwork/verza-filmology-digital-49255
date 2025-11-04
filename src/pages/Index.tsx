@@ -7,8 +7,20 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useMeta } from "@/hooks/useMeta";
+
 const Index = () => {
   const location = useLocation();
+  
+  useMeta({
+    title: "Verza TV - The Next Generation of Vertical Shorts",
+    description: "From the founder of E! Entertainment Television. The first U.S. platform for premium short-form vertical entertainment.",
+    keywords: "short-form video, vertical content, mobile entertainment, streaming platform, Verza TV, microdramas",
+    canonical: "https://verzatv.io/",
+    ogUrl: "https://verzatv.io/",
+    ogImage: "https://verzatv.io/og-image.png",
+  });
+  
   useEffect(() => {
     if (location.hash) {
       const el = document.getElementById(location.hash.substring(1));

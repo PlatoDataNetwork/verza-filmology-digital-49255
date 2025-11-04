@@ -4,9 +4,20 @@ import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 
 const About = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "About VERZA TV - Revolutionary Vertical Entertainment",
+    description: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals from the founder of E! Entertainment Television.",
+    keywords: "VERZA TV, about, vertical entertainment, microdramas, reality content, mobile streaming, E! Entertainment",
+    canonical: "https://verzatv.io/about",
+    ogTitle: "About VERZA TV - Revolutionary Vertical Entertainment",
+    ogDescription: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals.",
+    ogUrl: "https://verzatv.io/about",
+  });
   
   useEffect(() => {
     // Scroll to top when component mounts

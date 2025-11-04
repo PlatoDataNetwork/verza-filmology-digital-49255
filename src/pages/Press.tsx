@@ -4,9 +4,20 @@ import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 
 const Press = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "Press & Media - VERZA TV",
+    description: "Press contact, media inquiries, company overview, and press kit for VERZA TV. Contact us at press@verzatv.com for media requests and interviews.",
+    keywords: "VERZA TV press, media inquiries, press kit, company overview, media relations, press contact",
+    canonical: "https://verzatv.io/press",
+    ogTitle: "Press & Media - VERZA TV",
+    ogDescription: "Press contact, media inquiries, and company overview for VERZA TV - the first U.S. platform for premium vertical entertainment.",
+    ogUrl: "https://verzatv.io/press",
+  });
   
   useEffect(() => {
     window.scrollTo(0, 0);

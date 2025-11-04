@@ -2,11 +2,26 @@ import { Footer } from "@/components/Footer";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 
 const Licensing = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "Content Licensing & DRM - VERZA TV",
+    description: "Learn about VERZA TV's content licensing policies, Digital Rights Management (DRM) protection, and copyright information. Contact licensing@verzatv.com for inquiries.",
+    keywords: "VERZA TV licensing, content licensing, DRM, digital rights management, copyright, intellectual property",
+    canonical: "https://verzatv.io/licensing",
+    ogTitle: "Content Licensing & DRM - VERZA TV",
+    ogDescription: "Learn about VERZA TV's content licensing policies, Digital Rights Management (DRM), and copyright protection.",
+    ogUrl: "https://verzatv.io/licensing",
+  });
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="min-h-screen flex flex-col bg-background">

@@ -4,9 +4,20 @@ import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 
 const Legal = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "Legal - Terms of Use & Privacy Policy - VERZA TV",
+    description: "Read VERZA TV's terms of use, privacy policy, licensing information, and disclaimer. Learn about our policies for content usage and user data protection.",
+    keywords: "VERZA TV legal, terms of use, privacy policy, licensing, disclaimer, user agreement",
+    canonical: "https://verzatv.io/legal",
+    ogTitle: "Legal - Terms of Use & Privacy Policy - VERZA TV",
+    ogDescription: "VERZA TV's terms of use, privacy policy, licensing information, and legal policies.",
+    ogUrl: "https://verzatv.io/legal",
+  });
   
   useEffect(() => {
     // Scroll to the section if there's a hash in the URL

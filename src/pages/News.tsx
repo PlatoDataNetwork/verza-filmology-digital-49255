@@ -4,6 +4,7 @@ import { ChevronLeft, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
@@ -41,6 +42,16 @@ const pressArticles = [
 
 export default function News() {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "VERZA TV in the News - Latest Press Coverage & Updates",
+    description: "The latest press coverage and articles about VERZA TV's revolutionary microdrama platform, featuring coverage from The Hollywood Reporter, IMDb, and more.",
+    keywords: "VERZA TV news, press coverage, microdramas, vertical entertainment, media coverage, Hollywood Reporter",
+    canonical: "https://verzatv.io/news",
+    ogTitle: "VERZA TV in the News - Latest Press Coverage",
+    ogDescription: "Latest press coverage and articles about VERZA TV's revolutionary microdrama platform from major media outlets.",
+    ogUrl: "https://verzatv.io/news",
+  });
   
   useEffect(() => {
     window.scrollTo(0, 0);

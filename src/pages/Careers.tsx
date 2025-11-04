@@ -3,11 +3,26 @@ import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useMeta } from "@/hooks/useMeta";
 
 const Careers = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  useMeta({
+    title: "Careers at VERZA TV - Join Our Team",
+    description: "Build the future of entertainment at VERZA TV. Explore open positions in engineering, design, content, marketing, and data science. Join our team of innovators.",
+    keywords: "VERZA TV careers, jobs, employment, engineering jobs, content jobs, marketing jobs, Los Angeles jobs",
+    canonical: "https://verzatv.io/careers",
+    ogTitle: "Careers at VERZA TV - Join Our Team",
+    ogDescription: "Build the future of entertainment at VERZA TV. Explore open positions and join our team of innovators and creators.",
+    ogUrl: "https://verzatv.io/careers",
+  });
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const openPositions = [
     {
