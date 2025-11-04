@@ -141,7 +141,7 @@ export const Footer = () => {
               &copy; {new Date().getFullYear()} Filmology Labs. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
-              Made with Love <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in New York City
+              Made with Love <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in NYC
             </p>
           </div>
         </div>
