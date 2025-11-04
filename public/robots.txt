@@ -1,16 +1,11 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
 
-Sitemap: https://verza-tv-launchpad.vercel.app/sitemap.xml
+# Block access to sensitive paths
+Disallow: /api/
+Disallow: /admin/
+
+# Crawl delay for good behavior
+Crawl-delay: 1
+
+Sitemap: https://verzatv.io/sitemap.xml
