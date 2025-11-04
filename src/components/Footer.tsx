@@ -35,11 +35,11 @@ export const Footer = () => {
             <div className="col-span-2 md:col-span-1">
               <img 
                 src={verzaLogo} 
-                alt="Verza TV" 
+                alt="VERZA TV"
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
               />
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
-                Verza TV
+                VERZA TV
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
                 11 West 42nd Street Fl 2

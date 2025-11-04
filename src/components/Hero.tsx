@@ -42,7 +42,7 @@ export const Hero = () => {
           <div className="flex justify-center">
             <img 
               src={verzaLogo} 
-              alt="Verza TV" 
+              alt="VERZA TV"
               className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto"
             />
           </div>

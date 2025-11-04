@@ -36,7 +36,7 @@ const Careers = () => {
       department: "Marketing",
       location: "Los Angeles, CA / Remote",
       type: "Full-time",
-      description: "Drive growth and brand awareness for Verza TV across digital channels."
+      description: "Drive growth and brand awareness for VERZA TV across digital channels."
     },
     {
       title: "Data Scientist",
@@ -94,7 +94,7 @@ const Careers = () => {
       <section className="pt-2 md:pt-4 pb-12 md:pb-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-8 md:mb-12 text-center tracking-tight">
-            Why Join Verza TV?
+            Why Join VERZA TV?
           </h2>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="space-y-3 p-6 bg-muted/30 rounded-2xl">
@@ -224,7 +224,7 @@ const Careers = () => {
             Don't See the Right Role?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals. Send us your resume and let us know how you can contribute to Verza TV.
+            We're always looking for talented individuals. Send us your resume and let us know how you can contribute to VERZA TV.
           </p>
           <Button 
             size="lg"

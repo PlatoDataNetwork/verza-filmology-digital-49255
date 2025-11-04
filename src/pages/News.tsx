@@ -55,7 +55,7 @@ export default function News() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={verzaLogo} alt="Verza TV" className="h-8 w-auto" />
+              <img src={verzaLogo} alt="VERZA TV" className="h-8 w-auto" />
             </Link>
             <div className="flex items-center gap-4">
               <Link 
@@ -83,10 +83,10 @@ export default function News() {
           {/* Page Header */}
           <div className="max-w-4xl mx-auto mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Verza TV in the News
+              VERZA TV in the News
             </h1>
             <p className="text-lg text-muted-foreground">
-              The latest press coverage and articles about Verza TV's revolutionary microdrama platform.
+              The latest press coverage and articles about VERZA TV's revolutionary microdrama platform.
             </p>
           </div>
 

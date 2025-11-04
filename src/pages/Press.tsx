@@ -80,10 +80,10 @@ const Press = () => {
             <section className="space-y-3">
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Company Overview</h2>
               <p className="text-base md:text-lg leading-relaxed">
-                Verza TV is revolutionizing vertical content entertainment, founded by the visionary behind E! Entertainment Television. We deliver premium microdramas, reality content, and more, designed specifically for mobile-first audiences aged 18–65+.
+                VERZA TV is revolutionizing vertical content entertainment, founded by the visionary behind E! Entertainment Television. We deliver premium microdramas, reality content, and more, designed specifically for mobile-first audiences aged 18–65+.
               </p>
               <p className="text-base md:text-lg leading-relaxed">
-                As the first U.S. platform bridging pop culture with on-demand mobile entertainment, Verza TV is positioned at the forefront of the $6.5 billion short-form vertical content market.
+                As the first U.S. platform bridging pop culture with on-demand mobile entertainment, VERZA TV is positioned at the forefront of the $6.5 billion short-form vertical content market.
               </p>
             </section>
 
@@ -144,7 +144,7 @@ const Press = () => {
                       rel="noopener noreferrer"
                       className="hover:text-primary transition-colors"
                     >
-                      Verza TV Announces Launch of Revolutionary Vertical Content Platform
+                      VERZA TV Announces Launch of Revolutionary Vertical Content Platform
                     </a>
                   </h3>
                   <p className="text-base text-muted-foreground">
@@ -158,7 +158,7 @@ const Press = () => {
             <section className="bg-muted/30 p-6 md:p-8 rounded-2xl space-y-3">
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Media Inquiries</h2>
               <p className="text-base md:text-lg leading-relaxed">
-                Looking to cover Verza TV or request an interview with our leadership team? We'd love to hear from you.
+                Looking to cover VERZA TV or request an interview with our leadership team? We'd love to hear from you.
               </p>
               <div className="pt-2">
                 <Link 

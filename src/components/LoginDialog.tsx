@@ -55,7 +55,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
     if (success) {
       toast({
         title: "Login successful",
-        description: "Welcome to Verza TV Investors Portal",
+        description: "Welcome to VERZA TV Investors Portal",
       });
       onOpenChange(false);
       setEmail("");

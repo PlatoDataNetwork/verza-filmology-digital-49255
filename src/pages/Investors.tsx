@@ -51,7 +51,7 @@ export default function Investors() {
                 asChild
               >
                 <a href="https://verza-tv-launchpad.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  Verza TV Beta
+                  VERZA TV Beta
                 </a>
               </Button>
               <Button
@@ -81,7 +81,7 @@ export default function Investors() {
               <div className="flex justify-center">
                 <img 
                   src={verzaLogo} 
-                  alt="Verza TV" 
+                  alt="VERZA TV"
                   className="h-20 md:h-24 lg:h-28 w-auto"
                 />
               </div>
@@ -144,7 +144,7 @@ export default function Investors() {
                 <Card className="border-primary">
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary">$300M</CardTitle>
-                    <CardDescription>Verza TV Target Year 1</CardDescription>
+                    <CardDescription>VERZA TV Target Year 1</CardDescription>
                   </CardHeader>
                 </Card>
               </div>

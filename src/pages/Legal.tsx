@@ -68,7 +68,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Agreement to Terms</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  By accessing or using Verza TV, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our platform.
+                  By accessing or using VERZA TV, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our platform.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Content Usage</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  All content on Verza TV is protected by copyright and other intellectual property rights. You may not:
+                  All content on VERZA TV is protected by copyright and other intellectual property rights. You may not:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-base md:text-lg leading-relaxed">
                   <li>Copy, distribute, or share content without permission</li>
@@ -140,7 +140,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Introduction</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  At Verza TV, we respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our platform.
+                  At VERZA TV, we respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our platform.
                 </p>
               </div>
 
@@ -207,14 +207,14 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Content Licensing</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  All content available on Verza TV, including but not limited to microdramas, reality shows, videos, images, text, graphics, logos, and audio clips, is protected by copyright, trademark, and other intellectual property laws.
+                  All content available on VERZA TV, including but not limited to microdramas, reality shows, videos, images, text, graphics, logos, and audio clips, is protected by copyright, trademark, and other intellectual property laws.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">User License</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  Subject to your compliance with these terms, Verza TV grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and view content on the platform for your personal, non-commercial use only.
+                  Subject to your compliance with these terms, VERZA TV grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and view content on the platform for your personal, non-commercial use only.
                 </p>
               </div>
 
@@ -235,7 +235,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Third-Party Content</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  Some content on Verza TV may be owned by third parties. Such content is licensed to Verza TV and is subject to the copyright and licensing terms of the respective owners.
+                  Some content on VERZA TV may be owned by third parties. Such content is licensed to VERZA TV and is subject to the copyright and licensing terms of the respective owners.
                 </p>
               </div>
 
@@ -252,7 +252,7 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Trademark</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  Verza TV, the Verza TV logo, and other marks are trademarks of Filmology Labs. You may not use these trademarks without our prior written consent.
+                  VERZA TV, the VERZA TV logo, and other marks are trademarks of Filmology Labs. You may not use these trademarks without our prior written consent.
                 </p>
               </div>
             </div>
@@ -267,35 +267,35 @@ const Legal = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">General Information</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  The information provided by Verza TV is for general entertainment purposes only. All information on the platform is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information.
+                  The information provided by VERZA TV is for general entertainment purposes only. All information on the platform is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">No Professional Advice</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  The content on Verza TV does not constitute professional advice. Before making any decisions based on information found on our platform, we strongly advise you to consult with appropriate professionals.
+                  The content on VERZA TV does not constitute professional advice. Before making any decisions based on information found on our platform, we strongly advise you to consult with appropriate professionals.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Content Accuracy</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  While we strive to provide accurate and up-to-date content, Verza TV makes no warranties or representations as to the accuracy or completeness of the content available through our platform. Content is provided "as is" without warranty of any kind.
+                  While we strive to provide accurate and up-to-date content, VERZA TV makes no warranties or representations as to the accuracy or completeness of the content available through our platform. Content is provided "as is" without warranty of any kind.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Limitation of Liability</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  Under no circumstance shall Verza TV have any liability to you for any loss or damage of any kind incurred as a result of the use of the platform or reliance on any information provided on the platform. Your use of the platform and your reliance on any information is solely at your own risk.
+                  Under no circumstance shall VERZA TV have any liability to you for any loss or damage of any kind incurred as a result of the use of the platform or reliance on any information provided on the platform. Your use of the platform and your reliance on any information is solely at your own risk.
                 </p>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">External Links</h3>
                 <p className="text-base md:text-lg leading-relaxed">
-                  Our platform may contain links to external websites or content that are not provided or maintained by Verza TV. We do not guarantee the accuracy, relevance, or completeness of any external information or content.
+                  Our platform may contain links to external websites or content that are not provided or maintained by VERZA TV. We do not guarantee the accuracy, relevance, or completeness of any external information or content.
                 </p>
               </div>
 
