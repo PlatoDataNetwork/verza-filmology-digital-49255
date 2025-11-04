@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = (email: string, password: string): boolean => {
-    if (password === "VerzaTV1" && email.trim()) {
+    if (password === "VERZATV1" && email.trim()) {
       setIsAuthenticated(true);
       localStorage.setItem("verza-auth", "true");
       localStorage.setItem("verza-email", email);
