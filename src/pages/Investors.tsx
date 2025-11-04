@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { ChevronLeft, LogOut, TrendingUp, Users, DollarSign, Target, Rocket, Zap } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
@@ -12,6 +13,11 @@ import verzaLogo from "@/assets/verza-logo.png";
 export default function Investors() {
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+  
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Investors", href: "/investors" }
+  ];
 
   useMeta({
     title: "Investor Information - VERZA TV",
@@ -85,23 +91,26 @@ export default function Investors() {
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto text-center space-y-6">
-              <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
-                From the founder of E! Entertainment Television
-              </p>
-              <div className="flex justify-center">
-                <img 
-                  src={verzaLogo} 
-                  alt="VERZA TV"
-                  className="h-20 md:h-24 lg:h-28 w-auto"
-                />
+            <div className="max-w-5xl mx-auto space-y-6">
+              <Breadcrumb items={breadcrumbItems} />
+              <div className="text-center space-y-6">
+                <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
+                  From the founder of E! Entertainment Television
+                </p>
+                <div className="flex justify-center">
+                  <img 
+                    src={verzaLogo} 
+                    alt="VERZA TV"
+                    className="h-20 md:h-24 lg:h-28 w-auto"
+                  />
+                </div>
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  The Next Generation of Vertical Shorts
+                </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+                  Short Form Mobile Entertainment Network
+                </p>
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                The Next Generation of Vertical Shorts
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Short Form Mobile Entertainment Network
-              </p>
             </div>
           </div>
         </section>

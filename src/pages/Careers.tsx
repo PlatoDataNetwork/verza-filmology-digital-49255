@@ -1,5 +1,6 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,11 @@ import { useMeta } from "@/hooks/useMeta";
 
 const Careers = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Careers", href: "/careers" }
+  ];
   
   useMeta({
     title: "Careers at VERZA TV - Join Our Team",
@@ -95,13 +101,16 @@ const Careers = () => {
 
       {/* Hero Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
-            Build the Future of Entertainment
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
-            Join our team of innovators, creators, and storytellers who are revolutionizing vertical content for millions of viewers worldwide.
-          </p>
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <Breadcrumb items={breadcrumbItems} />
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
+              Build the Future of Entertainment
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
+              Join our team of innovators, creators, and storytellers who are revolutionizing vertical content for millions of viewers worldwide.
+            </p>
+          </div>
         </div>
       </section>
 

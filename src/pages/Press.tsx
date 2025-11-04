@@ -1,5 +1,6 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -8,6 +9,11 @@ import { useMeta } from "@/hooks/useMeta";
 
 const Press = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Press", href: "/press" }
+  ];
   
   useMeta({
     title: "Press & Media - VERZA TV",
@@ -57,6 +63,7 @@ const Press = () => {
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <Breadcrumb items={breadcrumbItems} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-4 md:mb-5 tracking-tight">
             Press & Media
           </h1>

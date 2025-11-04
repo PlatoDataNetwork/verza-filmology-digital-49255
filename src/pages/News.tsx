@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import verzaLogo from "@/assets/verza-logo.png";
@@ -42,6 +43,11 @@ const pressArticles = [
 
 export default function News() {
   const [loginOpen, setLoginOpen] = useState(false);
+  
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "News", href: "/news" }
+  ];
   
   useMeta({
     title: "VERZA TV in the News - Latest Press Coverage & Updates",
@@ -93,6 +99,7 @@ export default function News() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           {/* Page Header */}
           <div className="max-w-4xl mx-auto mb-12">
+            <Breadcrumb items={breadcrumbItems} />
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               VERZA TV in the News
             </h1>
