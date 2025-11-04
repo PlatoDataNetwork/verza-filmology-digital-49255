@@ -6,7 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { FrontendAuthProvider } from "@/contexts/FrontendAuthContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
+import Login from "./pages/Login";
 import About from "./pages/About";
 import Press from "./pages/Press";
 import News from "./pages/News";
@@ -21,27 +24,30 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      <AuthProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/press" element={<Press />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/legal" element={<Legal />} />
-              <Route path="/licensing" element={<Licensing />} />
-              <Route path="/investors" element={<Investors />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </AuthProvider>
+      <FrontendAuthProvider>
+        <AuthProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
+                <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+                <Route path="/press" element={<ProtectedRoute><Press /></ProtectedRoute>} />
+                <Route path="/news" element={<ProtectedRoute><News /></ProtectedRoute>} />
+                <Route path="/careers" element={<ProtectedRoute><Careers /></ProtectedRoute>} />
+                <Route path="/legal" element={<ProtectedRoute><Legal /></ProtectedRoute>} />
+                <Route path="/licensing" element={<ProtectedRoute><Licensing /></ProtectedRoute>} />
+                <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </AuthProvider>
+      </FrontendAuthProvider>
     </ThemeProvider>
   </QueryClientProvider>
 );
