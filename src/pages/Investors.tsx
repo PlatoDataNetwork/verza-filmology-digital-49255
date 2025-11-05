@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
@@ -18,6 +19,8 @@ export default function Investors() {
     { label: "Home", href: "/" },
     { label: "Investors", href: "/investors" }
   ];
+
+  useOrganizationSchema();
 
   useMeta({
     title: "Investor Information - VERZA TV",

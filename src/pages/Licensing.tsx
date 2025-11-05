@@ -6,6 +6,7 @@ import { ChevronLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 
 const Licensing = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -14,6 +15,8 @@ const Licensing = () => {
     { label: "Home", href: "/" },
     { label: "Licensing", href: "/licensing" }
   ];
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "Content Licensing & DRM - VERZA TV",

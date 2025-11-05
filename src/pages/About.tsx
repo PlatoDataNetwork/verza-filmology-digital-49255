@@ -6,6 +6,7 @@ import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 
 const About = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -14,6 +15,8 @@ const About = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" }
   ];
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "About VERZA TV - Revolutionary Vertical Entertainment",

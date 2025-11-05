@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
@@ -48,6 +49,8 @@ export default function News() {
     { label: "Home", href: "/" },
     { label: "News", href: "/news" }
   ];
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "VERZA TV in the News - Latest Press Coverage & Updates",

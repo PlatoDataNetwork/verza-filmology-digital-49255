@@ -8,9 +8,12 @@ import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 
 const Index = () => {
   const location = useLocation();
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "Verza TV - The Next Generation of Vertical Shorts",

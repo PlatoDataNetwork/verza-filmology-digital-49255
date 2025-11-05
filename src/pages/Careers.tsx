@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 
 const Careers = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -15,6 +16,8 @@ const Careers = () => {
     { label: "Home", href: "/" },
     { label: "Careers", href: "/careers" }
   ];
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "Careers at VERZA TV - Join Our Team",

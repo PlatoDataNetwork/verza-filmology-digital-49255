@@ -6,6 +6,7 @@ import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
+import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 
 const Legal = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -14,6 +15,8 @@ const Legal = () => {
     { label: "Home", href: "/" },
     { label: "Legal", href: "/legal" }
   ];
+  
+  useOrganizationSchema();
   
   useMeta({
     title: "Legal - Terms of Use & Privacy Policy - VERZA TV",
