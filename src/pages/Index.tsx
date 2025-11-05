@@ -9,11 +9,13 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
+import { useWebsiteSchema } from "@/hooks/useWebsiteSchema";
 
 const Index = () => {
   const location = useLocation();
   
   useOrganizationSchema();
+  useWebsiteSchema();
   
   useMeta({
     title: "Verza TV - The Next Generation of Vertical Shorts",
