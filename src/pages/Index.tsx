@@ -10,12 +10,43 @@ import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useWebsiteSchema } from "@/hooks/useWebsiteSchema";
+import { useVideoSchema } from "@/hooks/useVideoSchema";
 
 const Index = () => {
   const location = useLocation();
   
   useOrganizationSchema();
   useWebsiteSchema();
+  
+  useVideoSchema([
+    {
+      name: "Ultimate Revenge: A Mother's Justice",
+      description: "A gripping vertical drama about a mother seeking justice for her family. Experience premium short-form entertainment designed for mobile viewing.",
+      thumbnailUrl: "https://verzatv.io/og-image.png",
+      uploadDate: "2024-01-15",
+      duration: "PT2M30S",
+      width: 1080,
+      height: 1920
+    },
+    {
+      name: "Tech Billionaire's Secret Love",
+      description: "A compelling romance microdrama following a tech mogul's hidden relationship. Premium vertical content optimized for today's mobile-first audience.",
+      thumbnailUrl: "https://verzatv.io/og-image.png",
+      uploadDate: "2024-01-20",
+      duration: "PT3M15S",
+      width: 1080,
+      height: 1920
+    },
+    {
+      name: "The CEO's Double Life",
+      description: "An addictive thriller revealing the secret identity of a powerful executive. Vertical storytelling at its finest on VERZA TV.",
+      thumbnailUrl: "https://verzatv.io/og-image.png",
+      uploadDate: "2024-02-01",
+      duration: "PT2M45S",
+      width: 1080,
+      height: 1920
+    }
+  ]);
   
   useMeta({
     title: "Verza TV - The Next Generation of Vertical Shorts",
