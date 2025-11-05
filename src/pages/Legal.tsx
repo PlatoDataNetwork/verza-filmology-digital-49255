@@ -33,6 +33,71 @@ const Legal = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+
+    // Add FAQ structured data
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are VERZA TV's Terms of Use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By accessing or using VERZA TV, you agree to be bound by our Terms of Use. These include maintaining account security, subscription payments, content usage restrictions, and prohibited conduct. We reserve the right to suspend or terminate accounts for violations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does VERZA TV protect my personal data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VERZA TV implements industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. We collect account information, profile data, payment details, and usage data to provide and improve our services. You have the right to access, update, or delete your personal information at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I share VERZA TV content with others?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only. You may not copy, distribute, share, or create derivative works from our content without explicit written permission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is VERZA TV's refund policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Access to premium content requires a paid subscription. Subscriptions automatically renew unless cancelled before the renewal date. All payments are non-refundable except as required by law."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I use VERZA TV content for commercial purposes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For commercial licensing, partnership opportunities, or permission to use our content, please contact us at licensing@verzatv.com. All content requires explicit written permission for commercial use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does VERZA TV provide professional advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The content on VERZA TV is for general entertainment purposes only and does not constitute professional advice. Before making any decisions based on information found on our platform, we strongly advise you to consult with appropriate professionals."
+          }
+        }
+      ]
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   return (
