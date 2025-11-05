@@ -42,8 +42,11 @@ export const Hero = () => {
           <div className="flex justify-center">
             <img 
               src={verzaLogo} 
-              alt="VERZA TV"
+              alt="VERZA TV - Premium Vertical Entertainment Platform"
               className="h-16 sm:h-20 md:h-28 lg:h-32 w-auto"
+              width="512"
+              height="128"
+              loading="eager"
             />
           </div>
           

@@ -12,12 +12,59 @@ import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useWebsiteSchema } from "@/hooks/useWebsiteSchema";
 import { useVideoSchema } from "@/hooks/useVideoSchema";
 import { useFAQSchema } from "@/hooks/useFAQSchema";
+import { useLocalBusinessSchema } from "@/hooks/useLocalBusinessSchema";
+import { useItemListSchema } from "@/hooks/useItemListSchema";
 
 const Index = () => {
   const location = useLocation();
   
   useOrganizationSchema();
   useWebsiteSchema();
+  
+  useLocalBusinessSchema({
+    name: "VERZA TV",
+    description: "The first U.S. platform for premium short-form vertical entertainment. From the founder of E! Entertainment Television.",
+    address: {
+      streetAddress: "6353 Hollywood Blvd",
+      addressLocality: "Hollywood",
+      addressRegion: "CA",
+      postalCode: "90028",
+      addressCountry: "US"
+    },
+    telephone: "+1-310-560-6055",
+    email: "info@verzatv.com",
+    url: "https://verzatv.io/",
+    logo: "https://verzatv.io/og-image.png",
+    image: "https://verzatv.io/og-image.png",
+    sameAs: [
+      "https://twitter.com/verzatv",
+      "https://www.tiktok.com/@verzatv",
+      "https://www.instagram.com/verzatv",
+      "https://www.facebook.com/verzatv"
+    ]
+  });
+  
+  useItemListSchema({
+    name: "Featured VERZA TV Microdramas",
+    description: "Premium vertical entertainment content on VERZA TV including microdramas, reality shows, and original series",
+    items: [
+      {
+        name: "Ultimate Revenge: A Mother's Justice",
+        description: "A gripping vertical drama about a mother seeking justice for her family",
+        image: "https://verzatv.io/og-image.png"
+      },
+      {
+        name: "Tech Billionaire's Secret Love",
+        description: "A compelling romance microdrama following a tech mogul's hidden relationship",
+        image: "https://verzatv.io/og-image.png"
+      },
+      {
+        name: "The CEO's Double Life",
+        description: "An addictive thriller revealing the secret identity of a powerful executive",
+        image: "https://verzatv.io/og-image.png"
+      }
+    ]
+  });
   
   useFAQSchema([
     {

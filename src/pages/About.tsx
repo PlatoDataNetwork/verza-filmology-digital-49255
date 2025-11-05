@@ -8,6 +8,7 @@ import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
+import { usePersonSchema } from "@/hooks/usePersonSchema";
 
 const About = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -23,6 +24,30 @@ const About = () => {
     { name: "Home", url: "https://verzatv.io/" },
     { name: "About", url: "https://verzatv.io/about" }
   ]);
+  
+  usePersonSchema({
+    name: "Alan Mruvka",
+    jobTitle: "Founder & CEO",
+    description: "Founder of E! Entertainment Television and VERZA TV. Visionary entrepreneur revolutionizing vertical entertainment and mobile-first content.",
+    url: "https://verzatv.io/about",
+    image: "https://verzatv.io/og-image.png",
+    worksFor: {
+      name: "VERZA TV",
+      url: "https://verzatv.io"
+    },
+    knowsAbout: [
+      "Entertainment Technology",
+      "Vertical Video Content",
+      "Mobile Streaming",
+      "Content Production",
+      "Media Business",
+      "Television Broadcasting"
+    ],
+    sameAs: [
+      "https://www.imdb.com/name/nm0612067/",
+      "https://en.wikipedia.org/wiki/Alan_Mruvka"
+    ]
+  });
   
   useMeta({
     title: "About VERZA TV - Revolutionary Vertical Entertainment",

@@ -42,10 +42,10 @@ export const useOrganizationSchema = () => {
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1540 Broadway",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10036",
+        "streetAddress": "6353 Hollywood Blvd",
+        "addressLocality": "Hollywood",
+        "addressRegion": "CA",
+        "postalCode": "90028",
         "addressCountry": "US"
       },
       "founder": {
