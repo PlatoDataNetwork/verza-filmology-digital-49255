@@ -42,10 +42,10 @@ export const Footer = () => {
                 VERZA TV
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
-                11 West 42nd Street Fl 2
+                6353 Hollywood Blvd
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                New York, New York 10036
+                Hollywood, CA 90028
               </p>
             </div>
             
@@ -141,7 +141,7 @@ export const Footer = () => {
               &copy; {new Date().getFullYear()} Filmology Labs. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground flex items-center justify-center gap-1">
-              Made with Love <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in NYC
+              Made with Love <Heart className="w-3 h-3 fill-red-500 text-red-500" /> in Hollywood CA
             </p>
           </div>
         </div>
