@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
+import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const Careers = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -18,6 +19,11 @@ const Careers = () => {
   ];
   
   useOrganizationSchema();
+  
+  useBreadcrumbSchema([
+    { name: "Home", url: "https://verzatv.io/" },
+    { name: "Careers", url: "https://verzatv.io/careers" }
+  ]);
   
   useMeta({
     title: "Careers at VERZA TV - Join Our Team",

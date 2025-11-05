@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useAuth } from "@/contexts/AuthContext";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
+import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
@@ -21,6 +22,11 @@ export default function Investors() {
   ];
 
   useOrganizationSchema();
+  
+  useBreadcrumbSchema([
+    { name: "Home", url: "https://verzatv.io/" },
+    { name: "Investors", url: "https://verzatv.io/investors" }
+  ]);
 
   useMeta({
     title: "Investor Information - VERZA TV",

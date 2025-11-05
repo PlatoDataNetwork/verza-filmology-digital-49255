@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
+import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
@@ -51,6 +52,11 @@ export default function News() {
   ];
   
   useOrganizationSchema();
+  
+  useBreadcrumbSchema([
+    { name: "Home", url: "https://verzatv.io/" },
+    { name: "News", url: "https://verzatv.io/news" }
+  ]);
   
   useMeta({
     title: "VERZA TV in the News - Latest Press Coverage & Updates",

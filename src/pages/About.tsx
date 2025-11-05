@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
+import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const About = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -17,6 +18,11 @@ const About = () => {
   ];
   
   useOrganizationSchema();
+  
+  useBreadcrumbSchema([
+    { name: "Home", url: "https://verzatv.io/" },
+    { name: "About", url: "https://verzatv.io/about" }
+  ]);
   
   useMeta({
     title: "About VERZA TV - Revolutionary Vertical Entertainment",
