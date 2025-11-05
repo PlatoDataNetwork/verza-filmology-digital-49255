@@ -11,12 +11,36 @@ import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useWebsiteSchema } from "@/hooks/useWebsiteSchema";
 import { useVideoSchema } from "@/hooks/useVideoSchema";
+import { useFAQSchema } from "@/hooks/useFAQSchema";
 
 const Index = () => {
   const location = useLocation();
   
   useOrganizationSchema();
   useWebsiteSchema();
+  
+  useFAQSchema([
+    {
+      question: "What is VERZA TV?",
+      answer: "VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing."
+    },
+    {
+      question: "Who founded VERZA TV?",
+      answer: "VERZA TV was founded by Alan Mruvka, the visionary entrepreneur who created E! Entertainment Television. With decades of experience in entertainment media, Alan recognized the explosive opportunity in vertical short-form content."
+    },
+    {
+      question: "What type of content does VERZA TV offer?",
+      answer: "VERZA TV specializes in premium vertical microdramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones."
+    },
+    {
+      question: "How is VERZA TV different from other streaming platforms?",
+      answer: "VERZA TV is purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation."
+    },
+    {
+      question: "Is VERZA TV available now?",
+      answer: "VERZA TV is currently in development. We're building the next generation of entertainment for vertical shorts. Contact us at info@verzatv.com to learn more about launch plans and partnership opportunities."
+    }
+  ]);
   
   useVideoSchema([
     {
