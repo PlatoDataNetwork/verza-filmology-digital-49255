@@ -8,6 +8,7 @@ import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
@@ -57,6 +58,17 @@ export default function News() {
     { name: "Home", url: "https://verzatv.io/" },
     { name: "News", url: "https://verzatv.io/news" }
   ]);
+  
+  useArticleSchema(pressArticles.map(article => ({
+    headline: article.title,
+    description: `Coverage of VERZA TV from ${article.publication}. ${article.title}`,
+    image: "https://verzatv.io/og-image.png",
+    datePublished: new Date(article.date).toISOString(),
+    author: {
+      name: article.publication,
+    },
+    url: article.url
+  })));
   
   useMeta({
     title: "VERZA TV in the News - Latest Press Coverage & Updates",

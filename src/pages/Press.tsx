@@ -8,6 +8,7 @@ import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 const Press = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -23,6 +24,18 @@ const Press = () => {
     { name: "Home", url: "https://verzatv.io/" },
     { name: "Press", url: "https://verzatv.io/press" }
   ]);
+  
+  useArticleSchema({
+    headline: "VERZA TV Announces Launch of Revolutionary Vertical Content Platform",
+    description: "VERZA TV, founded by the creator of E! Entertainment Television, is launching the first U.S. platform for premium short-form vertical entertainment. The platform will deliver microdramas, reality shows, and premium vertical originals to mobile-first audiences.",
+    image: "https://verzatv.io/og-image.png",
+    datePublished: "2025-10-15T00:00:00Z",
+    author: {
+      name: "VERZA TV",
+      url: "https://verzatv.io"
+    },
+    url: "https://verzatv.io/press"
+  });
   
   useMeta({
     title: "Press & Media - VERZA TV",
