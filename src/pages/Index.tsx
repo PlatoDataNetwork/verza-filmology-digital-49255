@@ -6,7 +6,7 @@ import { Content } from "@/components/Content";
 import { Founder } from "@/components/Founder";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
@@ -15,9 +15,65 @@ import { useVideoSchema } from "@/hooks/useVideoSchema";
 import { useFAQSchema } from "@/hooks/useFAQSchema";
 import { useLocalBusinessSchema } from "@/hooks/useLocalBusinessSchema";
 import { useItemListSchema } from "@/hooks/useItemListSchema";
+import { useSwipeNavigation } from "@/hooks/useSwipeNavigation";
 
 const Index = () => {
   const location = useLocation();
+  const [currentSection, setCurrentSection] = useState(0);
+  const sections = useRef<string[]>(['hero', 'opportunity', 'solution', 'content', 'founder', 'contact']);
+  
+  const navigateToSection = (index: number) => {
+    if (index >= 0 && index < sections.current.length) {
+      const element = document.getElementById(sections.current[index]);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setCurrentSection(index);
+      }
+    }
+  };
+
+  useSwipeNavigation({
+    threshold: 80,
+    onSwipeUp: () => {
+      // Only on mobile devices
+      if (window.innerWidth < 768) {
+        navigateToSection(currentSection + 1);
+      }
+    },
+    onSwipeDown: () => {
+      // Only on mobile devices
+      if (window.innerWidth < 768) {
+        navigateToSection(currentSection - 1);
+      }
+    }
+  });
+
+  // Track which section is currently in view
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = sections.current.indexOf(entry.target.id);
+          if (index !== -1) {
+            setCurrentSection(index);
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.current.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
   
   useOrganizationSchema();
   useWebsiteSchema();
@@ -135,16 +191,33 @@ const Index = () => {
       if (el) el.scrollIntoView({ behavior: 'auto', block: 'start' });
     }
   }, [location]);
+  
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero />
-      <Opportunity />
-      <Solution />
-      <Content />
-      <Founder />
-      <Contact />
+      <div id="hero"><Hero /></div>
+      <div id="opportunity"><Opportunity /></div>
+      <div id="solution"><Solution /></div>
+      <div id="content"><Content /></div>
+      <div id="founder"><Founder /></div>
+      <div id="contact"><Contact /></div>
       <Footer />
+      
+      {/* Swipe indicator for mobile - only show on mobile */}
+      <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-30 md:hidden pointer-events-none">
+        <div className="flex flex-col items-center gap-1 opacity-60">
+          {sections.current.map((_, index) => (
+            <div 
+              key={index}
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                currentSection === index 
+                  ? 'bg-primary scale-125' 
+                  : 'bg-muted-foreground/40'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
