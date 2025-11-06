@@ -18,7 +18,7 @@ export const Solution = () => {
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-3 md:mb-6 tracking-tight px-3">
               Why we win.
             </h2>
-            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4">
               The first U.S. platform bridging pop culture with on-demand mobile entertainment.
             </p>
           </div>
