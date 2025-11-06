@@ -19,6 +19,7 @@ import Legal from "./pages/Legal";
 import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
+import Install from "./pages/Install";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const App = () => (
                 <Route path="/licensing" element={<ProtectedRoute><Licensing /></ProtectedRoute>} />
                 <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
                 <Route path="/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
+                <Route path="/install" element={<ProtectedRoute><Install /></ProtectedRoute>} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
