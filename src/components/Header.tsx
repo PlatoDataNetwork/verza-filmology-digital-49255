@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LoginDialog } from "@/components/LoginDialog";
+import { Menu, X } from "lucide-react";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
   NavigationMenu,
@@ -10,9 +11,17 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export const Header = () => {
   const [loginOpen, setLoginOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -25,68 +34,45 @@ export const Header = () => {
     }
   };
 
+  const navItems = [
+    { to: "/about", label: "About" },
+    { to: "/team", label: "Team" },
+    { to: "/careers", label: "Careers" },
+    { to: "/faq", label: "FAQ" },
+    { to: "/news", label: "Press" },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
       
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-3 items-center h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo - Left */}
-          <Link to="/" className="flex items-center justify-start">
+          <Link to="/" className="flex items-center">
             <img 
               src={verzaLogo} 
               alt="VERZA TV"
-              className="h-8 w-auto"
+              className="h-7 sm:h-8 w-auto"
             />
           </Link>
 
-          {/* Navigation - Center */}
-          <div className="flex items-center justify-center">
-            <NavigationMenu className="hidden md:block">
+          {/* Desktop Navigation - Center */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <Link to="/about">
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      About
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/team">
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      Team
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/careers">
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      Careers
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/faq">
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      FAQ
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link to="/news">
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      Press
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
+                {navItems.map((item) => (
+                  <NavigationMenuItem key={item.to}>
+                    <Link to={item.to}>
+                      <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        {item.label}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                ))}
                 <NavigationMenuItem>
                   <Link to="/#contact" onClick={handleContactClick}>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                       Contact
                     </NavigationMenuLink>
                   </Link>
@@ -95,17 +81,65 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Login & Theme Toggle - Right */}
-          <div className="flex items-center justify-end gap-3">
+          {/* Right Side - Login, Theme Toggle & Mobile Menu */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setLoginOpen(true)}
-              className="text-base font-medium"
+              className="text-sm font-medium hidden sm:flex"
             >
               Login
             </Button>
             <ThemeToggle />
+            
+            {/* Mobile Menu */}
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon" className="h-9 w-9">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-4 mt-8">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-lg font-medium py-2 hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <Link
+                    to="/#contact"
+                    onClick={(e) => {
+                      handleContactClick(e);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-lg font-medium py-2 hover:text-primary transition-colors"
+                  >
+                    Contact
+                  </Link>
+                  <Button
+                    variant="default"
+                    size="lg"
+                    onClick={() => {
+                      setLoginOpen(true);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="mt-4 w-full"
+                  >
+                    Login
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
