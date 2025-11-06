@@ -30,7 +30,7 @@ export const Content = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
                 </svg>
               </div>
-              <h3 className="text-base md:text-xl font-semibold mb-1.5 md:mb-2 text-foreground">Premium drama</h3>
+              <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Premium drama</h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Trending serialized stories and mini-dramas
               </p>
@@ -42,7 +42,7 @@ export const Content = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-base md:text-xl font-semibold mb-1.5 md:mb-2 text-foreground">Multiple genres</h3>
+              <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Multiple genres</h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Romance, horror, reality TV, and more
               </p>
@@ -54,7 +54,7 @@ export const Content = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-base md:text-xl font-semibold mb-1.5 md:mb-2 text-foreground">Licensed content</h3>
+              <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Licensed content</h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Feature movies and dramas from partners
               </p>
@@ -66,7 +66,7 @@ export const Content = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                 </svg>
               </div>
-              <h3 className="text-base md:text-xl font-semibold mb-1.5 md:mb-2 text-foreground">Additional media</h3>
+              <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Additional media</h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Podcasts, red carpet interviews, and more
               </p>
