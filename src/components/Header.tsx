@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LoginDialog } from "@/components/LoginDialog";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
   NavigationMenu,
@@ -93,6 +93,20 @@ export const Header = () => {
                   >
                     Login
                   </Button>
+                  
+                  {/* Footer section */}
+                  <div className="mt-8 pt-6 border-t border-border flex flex-col items-center gap-4">
+                    <img 
+                      src={verzaLogo} 
+                      alt="VERZA TV"
+                      className="h-10 w-auto opacity-80"
+                    />
+                    <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                      <span>Made with love</span>
+                      <Heart className="h-4 w-4 fill-red-500 text-red-500" />
+                      <span>in Hollywood</span>
+                    </div>
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>
