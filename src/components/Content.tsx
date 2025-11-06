@@ -79,23 +79,23 @@ export const Content = () => {
               Designed to grow together.
             </h3>
             <div className="grid md:grid-cols-3 gap-5 md:gap-8 lg:gap-12">
-              <div className="text-center space-y-1.5 md:space-y-3">
+              <div className="text-center space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">$4.99</div>
-                <div className="text-sm md:text-lg font-bold text-muted-foreground">Freemium to Premium</div>
+                <div className="text-base md:text-xl font-bold text-muted-foreground">Freemium to Premium</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   First 5 episodes free, then $4.99 to finish.
                 </div>
               </div>
-              <div className="text-center space-y-1.5 md:space-y-3">
+              <div className="text-center space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">Rewards</div>
-                <div className="text-sm md:text-lg font-bold text-muted-foreground">Community Incentives</div>
+                <div className="text-base md:text-xl font-bold text-muted-foreground">Community Incentives</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   Earn for daily logins, shares, and referrals
                 </div>
               </div>
-              <div className="text-center space-y-1.5 md:space-y-3">
+              <div className="text-center space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">V2</div>
-                <div className="text-sm md:text-lg font-bold text-muted-foreground">Subscription</div>
+                <div className="text-base md:text-xl font-bold text-muted-foreground">Subscription</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   Monthly unlimited access.
                 </div>
