@@ -52,22 +52,18 @@ export const Opportunity = () => {
             <h3 className="text-xl md:text-3xl font-semibold text-center mb-6 md:mb-10 text-foreground tracking-tight">
               The numbers tell the story.
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+            <div className="grid grid-cols-3 gap-4 md:gap-6 text-center">
               <div className="space-y-2">
-                <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">$59.57B</div>
+                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$59.57B</div>
                 <div className="text-xs md:text-sm text-muted-foreground leading-tight">Box office + streaming</div>
               </div>
               <div className="space-y-2">
-                <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">$34.8B</div>
+                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$34.8B</div>
                 <div className="text-xs md:text-sm text-muted-foreground leading-tight">Short form platforms</div>
               </div>
               <div className="space-y-2">
-                <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
+                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
                 <div className="text-xs md:text-sm text-muted-foreground leading-tight">Microdrama Apps</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-2xl md:text-4xl font-semibold text-primary tracking-tight">$300M</div>
-                <div className="text-xs md:text-sm text-muted-foreground leading-tight">Year 1 target</div>
               </div>
             </div>
           </Card>
