@@ -128,15 +128,6 @@ export const Footer = () => {
             <div>
               <h4 className="font-medium mb-3 md:mb-4 text-xs md:text-sm text-foreground">Connect</h4>
               <ul className="space-y-1 text-xs md:text-sm text-muted-foreground">
-                <li>
-                  <Link 
-                    to="/install" 
-                    onClick={(e) => handlePageClick(e, "/install")}
-                    className="hover:text-foreground transition-colors inline-block"
-                  >
-                    Install App
-                  </Link>
-                </li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block">TikTok</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block">Twitter</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors inline-block">Instagram</a></li>
