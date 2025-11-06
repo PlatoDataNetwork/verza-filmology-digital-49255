@@ -14,7 +14,7 @@ export const Opportunity = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}
-          <div className="text-center mb-6 md:mb-12 lg:mb-16 -mt-8 md:-mt-16">
+          <div className="text-center mb-6 md:mb-12 lg:mb-16 -mt-12 md:-mt-20">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               A defining moment.
             </h2>
