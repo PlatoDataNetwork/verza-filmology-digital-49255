@@ -6,11 +6,9 @@ import { LoginDialog } from "@/components/LoginDialog";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
 export const Header = () => {
@@ -79,64 +77,11 @@ export const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>FAQ</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[400px] p-4">
-                      <div className="space-y-3">
-                        <h4 className="font-medium text-sm">Frequently Asked Questions</h4>
-                        <ul className="space-y-2">
-                          <li>
-                            <Link 
-                              to="/legal#terms-of-use" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              What are VERZA TV's Terms of Use?
-                            </Link>
-                          </li>
-                          <li>
-                            <Link 
-                              to="/legal#privacy" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              How does VERZA TV protect my personal data?
-                            </Link>
-                          </li>
-                          <li>
-                            <Link 
-                              to="/legal#licensing" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              Can I share VERZA TV content with others?
-                            </Link>
-                          </li>
-                          <li>
-                            <Link 
-                              to="/legal#terms-of-use" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              What is VERZA TV's refund policy?
-                            </Link>
-                          </li>
-                          <li>
-                            <Link 
-                              to="/legal#licensing" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              How can I use VERZA TV content commercially?
-                            </Link>
-                          </li>
-                          <li>
-                            <Link 
-                              to="/legal#disclaimer" 
-                              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                              Does VERZA TV provide professional advice?
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
+                  <Link to="/faq">
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                      FAQ
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
