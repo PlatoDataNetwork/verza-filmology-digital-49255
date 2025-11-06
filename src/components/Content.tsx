@@ -97,7 +97,7 @@ export const Content = () => {
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">V2</div>
                 <div className="text-xs md:text-sm font-medium text-foreground">Subscription</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
-                  Monthly unlimited access in future release
+                  Monthly unlimited access.
                 </div>
               </div>
             </div>
