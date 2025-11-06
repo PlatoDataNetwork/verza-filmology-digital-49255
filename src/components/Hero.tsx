@@ -20,7 +20,7 @@ export const Hero = () => {
     >
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-24 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-2 sm:py-12 md:py-24 text-center">
         <div className="max-w-5xl mx-auto space-y-2 sm:space-y-3 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white tracking-tight px-4">
