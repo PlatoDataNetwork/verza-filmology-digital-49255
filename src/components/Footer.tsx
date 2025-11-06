@@ -37,6 +37,7 @@ export const Footer = () => {
                 src={verzaLogo} 
                 alt="VERZA TV"
                 className="h-10 md:h-12 w-auto mb-3 md:mb-4"
+                loading="lazy"
               />
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
                 VERZA TV
