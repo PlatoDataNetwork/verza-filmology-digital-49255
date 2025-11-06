@@ -94,23 +94,29 @@ export default function News() {
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
+                className="block p-6 md:p-8 rounded-2xl border border-border bg-card hover:bg-muted/30 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-sm font-semibold text-primary">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
                         {article.publication}
                       </span>
                       <span className="text-sm text-muted-foreground">
                         {article.date}
                       </span>
                     </div>
-                    <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h2 className="text-xl md:text-2xl font-semibold mb-2 group-hover:text-primary transition-colors leading-tight">
                       {article.title}
                     </h2>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary transition-colors mt-3">
+                      <span>Read article</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </div>
                   </div>
-                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
                 </div>
               </a>
             ))}
