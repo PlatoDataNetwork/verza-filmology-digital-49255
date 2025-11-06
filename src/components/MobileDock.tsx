@@ -1,14 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, HelpCircle, LogIn } from "lucide-react";
+import { Home, Info, HelpCircle, Mail, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const MobileDock = () => {
   const location = useLocation();
+  
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      const contactSection = document.querySelector("#contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const dockItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/about", label: "About", icon: Info },
     { to: "/faq", label: "FAQ", icon: HelpCircle },
+    { to: "/#contact", label: "Contact", icon: Mail, onClick: handleContactClick },
     { to: "/login", label: "Login", icon: LogIn },
   ];
 
@@ -23,6 +34,7 @@ export const MobileDock = () => {
             <Link
               key={item.to}
               to={item.to}
+              onClick={item.onClick}
               className={cn(
                 "flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all touch-manipulation min-w-[64px]",
                 isActive 
