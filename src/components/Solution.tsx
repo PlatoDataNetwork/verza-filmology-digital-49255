@@ -19,16 +19,10 @@ export const Solution = () => {
               Why we win.
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4">
-              The first U.S. platform bridging pop culture with on-demand mobile entertainment.
+              The first U.S. platform bridging pop culture with on-demand mobile entertainment.<br />
+              Tailored content that speaks to every segment.
             </p>
           </div>
-
-          {/* Mission Statement */}
-          <Card className="bg-background border-0 rounded-2xl p-6 md:p-10 mb-6 md:mb-12 shadow-sm">
-            <p className="text-lg md:text-2xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
-              Pick-and-choose programming for viewers aged 18–65.<br /> Tailored content that speaks to every segment.
-            </p>
-          </Card>
 
           {/* Key Differentiators - Uniform cards */}
           <div className="grid md:grid-cols-3 gap-4 md:gap-6">
