@@ -44,7 +44,7 @@ export const Hero = () => {
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
-          <p className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed pt-1 sm:pt-2 md:pt-4 px-4">
+          <p className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed pt-0 sm:pt-0 md:pt-2 px-4">
             Designed to elevate short-form storytelling. Built for the way you watch.
           </p>
 
