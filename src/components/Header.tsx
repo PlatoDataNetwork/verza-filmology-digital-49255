@@ -32,9 +32,9 @@ export const Header = () => {
       <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
       
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+        <div className="grid grid-cols-3 items-center h-16">
+          {/* Logo - Left */}
+          <Link to="/" className="flex items-center justify-start">
             <img 
               src={verzaLogo} 
               alt="VERZA TV"
@@ -42,8 +42,8 @@ export const Header = () => {
             />
           </Link>
 
-          {/* Navigation */}
-          <div className="flex items-center gap-6">
+          {/* Navigation - Center */}
+          <div className="flex items-center justify-center">
             <NavigationMenu className="hidden md:block">
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -140,18 +140,19 @@ export const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+          </div>
 
-            <div className="flex items-center gap-3">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setLoginOpen(true)}
-                className="text-sm font-medium"
-              >
-                Login
-              </Button>
-              <ThemeToggle />
-            </div>
+          {/* Login & Theme Toggle - Right */}
+          <div className="flex items-center justify-end gap-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setLoginOpen(true)}
+              className="text-sm font-medium"
+            >
+              Login
+            </Button>
+            <ThemeToggle />
           </div>
         </div>
       </div>
