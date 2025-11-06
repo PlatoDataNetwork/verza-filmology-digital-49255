@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Card } from "@/components/ui/card";
 
 export const Solution = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -23,16 +24,16 @@ export const Solution = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-background rounded-xl md:rounded-3xl p-5 md:p-10 lg:p-16 mb-6 md:mb-16 shadow-sm">
-            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
+          <Card className="bg-background border-0 rounded-2xl p-6 md:p-10 mb-6 md:mb-12 shadow-sm">
+            <p className="text-lg md:text-2xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
               Pick-and-choose programming for viewers aged 18–65. Tailored content that speaks to every segment.
             </p>
-          </div>
+          </Card>
 
-          {/* Key Differentiators - Apple grid style */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            <div className="space-y-3 md:space-y-4">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+          {/* Key Differentiators - Uniform cards */}
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <Card className="p-6 md:p-8 bg-background border-0 rounded-2xl space-y-3 md:space-y-4 active:bg-muted/30 md:hover:bg-muted/30 transition-all touch-manipulation">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                 <svg className="w-6 h-6 md:w-7 md:h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -41,10 +42,10 @@ export const Solution = () => {
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 Studio-friendly formats. Ideal for film and talent promotion across entertainment verticals.
               </p>
-            </div>
+            </Card>
 
-            <div className="space-y-3 md:space-y-4">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+            <Card className="p-6 md:p-8 bg-background border-0 rounded-2xl space-y-3 md:space-y-4 active:bg-muted/30 md:hover:bg-muted/30 transition-all touch-manipulation">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                 <svg className="w-6 h-6 md:w-7 md:h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
@@ -53,10 +54,10 @@ export const Solution = () => {
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 Bingeable vertical content under 1 minute. Perfect for a world where late-night TV is fading.
               </p>
-            </div>
+            </Card>
 
-            <div className="space-y-3 md:space-y-4">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+            <Card className="p-6 md:p-8 bg-background border-0 rounded-2xl space-y-3 md:space-y-4 active:bg-muted/30 md:hover:bg-muted/30 transition-all touch-manipulation">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                 <svg className="w-6 h-6 md:w-7 md:h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -65,7 +66,7 @@ export const Solution = () => {
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 Influencers, podcasts, red carpet content, and reality programming integrated seamlessly.
               </p>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
