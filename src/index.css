@@ -95,6 +95,14 @@ All colors MUST be HSL.
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .dark body {
+    background-image: url('/src/assets/dark-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
     letter-spacing: -0.02em;
