@@ -40,8 +40,8 @@ export const Hero = () => {
           />
           </div>
           
-          <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
-            Microdramas, Reality<br className="md:hidden" /> and More
+          <p className="text-3xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
+            Microdramas<br className="md:hidden" /> Reality and More
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
