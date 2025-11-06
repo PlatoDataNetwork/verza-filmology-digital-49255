@@ -40,7 +40,7 @@ export const Hero = () => {
           />
           </div>
           
-          <p className="text-3xl sm:text-4xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
             Microdramas,<br className="md:hidden" /> Reality and More
           </p>
 
