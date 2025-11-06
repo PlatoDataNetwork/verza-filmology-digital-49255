@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Users, Briefcase, HelpCircle, Mail } from "lucide-react";
+import { Home, Info, Briefcase, HelpCircle, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const MobileDock = () => {
@@ -17,7 +17,7 @@ export const MobileDock = () => {
 
   const dockItems = [
     { to: "/", label: "Home", icon: Home },
-    { to: "/team", label: "Team", icon: Users },
+    { to: "/about", label: "About", icon: Info },
     { to: "/careers", label: "Careers", icon: Briefcase },
     { to: "/faq", label: "FAQ", icon: HelpCircle },
     { to: "/#contact", label: "Contact", icon: Mail, onClick: handleContactClick },
