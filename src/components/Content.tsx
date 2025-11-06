@@ -81,7 +81,7 @@ export const Content = () => {
             <div className="grid md:grid-cols-3 gap-5 md:gap-8 lg:gap-12">
               <div className="text-center space-y-1.5 md:space-y-3">
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">$4.99</div>
-                <div className="text-sm md:text-lg font-bold text-muted-foreground">Flat fee model</div>
+                <div className="text-sm md:text-lg font-bold text-muted-foreground">Freemium to Premium Model</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   First 5 episodes free, then $4.99 to finish.
                 </div>
