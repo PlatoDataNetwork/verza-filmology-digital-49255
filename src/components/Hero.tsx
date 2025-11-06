@@ -36,28 +36,6 @@ export const Hero = () => {
             Designed to elevate short-form storytelling. Built for the way you watch.
           </p>
 
-          {/* CTA Buttons - Apple style */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 md:pt-8 w-full px-4 sm:px-0">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-base font-medium transition-all hover:scale-[1.02] min-h-[48px]"
-              asChild
-            >
-              <Link to="/about">
-                Learn more
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="w-full sm:w-auto rounded-full px-8 py-6 text-base font-medium border-2 transition-all hover:scale-[1.02] hover:border-foreground/30 min-h-[48px]"
-              asChild
-            >
-              <a href="#contact">Contact us</a>
-            </Button>
-          </div>
-
           {/* Stats - Minimalist Apple style */}
           <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-12 md:pt-20 max-w-4xl mx-auto px-2">
             <div className="space-y-1">

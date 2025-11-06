@@ -2,7 +2,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Plus } from "lucide-react";
 import { useState } from "react";
 import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
@@ -13,8 +13,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
 } from "@/components/ui/accordion";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 const FAQ = () => {
   const [loginOpen, setLoginOpen] = useState(false);
@@ -132,9 +132,12 @@ const FAQ = () => {
 
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left">
-                What are VERZA TV's Terms of Use?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  What are VERZA TV's Terms of Use?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 By accessing or using VERZA TV, you agree to be bound by our Terms of Use. These include maintaining account security, subscription payments, content usage restrictions, and prohibited conduct. We reserve the right to suspend or terminate accounts for violations.{" "}
                 <Link to="/legal#terms-of-use" className="text-primary hover:underline">
@@ -144,9 +147,12 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left">
-                How does VERZA TV protect my personal data?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  How does VERZA TV protect my personal data?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV implements industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. We collect account information, profile data, payment details, and usage data to provide and improve our services. You have the right to access, update, or delete your personal information at any time.{" "}
                 <Link to="/legal#privacy" className="text-primary hover:underline">
@@ -156,9 +162,12 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left">
-                Can I share VERZA TV content with others?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  Can I share VERZA TV content with others?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 No. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only. You may not copy, distribute, share, or create derivative works from our content without explicit written permission.{" "}
                 <Link to="/legal#licensing" className="text-primary hover:underline">
@@ -168,9 +177,12 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left">
-                What is VERZA TV's refund policy?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  What is VERZA TV's refund policy?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 Access to premium content requires a paid subscription. Subscriptions automatically renew unless cancelled before the renewal date. All payments are non-refundable except as required by law.{" "}
                 <Link to="/legal#terms-of-use" className="text-primary hover:underline">
@@ -180,9 +192,12 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left">
-                How can I use VERZA TV content for commercial purposes?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  How can I use VERZA TV content for commercial purposes?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 For commercial licensing, partnership opportunities, or permission to use our content, please contact us at{" "}
                 <a href="mailto:licensing@verzatv.com" className="text-primary hover:underline">
@@ -196,9 +211,12 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-6">
-              <AccordionTrigger className="text-left">
-                Does VERZA TV provide professional advice?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  Does VERZA TV provide professional advice?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 No. The content on VERZA TV is for general entertainment purposes only and does not constitute professional advice. Before making any decisions based on information found on our platform, we strongly advise you to consult with appropriate professionals.{" "}
                 <Link to="/legal#disclaimer" className="text-primary hover:underline">
@@ -208,45 +226,60 @@ const FAQ = () => {
             </AccordionItem>
 
             <AccordionItem value="item-7">
-              <AccordionTrigger className="text-left">
-                What is VERZA TV?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  What is VERZA TV?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-8">
-              <AccordionTrigger className="text-left">
-                Who founded VERZA TV?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  Who founded VERZA TV?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV was founded by Alan Mruvka, the visionary entrepreneur who created E! Entertainment Television. With decades of experience in entertainment media, Alan recognized the explosive opportunity in vertical short-form content.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-9">
-              <AccordionTrigger className="text-left">
-                What type of content does VERZA TV offer?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  What type of content does VERZA TV offer?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV specializes in premium vertical microdramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-10">
-              <AccordionTrigger className="text-left">
-                How is VERZA TV different from other streaming platforms?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  How is VERZA TV different from other streaming platforms?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV is purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-11">
-              <AccordionTrigger className="text-left">
-                Is VERZA TV available now?
-              </AccordionTrigger>
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  Is VERZA TV available now?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 VERZA TV is currently in development. We're building the next generation of entertainment for vertical shorts. Contact us at{" "}
                 <a href="mailto:info@verzatv.com" className="text-primary hover:underline">
