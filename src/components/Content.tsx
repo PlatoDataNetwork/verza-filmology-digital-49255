@@ -75,7 +75,7 @@ export const Content = () => {
 
           {/* Monetization - Mobile-optimized */}
           <div className="bg-muted/30 rounded-xl md:rounded-3xl p-5 md:p-10 lg:p-16">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-center mb-6 md:mb-12 text-foreground tracking-tight px-2">
+            <h3 className="text-lg sm:text-xl md:text-6xl lg:text-7xl font-semibold text-center mb-6 md:mb-12 text-foreground tracking-tight px-2">
               Designed to grow together.
             </h3>
             <div className="grid md:grid-cols-3 gap-5 md:gap-8 lg:gap-12">
