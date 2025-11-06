@@ -28,6 +28,19 @@ const Team = () => {
     knowsAbout: ["Entertainment", "Media", "Broadcasting", "Streaming", "Content Creation"]
   });
 
+  usePersonSchema({
+    name: "Larry Namer",
+    jobTitle: "Chief Strategy Officer",
+    description: "Co-founder of E! Entertainment Television and strategic visionary in global entertainment media.",
+    url: "https://verzatv.io/team",
+    worksFor: {
+      name: "VERZA TV",
+      url: "https://verzatv.io"
+    },
+    alumniOf: ["E! Entertainment Television"],
+    knowsAbout: ["Entertainment", "Media Strategy", "Broadcasting", "International Media", "Content Distribution"]
+  });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -69,6 +82,24 @@ const Team = () => {
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
                   Creator and founder of E! Entertainment Television, Alan brings decades of pioneering experience in entertainment media. His vision for vertical content streaming is revolutionizing how millions consume entertainment.
+                </p>
+              </div>
+            </div>
+
+            {/* Larry Namer */}
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                <div className="text-6xl font-bold text-primary">LN</div>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold text-foreground mb-2">
+                  Larry Namer
+                </h3>
+                <p className="text-base text-primary font-medium mb-3">
+                  Chief Strategy Officer
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
+                  Co-founder of E! Entertainment Television, Larry is a renowned media executive and strategic advisor. His expertise in global entertainment and media strategy drives VERZA TV's growth and market positioning.
                 </p>
               </div>
             </div>
