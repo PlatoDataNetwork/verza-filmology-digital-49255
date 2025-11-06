@@ -31,7 +31,7 @@ export const Content = () => {
                 </svg>
               </div>
               <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Premium drama</h3>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                 Trending serialized stories and mini-dramas
               </p>
             </div>
@@ -43,7 +43,7 @@ export const Content = () => {
                 </svg>
               </div>
               <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Multiple genres</h3>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                 Romance, horror, reality TV, and more
               </p>
             </div>
@@ -55,7 +55,7 @@ export const Content = () => {
                 </svg>
               </div>
               <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Licensed content</h3>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                 Feature movies and dramas from partners
               </p>
             </div>
@@ -67,7 +67,7 @@ export const Content = () => {
                 </svg>
               </div>
               <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Additional media</h3>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                 Podcasts, red carpet interviews, and more
               </p>
             </div>
