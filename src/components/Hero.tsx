@@ -32,7 +32,7 @@ export const Hero = () => {
             <img 
               src={verzaLogo} 
               alt="VERZA TV - Premium Vertical Entertainment Platform"
-              className="h-12 sm:h-16 md:h-24 lg:h-32 w-auto"
+              className="h-10 sm:h-16 md:h-24 lg:h-32 w-auto"
               width="512"
               height="128"
               loading="eager"
