@@ -28,7 +28,9 @@ export const Founder = () => {
           {/* Bio - Apple style quote/feature section */}
           <div className="bg-background rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16 mb-8 md:mb-16 shadow-sm">
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-center text-foreground/90">
-              Alan Mruvka holds over 35 years of experience in entertainment and real estate development. His most distinguished success revolutionized celebrity-based television as Founder of <span className="font-semibold text-foreground">E! Entertainment Television</span>, now valued at over <span className="font-semibold text-foreground">$15 billion</span>.
+              Alan Mruvka holds over 35 years of experience in entertainment and real estate development.<br />
+              His most distinguished success revolutionized celebrity-based television as Founder of<br />
+              <span className="font-semibold text-foreground">E! Entertainment Television</span>, now valued at over <span className="font-semibold text-foreground">$15 billion</span>.
             </p>
           </div>
 
