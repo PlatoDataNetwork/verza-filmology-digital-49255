@@ -48,78 +48,14 @@ export const Header = () => {
       
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Mobile Menu Hamburger - Far Left (Mobile Only) */}
-          <div className="flex items-center gap-3">
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon" className="h-10 w-10 -ml-2">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="w-[280px] sm:w-[320px]">
-                <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                </SheetHeader>
-                <nav className="flex flex-col gap-3 mt-6">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-base font-medium py-3 px-2 hover:bg-accent rounded-lg transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                  <Link
-                    to="/#contact"
-                    onClick={(e) => {
-                      handleContactClick(e);
-                      setMobileMenuOpen(false);
-                    }}
-                    className="text-base font-medium py-3 px-2 hover:bg-accent rounded-lg transition-colors"
-                  >
-                    Contact
-                  </Link>
-                  <Button
-                    variant="default"
-                    size="lg"
-                    onClick={() => {
-                      setLoginOpen(true);
-                      setMobileMenuOpen(false);
-                    }}
-                    className="mt-4 w-full min-h-[48px]"
-                  >
-                    Login
-                  </Button>
-                  
-                  {/* Footer section */}
-                  <div className="mt-8 pt-6 border-t border-border flex flex-col items-center gap-4">
-                    <img 
-                      src={verzaLogo} 
-                      alt="VERZA TV"
-                      className="h-10 w-auto opacity-80"
-                    />
-                    <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                      <span>Made with love</span>
-                      <Heart className="h-4 w-4 fill-red-500 text-red-500" />
-                      <span>in Hollywood</span>
-                    </div>
-                  </div>
-                </nav>
-              </SheetContent>
-            </Sheet>
-
-            {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <img 
-                src={verzaLogo} 
-                alt="VERZA TV"
-                className="h-7 sm:h-8 w-auto"
-              />
-            </Link>
-          </div>
+          {/* Logo - Left */}
+          <Link to="/" className="flex items-center">
+            <img 
+              src={verzaLogo} 
+              alt="VERZA TV"
+              className="h-7 sm:h-8 w-auto"
+            />
+          </Link>
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:flex items-center justify-center flex-1">

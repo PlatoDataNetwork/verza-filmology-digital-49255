@@ -94,9 +94,10 @@ All colors MUST be HSL.
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  padding-bottom: env(safe-area-inset-bottom);
+}
 
   html {
     scroll-behavior: smooth;

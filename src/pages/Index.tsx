@@ -6,6 +6,7 @@ import { Content } from "@/components/Content";
 import { Founder } from "@/components/Founder";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
@@ -136,7 +137,7 @@ const Index = () => {
     }
   }, [location]);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-16 md:pb-0">
       <Header />
       <Hero />
       <Opportunity />
@@ -145,6 +146,7 @@ const Index = () => {
       <Founder />
       <Contact />
       <Footer />
+      <MobileDock />
     </div>
   );
 };
