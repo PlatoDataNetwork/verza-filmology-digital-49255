@@ -94,7 +94,7 @@ export const Content = () => {
                 </div>
               </div>
               <div className="text-center space-y-1 md:space-y-2">
-                <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">V2</div>
+                <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">Unlimited</div>
                 <div className="text-base md:text-xl font-bold text-muted-foreground">Subscription</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   Monthly unlimited access.
