@@ -2,11 +2,11 @@ import { Card } from "@/components/ui/card";
 
 export const Opportunity = () => {
   return (
-    <section className="bg-background">
+    <section className="py-6 md:py-10 lg:py-12 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}
-          <div className="text-center mb-8 md:mb-12 lg:mb-16 pt-12 md:pt-20">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               A defining moment.
             </h2>
@@ -40,7 +40,7 @@ export const Opportunity = () => {
           </div>
 
           {/* Market Stats - Apple-style minimal presentation */}
-          <div className="bg-muted/30 rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16 mb-12 md:mb-20">
+          <div className="bg-muted/30 rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-12 text-foreground tracking-tight px-2">
               The numbers tell the story.
             </h3>
