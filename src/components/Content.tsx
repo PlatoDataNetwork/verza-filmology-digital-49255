@@ -88,7 +88,7 @@ export const Content = () => {
               </div>
               <div className="text-center space-y-1.5 md:space-y-3">
                 <div className="text-2xl md:text-4xl font-semibold text-foreground tracking-tight">Rewards</div>
-                <div className="text-sm md:text-lg font-bold text-muted-foreground">Community</div>
+                <div className="text-sm md:text-lg font-bold text-muted-foreground">Community Incentives</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   Earn for daily logins, shares, and referrals
                 </div>
