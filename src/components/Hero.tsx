@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-32 text-center">
         <div className="max-w-5xl mx-auto space-y-4 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
-          <p className="text-base sm:text-lg md:text-xl font-bold text-muted-foreground tracking-tight">
+          <p className="text-base sm:text-lg md:text-xl font-bold text-white tracking-tight">
             From the founders of E! Entertainment Television
           </p>
 
