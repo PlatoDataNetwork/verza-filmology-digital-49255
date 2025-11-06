@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 
 export const Opportunity = () => {
   return (
-    <section className="pt-2 pb-6 md:pt-4 md:pb-10 lg:pt-6 lg:pb-12 bg-background">
+    <section className="pt-0 pb-6 md:pb-10 lg:pb-12 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}
