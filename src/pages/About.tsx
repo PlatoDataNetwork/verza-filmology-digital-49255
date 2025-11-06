@@ -48,7 +48,7 @@ const About = () => {
   
   useMeta({
     title: "About VERZA TV - Revolutionary Vertical Entertainment",
-    description: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals from the founder of E! Entertainment Television.",
+    description: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals from the founders of E! Entertainment Television.",
     keywords: "VERZA TV, about, vertical entertainment, microdramas, reality content, mobile streaming, E! Entertainment",
     canonical: "https://verzatv.io/about",
     ogTitle: "About VERZA TV - Revolutionary Vertical Entertainment",

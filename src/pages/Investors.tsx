@@ -104,7 +104,7 @@ export default function Investors() {
               <Breadcrumb items={breadcrumbItems} />
               <div className="text-center space-y-6">
                 <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
-                  From the founder of E! Entertainment Television
+                  From the founders of E! Entertainment Television
                 </p>
                 <div className="flex justify-center">
                   <img 

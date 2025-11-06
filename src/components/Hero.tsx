@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto space-y-4 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
           <p className="text-xs sm:text-sm md:text-base font-medium text-muted-foreground tracking-tight">
-            From the founder of E! Entertainment Television
+            From the founders of E! Entertainment Television
           </p>
 
           {/* Main Headline - Logo */}

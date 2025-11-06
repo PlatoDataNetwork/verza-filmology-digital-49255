@@ -24,7 +24,7 @@ const Index = () => {
   
   useLocalBusinessSchema({
     name: "VERZA TV",
-    description: "The first U.S. platform for premium short-form vertical entertainment. From the founder of E! Entertainment Television.",
+    description: "The first U.S. platform for premium short-form vertical entertainment. From the founders of E! Entertainment Television.",
     address: {
       streetAddress: "6353 Hollywood Blvd",
       addressLocality: "Hollywood",
@@ -122,7 +122,7 @@ const Index = () => {
   
   useMeta({
     title: "Verza TV - The Next Generation of Vertical Shorts",
-    description: "From the founder of E! Entertainment Television. The first U.S. platform for premium short-form vertical entertainment.",
+    description: "From the founders of E! Entertainment Television. The first U.S. platform for premium short-form vertical entertainment.",
     keywords: "short-form video, vertical content, mobile entertainment, streaming platform, Verza TV, microdramas",
     canonical: "https://verzatv.io/",
     ogUrl: "https://verzatv.io/",
