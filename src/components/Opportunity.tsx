@@ -7,14 +7,14 @@ export const Opportunity = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`pt-0 pb-8 md:pb-10 lg:pb-12 bg-background transition-all duration-700 ${
+      className={`pt-0 pb-12 md:pb-16 lg:pb-20 bg-background transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}
-          <div className="text-center mb-6 md:mb-12 lg:mb-16 -mt-12 md:-mt-20">
+          <div className="text-center mb-6 md:mb-12 lg:mb-16 -mt-12 md:mt-8 lg:mt-12">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               A defining moment.
             </h2>
