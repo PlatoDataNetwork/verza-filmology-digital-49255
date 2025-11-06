@@ -26,7 +26,7 @@ export const Solution = () => {
           {/* Mission Statement */}
           <Card className="bg-background border-0 rounded-2xl p-6 md:p-10 mb-6 md:mb-12 shadow-sm">
             <p className="text-lg md:text-2xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
-              Pick-and-choose programming for viewers aged 18–65. Tailored content that speaks to every segment.
+              Pick-and-choose programming for viewers aged 18–65.<br /> Tailored content that speaks to every segment.
             </p>
           </Card>
 
