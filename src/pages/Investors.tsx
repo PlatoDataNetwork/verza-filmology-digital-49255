@@ -221,7 +221,7 @@ export default function Investors() {
               <div className="grid md:grid-cols-2 gap-8">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-xl">High Impact Partnerships</CardTitle>
+                    <CardTitle>High Impact Partnerships</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">High-impact influencer partnerships across entertainment verticals. Studio-friendly formats ideal for film and talent promotion. Creating authentic connections with audiences through trusted voices.</p>
@@ -229,7 +229,7 @@ export default function Investors() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-xl">Built for Mass Adoption</CardTitle>
+                    <CardTitle>Built for Mass Adoption</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">Built for mass adoption with bingeable, vertical content under 1 minute. Perfect distribution vehicle in a world where late-night is fading, replaced by creators on demand.</p>
