@@ -48,14 +48,64 @@ export const Header = () => {
       
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Left */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src={verzaLogo} 
-              alt="VERZA TV"
-              className="h-7 sm:h-8 w-auto"
-            />
-          </Link>
+          {/* Mobile Menu Hamburger - Far Left (Mobile Only) */}
+          <div className="flex items-center gap-3">
+            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon" className="h-10 w-10 -ml-2">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[280px] sm:w-[320px]">
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-3 mt-6">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-base font-medium py-3 px-2 hover:bg-accent rounded-lg transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <Link
+                    to="/#contact"
+                    onClick={(e) => {
+                      handleContactClick(e);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-base font-medium py-3 px-2 hover:bg-accent rounded-lg transition-colors"
+                  >
+                    Contact
+                  </Link>
+                  <Button
+                    variant="default"
+                    size="lg"
+                    onClick={() => {
+                      setLoginOpen(true);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="mt-4 w-full min-h-[48px]"
+                  >
+                    Login
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+
+            {/* Logo */}
+            <Link to="/" className="flex items-center">
+              <img 
+                src={verzaLogo} 
+                alt="VERZA TV"
+                className="h-7 sm:h-8 w-auto"
+              />
+            </Link>
+          </div>
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:flex items-center justify-center flex-1">
@@ -81,7 +131,7 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Login, Theme Toggle & Mobile Menu */}
+          {/* Right Side - Login & Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
@@ -92,54 +142,6 @@ export const Header = () => {
               Login
             </Button>
             <ThemeToggle />
-            
-            {/* Mobile Menu */}
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon" className="h-9 w-9">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[280px] sm:w-[350px]">
-                <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                </SheetHeader>
-                <nav className="flex flex-col gap-4 mt-8">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-lg font-medium py-2 hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                  <Link
-                    to="/#contact"
-                    onClick={(e) => {
-                      handleContactClick(e);
-                      setMobileMenuOpen(false);
-                    }}
-                    className="text-lg font-medium py-2 hover:text-primary transition-colors"
-                  >
-                    Contact
-                  </Link>
-                  <Button
-                    variant="default"
-                    size="lg"
-                    onClick={() => {
-                      setLoginOpen(true);
-                      setMobileMenuOpen(false);
-                    }}
-                    className="mt-4 w-full"
-                  >
-                    Login
-                  </Button>
-                </nav>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
       </div>

@@ -2,11 +2,11 @@ import { Card } from "@/components/ui/card";
 
 export const Opportunity = () => {
   return (
-    <section className="pt-0 pb-6 md:pb-10 lg:pb-12 bg-background">
+    <section className="pt-0 pb-8 md:pb-10 lg:pb-12 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}
-          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <div className="text-center mb-6 md:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               A defining moment.
             </h2>
@@ -16,7 +16,7 @@ export const Opportunity = () => {
           </div>
 
           {/* Key Points - Clean cards */}
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-20">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-20">
             <Card className="p-6 md:p-8 bg-muted/50 hover:bg-muted/70 transition-all border-0 rounded-2xl md:rounded-3xl">
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight">150M+</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">

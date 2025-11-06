@@ -1,10 +1,10 @@
 export const Content = () => {
   return (
-    <section className="py-6 md:py-10 lg:py-12 bg-background">
+    <section className="py-8 md:py-10 lg:py-12 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <div className="text-center mb-6 md:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               Content that connects.
             </h2>
@@ -14,7 +14,7 @@ export const Content = () => {
           </div>
 
           {/* Content Roadmap - Apple product grid style */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-20">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-20">
             <div className="p-6 md:p-8 bg-muted/50 rounded-2xl md:rounded-3xl">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6">
                 <svg className="w-5 h-5 md:w-6 md:h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">

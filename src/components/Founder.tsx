@@ -1,10 +1,10 @@
 export const Founder = () => {
   return (
-    <section className="py-6 md:py-10 lg:py-12 bg-muted/30">
+    <section className="py-8 md:py-10 lg:py-12 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-10 md:mb-12 lg:mb-16">
+          <div className="text-center mb-6 md:mb-12 lg:mb-16">
             <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-3 md:mb-4 tracking-tight">
               Founded by
             </p>
@@ -17,7 +17,7 @@ export const Founder = () => {
           </div>
 
           {/* Bio - Apple style quote/feature section */}
-          <div className="bg-background rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16 mb-12 md:mb-16 shadow-sm">
+          <div className="bg-background rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16 mb-8 md:mb-16 shadow-sm">
             <p className="text-base sm:text-lg md:text-xl leading-relaxed text-center text-foreground/90">
               Alan Mruvka holds over 35 years of experience in entertainment and real estate development. His most distinguished success revolutionized celebrity-based television as Founder of <span className="font-semibold text-foreground">E! Entertainment Television</span>, now valued at over <span className="font-semibold text-foreground">$15 billion</span>.
             </p>
