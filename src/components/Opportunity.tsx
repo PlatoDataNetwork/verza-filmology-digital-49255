@@ -49,7 +49,7 @@ export const Opportunity = () => {
 
           {/* Market Stats - Uniform cards */}
           <Card className="bg-muted/30 border-0 rounded-2xl p-6 md:p-10">
-            <h3 className="text-xl md:text-3xl font-semibold text-center mb-6 md:mb-10 text-foreground tracking-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-center mb-6 md:mb-10 text-foreground tracking-tight">
               Industry Metrics
             </h3>
             <div className="grid grid-cols-3 gap-3 md:gap-6 text-center">
