@@ -1,8 +1,12 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Opportunity } from "@/components/Opportunity";
+import { Solution } from "@/components/Solution";
+import { Content } from "@/components/Content";
+import { Founder } from "@/components/Founder";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
@@ -11,13 +15,6 @@ import { useVideoSchema } from "@/hooks/useVideoSchema";
 import { useFAQSchema } from "@/hooks/useFAQSchema";
 import { useLocalBusinessSchema } from "@/hooks/useLocalBusinessSchema";
 import { useItemListSchema } from "@/hooks/useItemListSchema";
-import { SectionSkeleton } from "@/components/SectionSkeleton";
-
-// Lazy load below-the-fold components for better initial page load
-const Opportunity = lazy(() => import("@/components/Opportunity").then(module => ({ default: module.Opportunity })));
-const Solution = lazy(() => import("@/components/Solution").then(module => ({ default: module.Solution })));
-const Content = lazy(() => import("@/components/Content").then(module => ({ default: module.Content })));
-const Founder = lazy(() => import("@/components/Founder").then(module => ({ default: module.Founder })));
 
 const Index = () => {
   const location = useLocation();
@@ -142,24 +139,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      
-      {/* Lazy loaded sections with fallback skeletons */}
-      <Suspense fallback={<SectionSkeleton />}>
-        <Opportunity />
-      </Suspense>
-      
-      <Suspense fallback={<SectionSkeleton />}>
-        <Solution />
-      </Suspense>
-      
-      <Suspense fallback={<SectionSkeleton />}>
-        <Content />
-      </Suspense>
-      
-      <Suspense fallback={<SectionSkeleton />}>
-        <Founder />
-      </Suspense>
-      
+      <Opportunity />
+      <Solution />
+      <Content />
+      <Founder />
       <Contact />
       <Footer />
     </div>

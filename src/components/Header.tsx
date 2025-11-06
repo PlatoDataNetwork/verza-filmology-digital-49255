@@ -94,12 +94,12 @@ export const Header = () => {
                     Login
                   </Button>
                   
+                  {/* Footer section */}
                   <div className="mt-8 pt-6 border-t border-border flex flex-col items-center gap-4">
                     <img 
                       src={verzaLogo} 
                       alt="VERZA TV"
                       className="h-10 w-auto opacity-80"
-                      loading="lazy"
                     />
                     <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
                       <span>Made with love</span>
@@ -111,6 +111,7 @@ export const Header = () => {
               </SheetContent>
             </Sheet>
 
+            {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
                 src={verzaLogo} 
