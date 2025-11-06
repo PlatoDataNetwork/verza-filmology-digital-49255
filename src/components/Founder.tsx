@@ -38,21 +38,21 @@ export const Founder = () => {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="text-center space-y-2 md:space-y-3">
               <div className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground tracking-tight">35+</div>
-              <p className="text-xs sm:text-sm text-muted-foreground px-2">
+              <p className="text-xs md:text-base text-muted-foreground px-2">
                 Years of entertainment experience
               </p>
             </div>
 
             <div className="text-center space-y-2 md:space-y-3">
               <div className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground tracking-tight">$15B</div>
-              <p className="text-xs sm:text-sm text-muted-foreground px-2">
+              <p className="text-xs md:text-base text-muted-foreground px-2">
                 Built E! into a global powerhouse
               </p>
             </div>
 
             <div className="text-center space-y-2 md:space-y-3">
               <div className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground tracking-tight">First</div>
-              <p className="text-xs sm:text-sm text-muted-foreground px-2">
+              <p className="text-xs md:text-base text-muted-foreground px-2">
                 Pioneered celebrity television
               </p>
             </div>
