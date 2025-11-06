@@ -93,7 +93,7 @@ export const Header = () => {
               variant="ghost"
               size="sm"
               onClick={() => setLoginOpen(true)}
-              className="text-sm font-medium"
+              className="text-base font-medium"
             >
               Login
             </Button>
