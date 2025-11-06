@@ -1,6 +1,6 @@
 export const Founder = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-muted/30">
+    <section className="py-6 md:py-10 lg:py-12 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

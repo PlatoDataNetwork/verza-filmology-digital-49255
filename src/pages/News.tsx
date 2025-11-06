@@ -1,15 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ChevronLeft, ExternalLink } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Header } from "@/components/Header";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { LoginDialog } from "@/components/LoginDialog";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import { useArticleSchema } from "@/hooks/useArticleSchema";
-import verzaLogo from "@/assets/verza-logo.png";
 
 const pressArticles = [
   {
@@ -45,7 +43,6 @@ const pressArticles = [
 ];
 
 export default function News() {
-  const [loginOpen, setLoginOpen] = useState(false);
   
   const breadcrumbItems = [
     { label: "Home", href: "/" },
@@ -86,34 +83,7 @@ export default function News() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
-      
-      {/* Header */}
-      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <img src={verzaLogo} alt="VERZA TV" className="h-8 w-auto" />
-            </Link>
-            <div className="flex items-center gap-4">
-              <Link 
-                to="/" 
-                className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                <ChevronLeft className="h-5 w-5" />
-                <span className="font-medium">Back</span>
-              </Link>
-              <button 
-                onClick={() => setLoginOpen(true)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
-              >
-                Login
-              </button>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="flex-grow">

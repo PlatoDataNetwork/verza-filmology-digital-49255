@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-8 md:py-12 lg:py-16 bg-background scroll-mt-20">
+    <section id="contact" className="py-6 md:py-10 lg:py-12 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}

@@ -1,16 +1,13 @@
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
-import { useState, useEffect } from "react";
-import { LoginDialog } from "@/components/LoginDialog";
+import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const Licensing = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
   
   const breadcrumbItems = [
     { label: "Home", href: "/" },
@@ -40,33 +37,7 @@ const Licensing = () => {
   
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
-      
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex h-16 items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors min-h-[44px]">
-              <ChevronLeft className="h-5 w-5" />
-              <span className="font-medium">Back</span>
-            </Link>
-            <div className="flex items-center gap-3">
-              <button 
-                onClick={() => setLoginOpen(true)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
-              >
-                Login
-              </button>
-              <Link 
-                to="/news" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                News
-              </Link>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-1">
         <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16">

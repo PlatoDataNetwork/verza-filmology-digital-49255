@@ -1,17 +1,14 @@
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
-import { useEffect, useState } from "react";
-import { LoginDialog } from "@/components/LoginDialog";
+import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import { usePersonSchema } from "@/hooks/usePersonSchema";
 
 const About = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
   
   const breadcrumbItems = [
     { label: "Home", href: "/" },
@@ -65,34 +62,7 @@ const About = () => {
   }, []);
   return (
     <div className="min-h-screen bg-background">
-      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
-      
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 text-foreground hover:text-primary transition-colors min-h-[44px]">
-              <ChevronLeft className="h-5 w-5" />
-              <span className="font-medium">Back</span>
-            </Link>
-            <div className="flex items-center gap-3">
-              <button 
-                onClick={() => setLoginOpen(true)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
-              >
-                Login
-              </button>
-              <Link 
-                to="/news" 
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-              >
-                News
-              </Link>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
