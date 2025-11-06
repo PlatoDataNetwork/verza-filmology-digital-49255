@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileDock } from "@/components/MobileDock";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
@@ -37,7 +38,7 @@ const Press = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16 md:pb-0">
       <Header />
 
       {/* Content */}
@@ -239,6 +240,7 @@ const Press = () => {
       </main>
 
       <Footer />
+      <MobileDock />
     </div>
   );
 };

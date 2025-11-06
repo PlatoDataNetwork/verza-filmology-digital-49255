@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileDock } from "@/components/MobileDock";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
@@ -24,7 +25,7 @@ const Licensing = () => {
   }, []);
   
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background pb-16 md:pb-0">
       <Header />
 
       <main className="flex-1">
@@ -159,6 +160,7 @@ const Licensing = () => {
       </main>
 
       <Footer />
+      <MobileDock />
     </div>
   );
 };

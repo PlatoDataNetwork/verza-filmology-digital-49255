@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
@@ -70,7 +71,7 @@ export default function News() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background pb-16 md:pb-0">
       <Header />
 
       {/* Main Content */}
@@ -125,6 +126,7 @@ export default function News() {
       </main>
 
       <Footer />
+      <MobileDock />
     </div>
   );
 }

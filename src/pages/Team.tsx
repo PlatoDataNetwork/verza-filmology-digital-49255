@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { usePersonSchema } from "@/hooks/usePersonSchema";
@@ -46,7 +47,7 @@ const Team = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16 md:pb-0">
       <Header />
 
       {/* Hero Section */}
@@ -136,6 +137,7 @@ const Team = () => {
       </section>
 
       <Footer />
+      <MobileDock />
     </div>
   );
 };
