@@ -1,26 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 const Press = () => {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Press", href: "/press" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Press", url: "https://verzatv.io/press" }
-  ]);
   
   useArticleSchema({
     headline: "VERZA TV Announces Launch of Revolutionary Vertical Content Platform",
@@ -55,7 +43,6 @@ const Press = () => {
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <Breadcrumb items={breadcrumbItems} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-4 md:mb-5 tracking-tight">
             Press & Media
           </h1>

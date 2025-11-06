@@ -1,12 +1,10 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import { useFAQSchema } from "@/hooks/useFAQSchema";
 import {
   Accordion,
@@ -17,17 +15,7 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 const FAQ = () => {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "FAQ", href: "/faq" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "FAQ", url: "https://verzatv.io/faq" }
-  ]);
   
   useFAQSchema([
     {
@@ -93,7 +81,6 @@ const FAQ = () => {
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <Breadcrumb items={breadcrumbItems} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
             Frequently Asked Questions
           </h1>

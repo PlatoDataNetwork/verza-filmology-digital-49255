@@ -1,24 +1,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const Legal = () => {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Legal", href: "/legal" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Legal", url: "https://verzatv.io/legal" }
-  ]);
   
   useMeta({
     title: "Legal - Terms of Use & Privacy Policy - VERZA TV",
@@ -112,7 +100,6 @@ const Legal = () => {
       {/* Content */}
       <main className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <Breadcrumb items={breadcrumbItems} />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
             Legal
           </h1>

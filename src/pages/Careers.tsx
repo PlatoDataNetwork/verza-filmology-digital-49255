@@ -1,27 +1,15 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const Careers = () => {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Careers", href: "/careers" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Careers", url: "https://verzatv.io/careers" }
-  ]);
   
   useMeta({
     title: "Careers at VERZA TV - Join Our Team",
@@ -82,7 +70,6 @@ const Careers = () => {
       {/* Hero Section */}
       <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <Breadcrumb items={breadcrumbItems} />
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-foreground mb-6 md:mb-8 tracking-tight">
               Build the Future of Entertainment

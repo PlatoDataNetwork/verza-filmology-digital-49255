@@ -3,30 +3,18 @@ import { useNavigate, Link } from "react-router-dom";
 import { ChevronLeft, LogOut, TrendingUp, Users, DollarSign, Target, Rocket, Zap } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Investors", href: "/investors" }
-  ];
 
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Investors", url: "https://verzatv.io/investors" }
-  ]);
 
   useMeta({
     title: "Investor Information - VERZA TV",
@@ -101,7 +89,6 @@ export default function Investors() {
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-6">
-              <Breadcrumb items={breadcrumbItems} />
               <div className="text-center space-y-6">
                 <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
                   From the founders of E! Entertainment Television

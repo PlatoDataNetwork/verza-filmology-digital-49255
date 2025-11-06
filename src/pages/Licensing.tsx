@@ -1,25 +1,13 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const Licensing = () => {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Licensing", href: "/licensing" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Licensing", url: "https://verzatv.io/licensing" }
-  ]);
   
   useMeta({
     title: "Content Licensing & DRM - VERZA TV",
@@ -42,7 +30,6 @@ const Licensing = () => {
       <main className="flex-1">
         <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16">
           <div className="max-w-4xl mx-auto">
-            <Breadcrumb items={breadcrumbItems} />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Licensing</h1>
             <p className="text-muted-foreground mb-8">
               Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}

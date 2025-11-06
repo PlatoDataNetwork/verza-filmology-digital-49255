@@ -3,10 +3,8 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 import { Footer } from "@/components/Footer";
-import { Breadcrumb } from "@/components/Breadcrumb";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 const pressArticles = [
@@ -44,17 +42,7 @@ const pressArticles = [
 
 export default function News() {
   
-  const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "News", href: "/news" }
-  ];
-  
   useOrganizationSchema();
-  
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "News", url: "https://verzatv.io/news" }
-  ]);
   
   useArticleSchema(pressArticles.map(article => ({
     headline: article.title,
@@ -90,7 +78,6 @@ export default function News() {
         <div className="container mx-auto px-4 py-12 md:py-16">
           {/* Page Header */}
           <div className="max-w-4xl mx-auto mb-12">
-            <Breadcrumb items={breadcrumbItems} />
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               VERZA TV in the News
             </h1>
