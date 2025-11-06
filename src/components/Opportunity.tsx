@@ -50,20 +50,20 @@ export const Opportunity = () => {
           {/* Market Stats - Uniform cards */}
           <Card className="bg-muted/30 border-0 rounded-2xl p-6 md:p-10">
             <h3 className="text-xl md:text-3xl font-semibold text-center mb-6 md:mb-10 text-foreground tracking-tight">
-              The numbers tell the story.
+              Industry Metrics
             </h3>
-            <div className="grid grid-cols-3 gap-4 md:gap-6 text-center">
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$59.57B</div>
-                <div className="text-xs md:text-sm text-muted-foreground leading-tight">Box office + streaming</div>
+            <div className="grid grid-cols-3 gap-3 md:gap-6 text-center">
+              <div className="space-y-1 md:space-y-2">
+                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$59.57B</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Box office + streaming</div>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$34.8B</div>
-                <div className="text-xs md:text-sm text-muted-foreground leading-tight">Short form platforms</div>
+              <div className="space-y-1 md:space-y-2">
+                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$34.8B</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Short form platforms</div>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
-                <div className="text-xs md:text-sm text-muted-foreground leading-tight">Microdrama Apps</div>
+              <div className="space-y-1 md:space-y-2">
+                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Microdrama Apps</div>
               </div>
             </div>
           </Card>
