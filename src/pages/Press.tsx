@@ -133,7 +133,7 @@ const Press = () => {
               
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-6 py-2">
-                  <p className="text-sm text-muted-foreground mb-2">October 15th, 2025</p>
+                  <p className="text-sm text-muted-foreground mb-2">October 15, 2025</p>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
                     <a 
                       href="https://www.hollywoodreporter.com/tv/tv-news/microdramas-come-to-america-verza-tv-vertical-soap-operas-1236401254/" 
@@ -141,11 +141,79 @@ const Press = () => {
                       rel="noopener noreferrer"
                       className="hover:text-primary transition-colors"
                     >
-                      VERZA TV Announces Launch of Revolutionary Vertical Content Platform
+                      E! Channel Founder to Launch the First U.S. Platform for Microdramas (Exclusive)
                     </a>
                   </h3>
                   <p className="text-base text-muted-foreground">
-                    Stay tuned for official announcements and updates about our platform launch.
+                    The Hollywood Reporter
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-primary pl-6 py-2">
+                  <p className="text-sm text-muted-foreground mb-2">October 15, 2025</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <a 
+                      href="https://www.imdb.com/news/ni65523634/?ref_=nwc_art_perm" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      E! Channel Founder to Launch the First U.S. Platform for Microdramas
+                    </a>
+                  </h3>
+                  <p className="text-base text-muted-foreground">
+                    IMDb News
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-primary pl-6 py-2">
+                  <p className="text-sm text-muted-foreground mb-2">October 15, 2025</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <a 
+                      href="https://stagerunner.net/microdramas-go-mainstream-fox-bets-big-verza-tv-launches-unions-set-the-rules/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      Microdramas Go Mainstream: Fox Bets Big, Verza TV Launches, Unions Set the Rules
+                    </a>
+                  </h3>
+                  <p className="text-base text-muted-foreground">
+                    StageRunner
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-primary pl-6 py-2">
+                  <p className="text-sm text-muted-foreground mb-2">October 15, 2025</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <a 
+                      href="https://www.msn.com/en-us/tv/news/new-us-based-microdrama-streaming-service-on-the-way/ar-AA1OB9y4?apiversion=v2&domshim=1&noservercache=1&noservertelemetry=1&batchservertelemetry=1&renderwebcomponents=1&wcseo=1" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      New US-based microdrama streaming service on the way
+                    </a>
+                  </h3>
+                  <p className="text-base text-muted-foreground">
+                    MSN
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-primary pl-6 py-2">
+                  <p className="text-sm text-muted-foreground mb-2">October 16, 2025</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    <a 
+                      href="https://thestreamable.com/verza-tv-microdrama-streaming-service-launching?utm_source=newsletter&utm_medium=email&utm_campaign=sendgrid" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      E! Channel Founder to Launch the First U.S. Platform for Microdramas
+                    </a>
+                  </h3>
+                  <p className="text-base text-muted-foreground">
+                    The Streamable
                   </p>
                 </div>
               </div>
