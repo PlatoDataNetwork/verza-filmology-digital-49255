@@ -1,6 +1,15 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export const Founder = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="py-8 md:py-10 lg:py-12 bg-muted/30">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-8 md:py-10 lg:py-12 bg-muted/30 transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

@@ -1,8 +1,16 @@
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Opportunity = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section className="pt-0 pb-8 md:pb-10 lg:pb-12 bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`pt-0 pb-8 md:pb-10 lg:pb-12 bg-background transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header - Apple style */}

@@ -1,10 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
-    <section id="contact" className="py-8 md:py-10 lg:py-12 bg-background scroll-mt-20">
+    <section 
+      id="contact" 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`py-8 md:py-10 lg:py-12 bg-background scroll-mt-20 transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}

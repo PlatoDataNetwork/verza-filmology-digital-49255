@@ -2,10 +2,18 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import verzaLogo from "@/assets/verza-logo.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Hero = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-background">
+    <section 
+      ref={ref as React.RefObject<HTMLElement>}
+      className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-background transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 text-center">
