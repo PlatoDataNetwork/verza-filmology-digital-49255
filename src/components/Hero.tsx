@@ -49,7 +49,7 @@ export const Hero = () => {
           </p>
 
           {/* Stats - Minimalist Apple style */}
-          <div className="hidden md:grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-6 sm:pt-8 md:pt-16 lg:pt-20 max-w-4xl mx-auto px-4">
+          <div className="hidden md:grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-6 sm:pt-8 md:pt-8 lg:pt-10 max-w-4xl mx-auto px-4">
             <div className="space-y-0.5 sm:space-y-1">
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
               <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Market size</div>
