@@ -40,7 +40,7 @@ export const Hero = () => {
           </div>
           
           <p className="text-3xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/90 font-medium tracking-tight max-w-4xl mx-auto px-4">
-            Microdramas, Reality & More.
+            Microdrama Network.
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
