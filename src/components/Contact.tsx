@@ -4,11 +4,11 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-12 md:py-20 lg:py-32 bg-background scroll-mt-20">
+    <section id="contact" className="py-8 md:py-12 lg:py-16 bg-background scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               Let's innovate together.
             </h2>
