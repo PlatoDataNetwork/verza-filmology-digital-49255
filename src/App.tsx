@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { FrontendAuthProvider } from "@/contexts/FrontendAuthContext";
+import { LoginProvider } from "@/contexts/LoginContext";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
@@ -28,28 +29,30 @@ const App = () => (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <FrontendAuthProvider>
         <AuthProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            <BrowserRouter>
-              <ScrollToTop />
-              <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
-                <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-                <Route path="/press" element={<ProtectedRoute><Press /></ProtectedRoute>} />
-                <Route path="/news" element={<ProtectedRoute><News /></ProtectedRoute>} />
-                <Route path="/careers" element={<ProtectedRoute><Careers /></ProtectedRoute>} />
-                <Route path="/team" element={<ProtectedRoute><Team /></ProtectedRoute>} />
-                <Route path="/legal" element={<ProtectedRoute><Legal /></ProtectedRoute>} />
-                <Route path="/licensing" element={<ProtectedRoute><Licensing /></ProtectedRoute>} />
-                <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
-                <Route path="/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </BrowserRouter>
-          </TooltipProvider>
+          <LoginProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Sonner />
+              <BrowserRouter>
+                <ScrollToTop />
+                <Routes>
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
+                  <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
+                  <Route path="/press" element={<ProtectedRoute><Press /></ProtectedRoute>} />
+                  <Route path="/news" element={<ProtectedRoute><News /></ProtectedRoute>} />
+                  <Route path="/careers" element={<ProtectedRoute><Careers /></ProtectedRoute>} />
+                  <Route path="/team" element={<ProtectedRoute><Team /></ProtectedRoute>} />
+                  <Route path="/legal" element={<ProtectedRoute><Legal /></ProtectedRoute>} />
+                  <Route path="/licensing" element={<ProtectedRoute><Licensing /></ProtectedRoute>} />
+                  <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
+                  <Route path="/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </BrowserRouter>
+            </TooltipProvider>
+          </LoginProvider>
         </AuthProvider>
       </FrontendAuthProvider>
     </ThemeProvider>

@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LoginDialog } from "@/components/LoginDialog";
+import { useLogin } from "@/contexts/LoginContext";
 import { Menu, X, Heart } from "lucide-react";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
@@ -20,8 +20,7 @@ import {
 } from "@/components/ui/sheet";
 
 export const Header = () => {
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { loginOpen, setLoginOpen } = useLogin();
   const location = useLocation();
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
