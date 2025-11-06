@@ -55,7 +55,7 @@ export const Opportunity = () => {
               </div>
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
-                <div className="text-xs sm:text-sm text-muted-foreground leading-tight">Short drama apps</div>
+                <div className="text-xs sm:text-sm text-muted-foreground leading-tight">Microdrama Apps</div>
               </div>
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-primary tracking-tight">$300M</div>
