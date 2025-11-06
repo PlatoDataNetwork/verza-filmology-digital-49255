@@ -64,22 +64,6 @@ export const Contact = () => {
               </Button>
             </form>
           </div>
-
-          {/* Contact Info - Minimal presentation */}
-          <div className="mt-8 md:mt-16 grid grid-cols-2 gap-6 md:gap-8 text-center">
-            <div className="space-y-1 md:space-y-2">
-              <p className="text-xs sm:text-sm font-medium text-muted-foreground">Phone</p>
-              <a href="tel:+13105606055" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors block">
-                +1 (310) 560-6055
-              </a>
-            </div>
-            <div className="space-y-1 md:space-y-2">
-              <p className="text-xs sm:text-sm font-medium text-muted-foreground">Email</p>
-              <a href="mailto:hello@verzatv.com" className="text-sm sm:text-base text-foreground hover:text-primary transition-colors block break-all">
-                hello@verzatv.com
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

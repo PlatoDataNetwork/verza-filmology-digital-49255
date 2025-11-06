@@ -42,11 +42,11 @@ export const Footer = () => {
                 VERZA TV
               </p>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-1">
-                6353 Hollywood Blvd
+                Los Angeles, CA 90028
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Hollywood, CA 90028
-              </p>
+              <a href="mailto:hello@verzatv.io" className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors leading-relaxed inline-block">
+                hello@verzatv.io
+              </a>
             </div>
             
             <div>
