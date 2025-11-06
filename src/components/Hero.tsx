@@ -24,7 +24,7 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto space-y-2 sm:space-y-3 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-muted-foreground tracking-tight px-4">
-            From the founders of E! Entertainment Television
+            From the Founders of E! Entertainment Television
           </p>
 
           {/* Main Headline - Logo */}
@@ -44,7 +44,7 @@ export const Hero = () => {
           </p>
 
           {/* Subheadline - Apple style descriptive text */}
-          <p className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Designed to elevate short-form storytelling. Built for the way you watch.
           </p>
 
