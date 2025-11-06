@@ -3,9 +3,13 @@ import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import verzaLogo from "@/assets/verza-logo.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useParallax } from "@/hooks/useParallax";
 
 export const Hero = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  const parallaxOffset1 = useParallax({ speed: 0.3 });
+  const parallaxOffset2 = useParallax({ speed: 0.5 });
+  const parallaxOffset3 = useParallax({ speed: 0.2 });
   
   return (
     <section 
@@ -62,8 +66,29 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-background -z-10"></div>
+      {/* Parallax Background Layers */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {/* Layer 3 - Slowest (Back) */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"
+          style={{ transform: `translateY(${parallaxOffset3}px)` }}
+        />
+        
+        {/* Layer 2 - Medium Speed */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-muted/40 via-muted/20 to-transparent"
+          style={{ transform: `translateY(${parallaxOffset2}px)` }}
+        />
+        
+        {/* Layer 1 - Fastest (Front) */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background"
+          style={{ transform: `translateY(${parallaxOffset1}px)` }}
+        />
+        
+        {/* Radial gradient overlay for depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_0%,hsl(var(--background))_70%)]" />
+      </div>
     </section>
   );
 };
