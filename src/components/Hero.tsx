@@ -14,14 +14,14 @@ export const Hero = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-background transition-all duration-700 ${
+      className={`relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex items-start md:items-center justify-center overflow-hidden bg-background transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24 text-center">
-        <div className="max-w-5xl mx-auto space-y-3 sm:space-y-4 md:space-y-6 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-24 text-center">
+        <div className="max-w-5xl mx-auto space-y-2 sm:space-y-3 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white tracking-tight px-4">
             From the founders of E! Entertainment Television
@@ -49,7 +49,7 @@ export const Hero = () => {
           </p>
 
           {/* Stats - Minimalist Apple style */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-8 sm:pt-12 md:pt-16 lg:pt-20 max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-6 sm:pt-8 md:pt-16 lg:pt-20 max-w-4xl mx-auto px-4">
             <div className="space-y-0.5 sm:space-y-1">
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground tracking-tight">$6.5B</div>
               <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground">Market size</div>
