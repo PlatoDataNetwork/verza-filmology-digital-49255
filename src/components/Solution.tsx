@@ -14,17 +14,17 @@ export const Solution = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-6 md:mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-3 md:mb-6 tracking-tight px-3">
               Why we win.
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               The first U.S. platform bridging pop culture with on-demand mobile entertainment.
             </p>
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-background rounded-2xl md:rounded-3xl p-6 md:p-10 lg:p-16 mb-8 md:mb-16 shadow-sm">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
+          <div className="bg-background rounded-xl md:rounded-3xl p-5 md:p-10 lg:p-16 mb-6 md:mb-16 shadow-sm">
+            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-center font-medium leading-relaxed text-foreground/90 tracking-tight">
               Pick-and-choose programming for viewers aged 18–65. Tailored content that speaks to every segment.
             </p>
           </div>

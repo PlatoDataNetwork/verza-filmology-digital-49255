@@ -20,26 +20,27 @@ export const Hero = () => {
     >
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-2 sm:py-12 md:py-24 text-center">
-        <div className="max-w-5xl mx-auto space-y-2 sm:space-y-3 md:space-y-6 animate-fade-in">
+      <div className="relative z-10 container mx-auto px-3 sm:px-6 py-6 sm:py-12 md:py-24 text-center">
+        <div className="max-w-5xl mx-auto space-y-3 sm:space-y-4 md:space-y-6 animate-fade-in">
           {/* Eyebrow */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-muted-foreground tracking-tight px-4">
             From the Founders of E! Entertainment Television
           </p>
 
           {/* Main Headline - Logo */}
-          <div className="flex justify-center py-2">
+          <div className="flex justify-center py-1 sm:py-2">
             <img 
               src={verzaLogo} 
               alt="VERZA TV - Premium Vertical Entertainment Platform"
-              className="h-10 sm:h-16 md:h-24 lg:h-32 w-auto"
+              className="h-12 sm:h-16 md:h-24 lg:h-32 w-auto"
               width="512"
               height="128"
               loading="eager"
+              fetchPriority="high"
             />
           </div>
           
-          <p className="text-3xl sm:text-4xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
+          <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
             Microdramas, Reality<br className="md:hidden" /> and More
           </p>
 
@@ -48,19 +49,19 @@ export const Hero = () => {
             Designed to elevate short-form storytelling. Built for the way you watch.
           </p>
 
-          {/* Stats - Minimalist Apple style */}
-          <div className="hidden md:grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-6 sm:pt-8 md:pt-8 lg:pt-10 max-w-4xl mx-auto px-4">
-            <div className="space-y-0.5 sm:space-y-1">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">$6.5B</div>
-              <div className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground">Market size</div>
+          {/* Stats - Mobile-optimized, always visible */}
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-4 sm:pt-6 md:pt-8 lg:pt-10 max-w-4xl mx-auto px-4">
+            <div className="space-y-1 sm:space-y-1.5">
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">$6.5B</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Market size</div>
             </div>
-            <div className="space-y-0.5 sm:space-y-1">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">150M+</div>
-              <div className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground">Downloads</div>
+            <div className="space-y-1 sm:space-y-1.5">
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">150M+</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Downloads</div>
             </div>
-            <div className="space-y-0.5 sm:space-y-1">
-              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">18–65+</div>
-              <div className="text-lg sm:text-xl md:text-lg lg:text-xl text-muted-foreground">Demographics</div>
+            <div className="space-y-1 sm:space-y-1.5">
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">18–65+</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Demographics</div>
             </div>
           </div>
         </div>

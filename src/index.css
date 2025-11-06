@@ -94,6 +94,8 @@ All colors MUST be HSL.
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
   html {
@@ -110,5 +112,20 @@ All colors MUST be HSL.
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Mobile optimization utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Safe area support for mobile notches */
+  @supports (padding: max(0px)) {
+    .safe-area-inset-top {
+      padding-top: max(env(safe-area-inset-top), 1rem);
+    }
+    .safe-area-inset-bottom {
+      padding-bottom: max(env(safe-area-inset-bottom), 1rem);
+    }
   }
 }
