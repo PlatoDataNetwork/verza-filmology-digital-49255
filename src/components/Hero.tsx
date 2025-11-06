@@ -14,7 +14,7 @@ export const Hero = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className={`relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex items-start md:items-center justify-center overflow-hidden bg-background transition-all duration-700 ${
+      className={`relative min-h-[50vh] md:min-h-[calc(100vh-4rem)] flex items-start md:items-center justify-center overflow-hidden bg-background transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
