@@ -9,14 +9,7 @@ interface FrontendAuthContextType {
 const FrontendAuthContext = createContext<FrontendAuthContextType | undefined>(undefined);
 
 export const FrontendAuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const auth = localStorage.getItem("verza-frontend-auth");
-    if (auth === "true") {
-      setIsAuthenticated(true);
-    }
-  }, []);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   const login = (password: string): boolean => {
     if (password === "VERZATV1") {
