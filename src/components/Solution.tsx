@@ -19,8 +19,7 @@ export const Solution = () => {
               Why we win.
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4">
-              The first U.S. platform bridging pop culture with on-demand mobile entertainment.<br />
-              Tailored content that speaks to every segment.
+              The first U.S. platform bridging pop culture with on-demand mobile entertainment by Hollywood insiders.
             </p>
           </div>
 
@@ -46,7 +45,7 @@ export const Solution = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-foreground tracking-tight">Built for mass adoption</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Bingeable vertical content under 1 minute. Perfect for a world where late-night TV is fading.
+                60-90 second bingeable vertical content. Perfect for a world where late-night TV is fading.
               </p>
             </Card>
 

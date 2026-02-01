@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import alanMruvka from "@/assets/alan-mruvka.png";
 
 export const Founder = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -20,9 +21,16 @@ export const Founder = () => {
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
               Alan Mruvka
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium px-4 mb-6 md:mb-8">
               Founder of E! Entertainment Television
             </p>
+            <div className="flex justify-center">
+              <img 
+                src={alanMruvka} 
+                alt="Alan Mruvka - Founder of E! Entertainment Television"
+                className="w-48 h-auto md:w-64 lg:w-80 rounded-2xl shadow-lg object-cover"
+              />
+            </div>
           </div>
 
           {/* Bio - Apple style quote/feature section */}
