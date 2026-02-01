@@ -19,7 +19,8 @@ export const Solution = () => {
               Why we win.
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4">
-              The first U.S. platform bridging pop culture with on-demand mobile entertainment by Hollywood insiders.
+              The first U.S. platform bridging pop culture with on-demand mobile entertainment by Hollywood insiders.<br />
+              60-90 second bingeable vertical content. Perfect for a world where late-night TV is fading.
             </p>
           </div>
 
