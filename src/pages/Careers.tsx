@@ -111,58 +111,6 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-12 md:py-20 bg-muted/10">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-8 md:mb-12 text-center tracking-tight">
-            Benefits & Perks
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Competitive Compensation</h4>
-                <p className="text-sm text-muted-foreground">Salary, equity, and performance bonuses</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Health & Wellness</h4>
-                <p className="text-sm text-muted-foreground">Comprehensive medical, dental, and vision coverage</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Flexible Work</h4>
-                <p className="text-sm text-muted-foreground">Remote-friendly with flexible hours</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Professional Development</h4>
-                <p className="text-sm text-muted-foreground">Learning budget and conference attendance</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Unlimited PTO</h4>
-                <p className="text-sm text-muted-foreground">Take time off when you need it</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold text-xl">✓</div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Team Events</h4>
-                <p className="text-sm text-muted-foreground">Regular offsites and team building activities</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Open Positions */}
       <section className="py-12 md:py-20 bg-background">
