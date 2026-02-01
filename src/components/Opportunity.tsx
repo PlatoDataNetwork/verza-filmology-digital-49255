@@ -52,7 +52,7 @@ export const Opportunity = () => {
             <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-center mb-6 md:mb-10 text-foreground tracking-tight">
               Industry Metrics
             </h3>
-            <div className="grid grid-cols-3 gap-3 md:gap-6 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 text-center">
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$59.57B</div>
                 <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Box office + streaming</div>
@@ -64,6 +64,10 @@ export const Opportunity = () => {
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
                 <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Current Microdrama Apps</div>
+              </div>
+              <div className="space-y-1 md:space-y-2">
+                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$23B</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">2030 Projection for Microdrama Apps</div>
               </div>
             </div>
           </Card>
