@@ -33,8 +33,8 @@ const Team = () => {
 
   usePersonSchema({
     name: "Larry Namer",
-    jobTitle: "Chief Strategy Officer",
-    description: "Co-founder of E! Entertainment Television and strategic visionary in global entertainment media.",
+    jobTitle: "Senior Advisor",
+    description: "Founder of E! Entertainment Television, Larry is a renowned media executive and strategic advisor.",
     url: "https://verzatv.io/team",
     worksFor: {
       name: "VERZA TV",
@@ -68,8 +68,8 @@ const Team = () => {
 
       {/* Team Members */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <div className="grid sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 justify-center">
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
@@ -98,7 +98,7 @@ const Team = () => {
               <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
                 <img 
                   src={larryNamerImg} 
-                  alt="Larry Namer - Chief Strategy Officer"
+                  alt="Larry Namer - Senior Advisor"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -107,25 +107,10 @@ const Team = () => {
                   Larry Namer
                 </h3>
                 <p className="text-sm sm:text-base text-primary font-medium mb-2 sm:mb-3">
-                  Chief Strategy Officer
+                  Senior Advisor
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
-                  Co-founder of E! Entertainment Television, Larry is a renowned media executive and strategic advisor. His expertise in global entertainment and media strategy drives VERZA TV's growth and market positioning.
-                </p>
-              </div>
-            </div>
-
-            {/* Placeholder for future team members */}
-            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4 opacity-50 hidden lg:flex">
-              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-muted/30 flex items-center justify-center">
-                <div className="text-3xl sm:text-4xl text-muted-foreground">+</div>
-              </div>
-              <div className="px-4">
-                <h3 className="text-lg sm:text-xl font-semibold text-muted-foreground mb-2">
-                  More to Come
-                </h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">
-                  Our team is growing
+                  Founder of E! Entertainment Television, Larry is a renowned media executive and strategic advisor. His expertise in global entertainment and media strategy drives VERZA TV's growth and market positioning.
                 </p>
               </div>
             </div>
