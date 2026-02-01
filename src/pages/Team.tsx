@@ -4,6 +4,8 @@ import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { usePersonSchema } from "@/hooks/usePersonSchema";
+import alanMruvkaImg from "@/assets/alan-mruvka-team.png";
+import larryNamerImg from "@/assets/larry-namer.png";
 
 const Team = () => {
   useMeta({
@@ -71,8 +73,12 @@ const Team = () => {
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <div className="text-5xl sm:text-6xl font-bold text-primary">AM</div>
+              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
+                <img 
+                  src={alanMruvkaImg} 
+                  alt="Alan Mruvka - Founder & CEO"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="px-4">
                 <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
@@ -89,8 +95,12 @@ const Team = () => {
 
             {/* Larry Namer */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <div className="text-5xl sm:text-6xl font-bold text-primary">LN</div>
+              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
+                <img 
+                  src={larryNamerImg} 
+                  alt="Larry Namer - Chief Strategy Officer"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="px-4">
                 <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
