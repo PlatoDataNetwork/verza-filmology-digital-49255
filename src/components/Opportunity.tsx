@@ -63,7 +63,7 @@ export const Opportunity = () => {
               </div>
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
-                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Microdrama Apps</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Current Microdrama Apps</div>
               </div>
             </div>
           </Card>
