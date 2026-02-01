@@ -28,39 +28,11 @@ const Careers = () => {
   
   const openPositions = [
     {
-      title: "Senior Full-Stack Engineer",
-      department: "Engineering",
+      title: "General Application",
+      department: "Various",
       location: "Los Angeles, CA / Remote",
       type: "Full-time",
-      description: "Build scalable infrastructure for the next generation of vertical content streaming."
-    },
-    {
-      title: "Product Designer",
-      department: "Design",
-      location: "Los Angeles, CA / Remote",
-      type: "Full-time",
-      description: "Design intuitive, beautiful experiences that delight millions of users."
-    },
-    {
-      title: "Content Strategy Lead",
-      department: "Content",
-      location: "Los Angeles, CA",
-      type: "Full-time",
-      description: "Shape our content strategy and work with creators to bring compelling stories to life."
-    },
-    {
-      title: "Marketing Manager",
-      department: "Marketing",
-      location: "Los Angeles, CA / Remote",
-      type: "Full-time",
-      description: "Drive growth and brand awareness for VERZA TV across digital channels."
-    },
-    {
-      title: "Data Scientist",
-      department: "Data & Analytics",
-      location: "Los Angeles, CA / Remote",
-      type: "Full-time",
-      description: "Leverage data to optimize content recommendations and user engagement."
+      description: "We're always looking for talented individuals to join our team. Apply now and tell us how you can contribute."
     }
   ];
 
