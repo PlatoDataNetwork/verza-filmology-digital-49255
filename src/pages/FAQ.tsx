@@ -20,6 +20,10 @@ const FAQ = () => {
   
   useFAQSchema([
     {
+      question: "What is VERZA TV?",
+      answer: "VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing."
+    },
+    {
       question: "What are VERZA TV's Terms of Use?",
       answer: "By accessing or using VERZA TV, you agree to be bound by our Terms of Use. These include maintaining account security, subscription payments, content usage restrictions, and prohibited conduct. We reserve the right to suspend or terminate accounts for violations."
     },
@@ -29,7 +33,7 @@ const FAQ = () => {
     },
     {
       question: "Can I share VERZA TV content with others?",
-      answer: "No. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only. You may not copy, distribute, share, or create derivative works from our content without explicit written permission."
+      answer: "Other than 30 second promotional clips, you may not copy, distribute, share, or create derivative works from our content without explicit written permission. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only."
     },
     {
       question: "What is VERZA TV's refund policy?",
@@ -37,15 +41,11 @@ const FAQ = () => {
     },
     {
       question: "How can I use VERZA TV content for commercial purposes?",
-      answer: "For commercial licensing, partnership opportunities, or permission to use our content, please contact us at licensing@verzatv.com. All content requires explicit written permission for commercial use."
+      answer: "For commercial licensing, partnership opportunities, or permission to use our content, please contact us at licensing@verzatv.io. All content requires explicit written permission for commercial use."
     },
     {
       question: "Does VERZA TV provide professional advice?",
       answer: "No. The content on VERZA TV is for general entertainment purposes only and does not constitute professional advice. Before making any decisions based on information found on our platform, we strongly advise you to consult with appropriate professionals."
-    },
-    {
-      question: "What is VERZA TV?",
-      answer: "VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing."
     },
     {
       question: "Who founded VERZA TV?",
@@ -57,11 +57,11 @@ const FAQ = () => {
     },
     {
       question: "How is VERZA TV different from other streaming platforms?",
-      answer: "VERZA TV is purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation."
+      answer: "VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation."
     },
     {
       question: "Is VERZA TV available now?",
-      answer: "VERZA TV is currently in development. We're building the next generation of entertainment for vertical shorts. Contact us at info@verzatv.com to learn more about launch plans and partnership opportunities."
+      answer: "Yes! VERZA TV is available now on iOS and Android. Download it from the App Store or Google Play Store."
     }
   ]);
   
@@ -93,6 +93,18 @@ const FAQ = () => {
             <AccordionItem value="item-1">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
+                  What is VERZA TV?
+                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
+                </AccordionPrimitive.Trigger>
+              </AccordionPrimitive.Header>
+              <AccordionContent className="text-muted-foreground">
+                VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionPrimitive.Header className="flex">
+                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   What are VERZA TV's Terms of Use?
                   <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
                 </AccordionPrimitive.Trigger>
@@ -105,7 +117,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2">
+            <AccordionItem value="item-3">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   How does VERZA TV protect my personal data?
@@ -120,7 +132,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3">
+            <AccordionItem value="item-4">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   Can I share VERZA TV content with others?
@@ -128,14 +140,14 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                No. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only. You may not copy, distribute, share, or create derivative works from our content without explicit written permission.{" "}
+                Other than 30 second promotional clips, you may not copy, distribute, share, or create derivative works from our content without explicit written permission. All content on VERZA TV is protected by copyright and intellectual property laws. You receive a limited, non-exclusive, non-transferable license for personal, non-commercial use only.{" "}
                 <Link to="/legal#licensing" className="text-primary hover:underline">
                   Read Licensing Terms
                 </Link>
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4">
+            <AccordionItem value="item-5">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   What is VERZA TV's refund policy?
@@ -150,7 +162,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5">
+            <AccordionItem value="item-6">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   How can I use VERZA TV content for commercial purposes?
@@ -159,8 +171,8 @@ const FAQ = () => {
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
                 For commercial licensing, partnership opportunities, or permission to use our content, please contact us at{" "}
-                <a href="mailto:licensing@verzatv.com" className="text-primary hover:underline">
-                  licensing@verzatv.com
+                <a href="mailto:licensing@verzatv.io" className="text-primary hover:underline">
+                  licensing@verzatv.io
                 </a>
                 . All content requires explicit written permission for commercial use.{" "}
                 <Link to="/legal#licensing" className="text-primary hover:underline">
@@ -169,7 +181,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6">
+            <AccordionItem value="item-7">
               <AccordionPrimitive.Header className="flex">
                 <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
                   Does VERZA TV provide professional advice?
@@ -181,18 +193,6 @@ const FAQ = () => {
                 <Link to="/legal#disclaimer" className="text-primary hover:underline">
                   Read Disclaimer
                 </Link>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-7">
-              <AccordionPrimitive.Header className="flex">
-                <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between py-4 text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-45">
-                  What is VERZA TV?
-                  <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-              <AccordionContent className="text-muted-foreground">
-                VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing.
               </AccordionContent>
             </AccordionItem>
 
@@ -228,7 +228,7 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                VERZA TV is purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation.
+                VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation.
               </AccordionContent>
             </AccordionItem>
 
@@ -240,11 +240,14 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                VERZA TV is currently in development. We're building the next generation of entertainment for vertical shorts. Contact us at{" "}
-                <a href="mailto:info@verzatv.com" className="text-primary hover:underline">
-                  info@verzatv.com
+                Yes! VERZA TV is available now. Download it from the{" "}
+                <a href="https://apps.apple.com/us/app/verzatv/id6752884623" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  App Store
                 </a>
-                {" "}to learn more about launch plans and partnership opportunities.
+                {" "}or{" "}
+                <a href="https://play.google.com/store/apps/details?id=com.verzatv.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Google Play Store
+                </a>.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
