@@ -50,22 +50,18 @@ export const Hero = () => {
           </p>
 
           {/* Stats - Mobile-optimized, always visible */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-4 sm:pt-6 md:pt-8 lg:pt-10 max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-4 sm:pt-6 md:pt-8 lg:pt-10 max-w-4xl mx-auto px-4">
             <div className="space-y-1 sm:space-y-1.5">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">$6.5B</div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">Market size</div>
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">$6.5B</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Market size</div>
             </div>
             <div className="space-y-1 sm:space-y-1.5">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">$24.8B</div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">2030 Projection</div>
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">150M+</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Downloads</div>
             </div>
             <div className="space-y-1 sm:space-y-1.5">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">150M+</div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">Downloads</div>
-            </div>
-            <div className="space-y-1 sm:space-y-1.5">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">18–65+</div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">Demographics</div>
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">18–65+</div>
+              <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Demographics</div>
             </div>
           </div>
         </div>
