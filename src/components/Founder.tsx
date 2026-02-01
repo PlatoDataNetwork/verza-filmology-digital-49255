@@ -28,7 +28,7 @@ export const Founder = () => {
               <img 
                 src={alanMruvka} 
                 alt="Alan Mruvka - Founder of E! Entertainment Television"
-                className="w-48 h-auto md:w-64 lg:w-80 rounded-2xl shadow-lg object-cover"
+                className="w-96 h-auto md:w-[32rem] lg:w-[40rem] rounded-2xl shadow-lg object-cover"
               />
             </div>
           </div>
