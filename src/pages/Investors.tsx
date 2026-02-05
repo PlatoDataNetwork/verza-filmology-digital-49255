@@ -83,7 +83,7 @@ export default function Investors() {
             <div className="max-w-5xl mx-auto space-y-6">
               <div className="text-center space-y-6">
                 <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
-                  From the founders of E! Entertainment Television
+                  From the Co-Founder of E! Entertainment Television
                 </p>
                 <div className="flex justify-center">
                   <img 
@@ -151,7 +151,7 @@ export default function Investors() {
                 </Card>
                 <Card className="border-primary">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary">$300M</CardTitle>
+                    <CardTitle className="text-2xl text-primary">$50M</CardTitle>
                     <CardDescription>VERZA TV Target Year 1</CardDescription>
                   </CardHeader>
                 </Card>
@@ -174,7 +174,7 @@ export default function Investors() {
                     <CardTitle>Lacks Influencers</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Limited influencer-driven content and celebrity involvement in platforms.</p>
+                    <p className="text-muted-foreground">Limited influencer-driven content in other programs.</p>
                   </CardContent>
                 </Card>
                 <Card>
@@ -182,12 +182,12 @@ export default function Investors() {
                     <CardTitle>Ability to Promote</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Studios lack mobile-native platforms as late-night TV declines rapidly.</p>
+                    <p className="text-muted-foreground">Studios lack mobile-native platforms as traditional TV ownership.</p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Lack Other Medias</CardTitle>
+                    <CardTitle>Lack of Other Programming</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">No integration of podcasts, red carpet events, or reality programming.</p>
