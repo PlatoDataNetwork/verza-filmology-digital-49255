@@ -21,7 +21,7 @@ const FAQ = () => {
   useFAQSchema([
     {
       question: "What is VERZA TV?",
-      answer: "VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing."
+      answer: "VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive micro-dramas optimized for mobile viewing."
     },
     {
       question: "What are VERZA TV's Terms of Use?",
@@ -53,11 +53,11 @@ const FAQ = () => {
     },
     {
       question: "What type of content does VERZA TV offer?",
-      answer: "VERZA TV specializes in premium vertical microdramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones."
+      answer: "VERZA TV specializes in premium vertical micro-dramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones."
     },
     {
       question: "How is VERZA TV different from other streaming platforms?",
-      answer: "VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation."
+      answer: "VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium micro-dramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation."
     },
     {
       question: "Is VERZA TV available now?",
@@ -98,7 +98,7 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive microdramas optimized for mobile viewing.
+                VERZA TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, the creator and founder of E! Entertainment Television, VERZA TV delivers addictive micro-dramas optimized for mobile viewing.
               </AccordionContent>
             </AccordionItem>
 
@@ -216,7 +216,7 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                VERZA TV specializes in premium vertical microdramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones.
+                VERZA TV specializes in premium vertical micro-dramas designed for mobile-first audiences. Our content includes compelling stories across genres like romance, thriller, drama, and more, all optimized for vertical viewing on smartphones.
               </AccordionContent>
             </AccordionItem>
 
@@ -228,7 +228,7 @@ const FAQ = () => {
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
               <AccordionContent className="text-muted-foreground">
-                VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium microdramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation.
+                VERZA TV is the first U.S. based micro-drama app and is founded by true Hollywood insiders. We are purpose-built for vertical short-form content, unlike traditional streaming platforms. We focus exclusively on premium micro-dramas that deliver complete storytelling experiences in bite-sized episodes, perfect for today's mobile-first generation.
               </AccordionContent>
             </AccordionItem>
 
