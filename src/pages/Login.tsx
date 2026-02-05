@@ -17,7 +17,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/");
+      navigate("/investors");
     }
   }, [isAuthenticated, navigate]);
 
@@ -31,7 +31,7 @@ const Login = () => {
         title: "Login successful",
         description: "Welcome to VERZA TV",
       });
-      navigate("/");
+      navigate("/investors");
     } else {
       toast({
         variant: "destructive",
