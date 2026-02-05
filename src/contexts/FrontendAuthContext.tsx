@@ -9,12 +9,15 @@ interface FrontendAuthContextType {
 const FrontendAuthContext = createContext<FrontendAuthContextType | undefined>(undefined);
 
 export const FrontendAuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    // Check sessionStorage on initial load (clears when browser/tab closes)
+    return sessionStorage.getItem("verza-frontend-auth") === "true";
+  });
 
   const login = (password: string): boolean => {
     if (password === "VERZATV1") {
       setIsAuthenticated(true);
-      localStorage.setItem("verza-frontend-auth", "true");
+      sessionStorage.setItem("verza-frontend-auth", "true");
       return true;
     }
     return false;
@@ -22,7 +25,7 @@ export const FrontendAuthProvider = ({ children }: { children: ReactNode }) => {
 
   const logout = () => {
     setIsAuthenticated(false);
-    localStorage.removeItem("verza-frontend-auth");
+    sessionStorage.removeItem("verza-frontend-auth");
   };
 
   return (
