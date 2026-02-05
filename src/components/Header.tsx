@@ -42,12 +42,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo - Left */}
           <Link to="/" className="flex items-center">
-            <div className="flex flex-col leading-none">
-              <img src={verzaLogo} alt="VERZA TV" className="h-7 sm:h-8 w-auto" />
-              <span className="mt-0.5 text-[10px] sm:text-[11px] text-muted-foreground tracking-wide">
-                A Filmology Labs Company
-              </span>
-            </div>
+            <img src={verzaLogo} alt="VERZA TV" className="h-7 sm:h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation - Center */}
