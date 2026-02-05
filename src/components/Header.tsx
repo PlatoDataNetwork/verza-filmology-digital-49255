@@ -38,6 +38,7 @@ export const Header = () => {
     { to: "/team", label: "Team" },
     { to: "/careers", label: "Careers" },
     { to: "/faq", label: "FAQ" },
+    { to: "/login", label: "Investor" },
     { to: "/news", label: "Press" },
   ];
 
@@ -80,16 +81,8 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Login & Theme Toggle */}
+          {/* Right Side - Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setLoginOpen(true)}
-              className="text-sm font-medium hidden sm:flex"
-            >
-              Login
-            </Button>
             <ThemeToggle />
           </div>
         </div>
