@@ -49,7 +49,6 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Pascal Borno", title: "COO" },
     { name: "Wendy Fishman", title: "VP, Development and Production, Micro-Dramas" },
     { name: "Darrell Weaver", title: "CTO" },
     { name: "Allison Reichel", title: "" },
@@ -75,23 +74,23 @@ const Team = () => {
 
       {/* Founders Row */}
       <section className="py-6 sm:py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-12 justify-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-10 justify-center">
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full overflow-hidden">
                 <img 
                   src={alanMruvkaImg} 
                   alt="Alan Mruvka - Founder & CEO"
-                  className="w-full h-full object-cover object-[center_20%]"
+                  className="w-[140%] h-[140%] object-cover object-[center_15%] -ml-[20%] -mt-[5%]"
                 />
               </div>
-              <div className="px-2">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
+              <div className="px-1">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-1">
                   Alan Mruvka
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base text-primary font-medium">
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
                   Founder & CEO
                 </p>
               </div>
@@ -99,19 +98,36 @@ const Team = () => {
 
             {/* Larry Namer */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full overflow-hidden">
                 <img 
                   src={larryNamerImg} 
                   alt="Larry Namer - Senior Advisor"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="px-2">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
+              <div className="px-1">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-1">
                   Larry Namer
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base text-primary font-medium">
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
                   Senior Advisor
+                </p>
+              </div>
+            </div>
+
+            {/* Pascal Borno */}
+            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full bg-muted flex items-center justify-center">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground">
+                  PB
+                </span>
+              </div>
+              <div className="px-1">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-1">
+                  Pascal Borno
+                </h3>
+                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
+                  COO
                 </p>
               </div>
             </div>
