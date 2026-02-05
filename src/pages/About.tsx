@@ -117,7 +117,7 @@ const About = () => {
             <section className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">The Opportunity</h2>
               <p className="text-base md:text-lg leading-relaxed">
-                The vertical content market is experiencing explosive growth, with a $6.5 billion market size and over 150 million downloads across leading platforms. VERZA TV is positioned at the forefront of this transformation, serving audiences from 18 to 65+ who demand premium, mobile-optimized entertainment.
+                The vertical content market is experiencing explosive growth, with an $11 billion market size and over 150 million downloads across leading platforms. VERZA TV is positioned at the forefront of this transformation, serving audiences from 18 to 65+ who demand premium, mobile-optimized entertainment.
               </p>
             </section>
 

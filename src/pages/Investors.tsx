@@ -19,11 +19,11 @@ export default function Investors() {
 
   useMeta({
     title: "Investor Information - VERZA TV",
-    description: "Explore VERZA TV's investment opportunity in the $6.5B short-form vertical content market. Learn about our market strategy, target audience, and growth plans.",
-    keywords: "VERZA TV investors, investment opportunity, vertical content market, microdramas, short-form video investment",
+    description: "Explore VERZA TV's investment opportunity in the $11B short-form vertical content market. Learn about our market strategy, target audience, and growth plans.",
+    keywords: "VERZA TV investors, investment opportunity, vertical content market, micro-dramas, short-form video investment",
     canonical: "https://verzatv.io/investors",
     ogTitle: "Investor Information - VERZA TV",
-    ogDescription: "Explore VERZA TV's investment opportunity in the $6.5B short-form vertical content market.",
+    ogDescription: "Explore VERZA TV's investment opportunity in the $11B short-form vertical content market.",
     ogUrl: "https://verzatv.io/investors",
   });
 
@@ -145,7 +145,7 @@ export default function Investors() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-2xl">$6.5B</CardTitle>
+                    <CardTitle className="text-2xl">$11B</CardTitle>
                     <CardDescription>Short Form Drama App Market</CardDescription>
                   </CardHeader>
                 </Card>

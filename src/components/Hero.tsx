@@ -55,7 +55,7 @@ export const Hero = () => {
           {/* Stats - Mobile-optimized, always visible */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 pt-4 sm:pt-6 md:pt-8 lg:pt-10 max-w-4xl mx-auto px-4">
             <div className="space-y-1 sm:space-y-1.5">
-              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">$6.5B</div>
+              <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight">$11B</div>
               <div className="text-xs sm:text-sm md:text-lg lg:text-xl text-muted-foreground">Market size</div>
             </div>
             <div className="space-y-1 sm:space-y-1.5">

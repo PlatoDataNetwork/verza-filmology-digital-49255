@@ -81,7 +81,7 @@ const Press = () => {
                 VERZA TV is revolutionizing vertical content entertainment, founded by the visionary behind E! Entertainment Television. We deliver premium micro-dramas, reality content, and more, designed specifically for mobile-first audiences aged 18–65+.
               </p>
               <p className="text-base md:text-lg leading-relaxed">
-                As the first U.S. platform bridging pop culture with on-demand mobile entertainment, VERZA TV is positioned at the forefront of the $6.5 billion short-form vertical content market.
+                As the first U.S. platform bridging pop culture with on-demand mobile entertainment, VERZA TV is positioned at the forefront of the $11 billion short-form vertical content market.
               </p>
             </section>
 
@@ -91,7 +91,7 @@ const Press = () => {
               <ul className="space-y-2 text-base md:text-lg leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
-                  <span><strong>Market Size:</strong> $6.5B vertical content market with 150M+ downloads globally</span>
+                  <span><strong>Market Size:</strong> $11B vertical content market with 150M+ downloads globally</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
