@@ -6,13 +6,13 @@ import { Footer } from "@/components/Footer";
 import { MobileDock } from "@/components/MobileDock";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useAuth } from "@/contexts/AuthContext";
+import { useFrontendAuth } from "@/contexts/FrontendAuthContext";
 import { useMeta } from "@/hooks/useMeta";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
 export default function Investors() {
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout } = useFrontendAuth();
   const navigate = useNavigate();
 
   useOrganizationSchema();
@@ -29,7 +29,7 @@ export default function Investors() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate("/");
+      navigate("/login");
     }
   }, [isAuthenticated, navigate]);
 
