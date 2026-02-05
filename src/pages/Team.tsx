@@ -4,7 +4,7 @@ import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { usePersonSchema } from "@/hooks/usePersonSchema";
-import alanMruvkaImg from "@/assets/alan-mruvka-team.png";
+import alanMruvkaImg from "@/assets/alan-mruvka.png";
 import larryNamerImg from "@/assets/larry-namer.png";
 
 const Team = () => {
@@ -48,69 +48,70 @@ const Team = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const executiveTeam = [
+    { name: "Pascal Borno", title: "COO" },
+    { name: "Wendy Fishman", title: "VP, Development and Production, Micro-Dramas" },
+    { name: "Darrell Weaver", title: "CTO" },
+    { name: "Allison Reichel", title: "" },
+  ];
+
   return (
     <div className="min-h-screen bg-background pb-16 md:pb-0">
       <Header />
 
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-6 sm:py-8 md:py-10 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 sm:mb-6 md:mb-8 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-3 sm:mb-4 tracking-tight">
               Leadership Team
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4">
               Meet the visionaries and innovators building the future of vertical entertainment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Team Members */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-background">
+      {/* Founders Row */}
+      <section className="py-6 sm:py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="grid sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12 justify-center">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-12 justify-center">
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
                 <img 
                   src={alanMruvkaImg} 
                   alt="Alan Mruvka - Founder & CEO"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="px-4">
-                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
+              <div className="px-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
                   Alan Mruvka
                 </h3>
-                <p className="text-sm sm:text-base text-primary font-medium mb-2 sm:mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-primary font-medium">
                   Founder & CEO
-                </p>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
-                  Creator and founder of E! Entertainment Television, Alan brings decades of pioneering experience in entertainment media. His vision for vertical content streaming is revolutionizing how millions consume entertainment.
                 </p>
               </div>
             </div>
 
             {/* Larry Namer */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
                 <img 
                   src={larryNamerImg} 
                   alt="Larry Namer - Senior Advisor"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="px-4">
-                <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
+              <div className="px-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-1">
                   Larry Namer
                 </h3>
-                <p className="text-sm sm:text-base text-primary font-medium mb-2 sm:mb-3">
+                <p className="text-xs sm:text-sm md:text-base text-primary font-medium">
                   Senior Advisor
-                </p>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto">
-                  Founder of E! Entertainment Television, Larry is a renowned media executive and strategic advisor. His expertise in global entertainment and media strategy drives VERZA TV's growth and market positioning.
                 </p>
               </div>
             </div>
@@ -119,8 +120,35 @@ const Team = () => {
         </div>
       </section>
 
+      {/* Executive Team */}
+      <section className="py-6 sm:py-8 md:py-12 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+            {executiveTeam.map((member) => (
+              <div key={member.name} className="flex flex-col items-center text-center space-y-2 sm:space-y-3">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-muted flex items-center justify-center">
+                  <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+                <div className="px-2">
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold text-foreground mb-0.5">
+                    {member.name}
+                  </h3>
+                  {member.title && (
+                    <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium leading-tight">
+                      {member.title}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Join Us Section */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground mb-3 sm:mb-4 tracking-tight">
             Join Our Team
