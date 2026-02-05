@@ -83,7 +83,7 @@ const Team = () => {
                 <img 
                   src={alanMruvkaImg} 
                   alt="Alan Mruvka - Founder & CEO"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[center_5%]"
                 />
               </div>
               <div className="px-1">
