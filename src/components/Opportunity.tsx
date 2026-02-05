@@ -54,7 +54,7 @@ export const Opportunity = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 text-center">
               <div className="space-y-1 md:space-y-2">
-                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$59.57B</div>
+                <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$59.5B+</div>
                 <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Box office + streaming</div>
               </div>
               <div className="space-y-1 md:space-y-2">
