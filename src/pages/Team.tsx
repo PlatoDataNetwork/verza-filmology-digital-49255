@@ -4,7 +4,7 @@ import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { usePersonSchema } from "@/hooks/usePersonSchema";
-import alanMruvkaImg from "@/assets/alan-mruvka.png";
+import alanMruvkaImg from "@/assets/alan-mruvka-headshot.png";
 import larryNamerImg from "@/assets/larry-namer.png";
 
 const Team = () => {
@@ -83,7 +83,7 @@ const Team = () => {
                 <img 
                   src={alanMruvkaImg} 
                   alt="Alan Mruvka - Founder & CEO"
-                  className="w-[180%] h-[180%] object-cover object-[center_10%] -ml-[40%] -mt-[10%]"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="px-1">
