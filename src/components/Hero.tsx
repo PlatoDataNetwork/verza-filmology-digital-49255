@@ -28,16 +28,19 @@ export const Hero = () => {
           </p>
 
           {/* Main Headline - Logo */}
-          <div className="flex justify-center py-1 sm:py-2">
-          <img 
-            src={verzaLogo} 
-            alt="VERZA TV - Premium Vertical Entertainment Platform"
-            className="h-12 sm:h-16 md:h-24 lg:h-32 w-auto"
-            width="512"
-            height="128"
-            loading="eager"
-            fetchPriority="high"
-          />
+          <div className="flex flex-col items-center py-1 sm:py-2">
+            <img 
+              src={verzaLogo} 
+              alt="VERZA TV - Premium Vertical Entertainment Platform"
+              className="h-12 sm:h-16 md:h-24 lg:h-32 w-auto"
+              width="512"
+              height="128"
+              loading="eager"
+              fetchPriority="high"
+            />
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground mt-1 sm:mt-2 tracking-wide">
+              A Filmology Labs Company
+            </p>
           </div>
           
           <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground/90 font-bold tracking-normal max-w-4xl mx-auto px-4">
