@@ -15,7 +15,7 @@ export const Founder = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-6 md:mb-12 lg:mb-16">
-            <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-3 md:mb-4 tracking-tight">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium mb-3 md:mb-4 tracking-tight">
               Founded by
             </p>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground mb-4 md:mb-6 tracking-tight px-2">
@@ -28,7 +28,7 @@ export const Founder = () => {
               <img 
                 src={alanMruvka} 
                 alt="Alan Mruvka - Founder of E! Entertainment Television"
-                className="w-96 h-auto md:w-[32rem] lg:w-[40rem] rounded-2xl shadow-lg object-cover"
+                className="w-24 h-auto md:w-32 lg:w-40 rounded-2xl shadow-lg object-cover"
               />
             </div>
           </div>
