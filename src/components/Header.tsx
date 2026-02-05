@@ -89,7 +89,7 @@ export const Header = () => {
               onClick={() => setLoginOpen(true)}
               className="text-sm font-medium hidden sm:flex"
             >
-              Investor Presentation
+              Login
             </Button>
             <ThemeToggle />
           </div>
