@@ -81,8 +81,16 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Theme Toggle */}
+          {/* Right Side - Investor Presentation & Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setLoginOpen(true)}
+              className="text-sm font-medium hidden sm:flex"
+            >
+              Investor Presentation
+            </Button>
             <ThemeToggle />
           </div>
         </div>
