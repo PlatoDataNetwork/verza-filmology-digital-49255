@@ -13,7 +13,7 @@ const Press = () => {
   
   useArticleSchema({
     headline: "VERZA TV Announces Launch of Revolutionary Vertical Content Platform",
-    description: "VERZA TV, founded by the creator of E! Entertainment Television, is launching the first U.S. platform for premium short-form vertical entertainment. The platform will deliver microdramas, reality shows, and premium vertical originals to mobile-first audiences.",
+    description: "VERZA TV, founded by the creator of E! Entertainment Television, is launching the first U.S. platform for premium short-form vertical entertainment. The platform will deliver micro-dramas, reality shows, and premium vertical originals to mobile-first audiences.",
     image: "https://verzatv.io/og-image.png",
     datePublished: "2025-10-15T00:00:00Z",
     author: {
@@ -78,7 +78,7 @@ const Press = () => {
             <section className="space-y-3">
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Company Overview</h2>
               <p className="text-base md:text-lg leading-relaxed">
-                VERZA TV is revolutionizing vertical content entertainment, founded by the visionary behind E! Entertainment Television. We deliver premium microdramas, reality content, and more, designed specifically for mobile-first audiences aged 18–65+.
+                VERZA TV is revolutionizing vertical content entertainment, founded by the visionary behind E! Entertainment Television. We deliver premium micro-dramas, reality content, and more, designed specifically for mobile-first audiences aged 18–65+.
               </p>
               <p className="text-base md:text-lg leading-relaxed">
                 As the first U.S. platform bridging pop culture with on-demand mobile entertainment, VERZA TV is positioned at the forefront of the $6.5 billion short-form vertical content market.
@@ -99,7 +99,7 @@ const Press = () => {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
-                  <span><strong>Content:</strong> Microdramas, reality shows, and premium vertical originals</span>
+                  <span><strong>Content:</strong> Micro-dramas, reality shows, and premium vertical originals</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>

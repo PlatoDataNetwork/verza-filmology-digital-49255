@@ -37,11 +37,11 @@ const About = () => {
   
   useMeta({
     title: "About VERZA TV - Revolutionary Vertical Entertainment",
-    description: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals from the founders of E! Entertainment Television.",
-    keywords: "VERZA TV, about, vertical entertainment, microdramas, reality content, mobile streaming, E! Entertainment",
+    description: "Learn about VERZA TV's mission to revolutionize vertical entertainment with micro-dramas, reality content, and premium originals from the founders of E! Entertainment Television.",
+    keywords: "VERZA TV, about, vertical entertainment, micro-dramas, reality content, mobile streaming, E! Entertainment",
     canonical: "https://verzatv.io/about",
     ogTitle: "About VERZA TV - Revolutionary Vertical Entertainment",
-    ogDescription: "Learn about VERZA TV's mission to revolutionize vertical entertainment with microdramas, reality content, and premium originals.",
+    ogDescription: "Learn about VERZA TV's mission to revolutionize vertical entertainment with micro-dramas, reality content, and premium originals.",
     ogUrl: "https://verzatv.io/about",
   });
   
@@ -68,7 +68,7 @@ const About = () => {
             <section className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Our Vision</h2>
               <p className="text-base md:text-lg leading-relaxed">
-                VERZA TV is pioneering the future of short-form vertical content. We believe that compelling stories don't need hours to be told—they need the right format, the right creators, and the right platform. From microdramas that captivate in minutes to reality content that keeps you coming back, we're building the destination for vertical entertainment.
+                VERZA TV is pioneering the future of short-form vertical content. We believe that compelling stories don't need hours to be told—they need the right format, the right creators, and the right platform. From micro-dramas that captivate in minutes to reality content that keeps you coming back, we're building the destination for vertical entertainment.
               </p>
             </section>
 
@@ -85,7 +85,7 @@ const About = () => {
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">What We Offer</h2>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h3 className="text-lg md:text-xl font-semibold text-foreground">Microdramas</h3>
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground">Micro-Dramas</h3>
                   <p className="text-base md:text-lg leading-relaxed">
                     Binge-worthy serialized content designed for vertical viewing. Each episode delivers complete story arcs in bite-sized formats, perfect for today's mobile-first audience.
                   </p>
