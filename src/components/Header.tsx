@@ -1,8 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { LoginDialog } from "@/components/LoginDialog";
-import { useLogin } from "@/contexts/LoginContext";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
   NavigationMenu,
@@ -12,7 +10,6 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export const Header = () => {
-  const { loginOpen, setLoginOpen } = useLogin();
   const location = useLocation();
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -36,8 +33,6 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
-      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
-
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo - Left */}
@@ -76,15 +71,15 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Investor Presentation & Theme Toggle */}
+          {/* Right Side - Login & Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setLoginOpen(true)}
+              asChild
               className="text-sm font-medium hidden sm:flex"
             >
-              Login
+              <Link to="/login">Login</Link>
             </Button>
             <ThemeToggle />
           </div>

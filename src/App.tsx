@@ -37,16 +37,16 @@ const App = () => (
                 <ScrollToTop />
                 <Routes>
                   <Route path="/login" element={<Login />} />
-                  <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
-                  <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-                  <Route path="/press" element={<ProtectedRoute><Press /></ProtectedRoute>} />
-                  <Route path="/news" element={<ProtectedRoute><News /></ProtectedRoute>} />
-                  <Route path="/careers" element={<ProtectedRoute><Careers /></ProtectedRoute>} />
-                  <Route path="/team" element={<ProtectedRoute><Team /></ProtectedRoute>} />
-                  <Route path="/legal" element={<ProtectedRoute><Legal /></ProtectedRoute>} />
-                  <Route path="/licensing" element={<ProtectedRoute><Licensing /></ProtectedRoute>} />
+                  <Route path="/" element={<Index />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/legal" element={<Legal />} />
+                  <Route path="/licensing" element={<Licensing />} />
                   <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
-                  <Route path="/faq" element={<ProtectedRoute><FAQ /></ProtectedRoute>} />
+                  <Route path="/faq" element={<FAQ />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
