@@ -187,7 +187,7 @@ export default function Investors() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle>Lack of Other Programming</CardTitle>
+                    <CardTitle>Lack of Programming</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">No integration of podcasts, red carpet events, or reality programming.</p>
