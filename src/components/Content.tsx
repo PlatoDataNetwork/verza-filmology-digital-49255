@@ -18,7 +18,7 @@ export const Content = () => {
               Content that connects.
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Trending serialized stories and micro-dramas.
+              Launched with 80+ Trending serialized stories and micro-dramas.
             </p>
           </div>
 
