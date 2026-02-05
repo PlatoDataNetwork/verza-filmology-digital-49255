@@ -21,12 +21,6 @@ export const Solution = () => {
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4">
               Founded by Hollywood Insider Alan Mruvka the co-founder of E! Entertainment Television.
             </p>
-            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4 mt-1">
-              The first U.S. platform bridging pop culture with on-demand mobile entertainment.
-            </p>
-            <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-5xl mx-auto leading-relaxed px-4 mt-1">
-              60-90 second bingeable vertical content. Perfect for a world where late-night TV is fading.
-            </p>
           </div>
 
           {/* Key Differentiators - Uniform cards */}
