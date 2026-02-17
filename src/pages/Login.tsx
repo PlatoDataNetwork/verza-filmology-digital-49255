@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background pb-16 md:pb-0">
       <Header />
-      <main className="flex-grow flex items-center justify-center px-4">
+      <main className="flex-grow flex items-center justify-center px-4 py-12 md:py-16">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center space-y-6">
             <img 
