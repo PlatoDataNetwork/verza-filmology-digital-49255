@@ -14,7 +14,7 @@ export const Opportunity = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* App Store Links */}
-          <div className="flex flex-col items-center gap-3 mb-8 md:mb-12 -mt-4 md:mt-0">
+          <div className="flex flex-col items-center gap-3 mb-8 md:mb-12 -mt-8 md:-mt-4">
             <a 
               href="https://apps.apple.com/us/app/verzatv/id6752884623" 
               target="_blank" 
