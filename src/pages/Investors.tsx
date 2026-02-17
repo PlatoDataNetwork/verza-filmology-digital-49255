@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ChevronLeft, LogOut, TrendingUp, Users, DollarSign, Target, Rocket, Zap } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileDock } from "@/components/MobileDock";
 import { Button } from "@/components/ui/button";
@@ -48,32 +49,21 @@ export default function Investors() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background pb-16 md:pb-0">
-      {/* Header */}
-      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <Link 
-              to="/" 
-              className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5" />
-              <span className="font-medium">Back</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleLogout}
-                className="flex items-center gap-2"
-              >
-                <LogOut className="h-4 w-4" />
-                Logout
-              </Button>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
+      {/* Shared Header */}
+      <Header />
+      
+      {/* Logout bar */}
+      <div className="container mx-auto px-4 py-2 flex justify-end">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleLogout}
+          className="flex items-center gap-2"
+        >
+          <LogOut className="h-4 w-4" />
+          Logout
+        </Button>
+      </div>
 
       {/* Main Content */}
       <main className="flex-grow">
