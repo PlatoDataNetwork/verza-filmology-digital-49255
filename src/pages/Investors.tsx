@@ -82,9 +82,9 @@ export default function Investors() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-6">
               <div className="text-center space-y-6">
-                <p className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight">
-                  From the Co-Founder of E! Entertainment Television
-                </p>
+                <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+                  Investor Overview
+                </h2>
                 <div className="flex justify-center">
                   <img 
                     src={verzaLogo} 
