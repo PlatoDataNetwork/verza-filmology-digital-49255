@@ -127,7 +127,7 @@ const Team = () => {
                   Pascal Borno
                 </h3>
                 <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
-                  COO
+                  Senior Advisor
                 </p>
               </div>
             </div>
