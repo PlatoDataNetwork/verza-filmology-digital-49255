@@ -34,7 +34,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
   const { toast } = useToast();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
 
@@ -50,7 +50,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
       return;
     }
 
-    const success = login(email, password);
+    const success = await login(email, password);
     
     if (success) {
       toast({
