@@ -30,7 +30,7 @@ export const Contact = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(formData);
     if (!result.success) {
@@ -43,9 +43,31 @@ export const Contact = () => {
       return;
     }
     setIsSubmitting(true);
-    // Form is validated but not connected to a backend yet
-    toast({ title: "Message validated", description: "Contact form backend coming soon." });
-    setIsSubmitting(false);
+    try {
+      const { error } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-submission",
+          idempotencyKey: `contact-${Date.now()}-${result.data.email}`,
+          templateData: {
+            name: result.data.name,
+            email: result.data.email,
+            company: result.data.company,
+            message: result.data.message,
+          },
+        },
+      });
+      if (error) throw error;
+      toast({ title: "Message sent", description: "Thanks for reaching out — we'll be in touch soon." });
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Your message couldn't be sent. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
