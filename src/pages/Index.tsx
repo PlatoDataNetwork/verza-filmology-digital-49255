@@ -1,10 +1,13 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Opportunity } from "@/components/Opportunity";
-import { Solution } from "@/components/Solution";
-import { Content } from "@/components/Content";
+import { DigitalTheatre } from "@/components/DigitalTheatre";
+import { ForViewers } from "@/components/ForViewers";
+import { ForCreators } from "@/components/ForCreators";
+import { OriginalProgramming } from "@/components/OriginalProgramming";
 import { Founder } from "@/components/Founder";
+import { ForBrands } from "@/components/ForBrands";
 import { Contact } from "@/components/Contact";
+import { JoinEcosystem } from "@/components/JoinEcosystem";
 import { Footer } from "@/components/Footer";
 import { MobileDock } from "@/components/MobileDock";
 import { useEffect } from "react";
