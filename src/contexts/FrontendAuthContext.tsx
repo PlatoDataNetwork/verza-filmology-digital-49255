@@ -1,8 +1,9 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface FrontendAuthContextType {
   isAuthenticated: boolean;
-  login: (password: string) => boolean;
+  login: (password: string) => Promise<boolean>;
   logout: () => void;
 }
 
@@ -14,13 +15,20 @@ export const FrontendAuthProvider = ({ children }: { children: ReactNode }) => {
     return sessionStorage.getItem("verza-frontend-auth") === "true";
   });
 
-  const login = (password: string): boolean => {
-    if (password === "VERZATV1") {
-      setIsAuthenticated(true);
-      sessionStorage.setItem("verza-frontend-auth", "true");
-      return true;
+  const login = async (password: string): Promise<boolean> => {
+    if (!password) return false;
+
+    const { data, error } = await supabase.functions.invoke("verify-investor-access", {
+      body: { password },
+    });
+
+    if (error || !data?.authorized) {
+      return false;
     }
-    return false;
+
+    setIsAuthenticated(true);
+    sessionStorage.setItem("verza-frontend-auth", "true");
+    return true;
   };
 
   const logout = () => {
