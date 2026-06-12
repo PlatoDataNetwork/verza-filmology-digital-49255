@@ -1,8 +1,9 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface AuthContextType {
   isAuthenticated: boolean;
-  login: (email: string, password: string) => boolean;
+  login: (email: string, password: string) => Promise<boolean>;
   logout: () => void;
 }
 
@@ -18,14 +19,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-  const login = (email: string, password: string): boolean => {
-    if (password === "VERZATV1" && email.trim()) {
-      setIsAuthenticated(true);
-      localStorage.setItem("verza-auth", "true");
-      localStorage.setItem("verza-email", email);
-      return true;
+  const login = async (email: string, password: string): Promise<boolean> => {
+    if (!email.trim() || !password) return false;
+
+    const { data, error } = await supabase.functions.invoke("verify-investor-access", {
+      body: { password },
+    });
+
+    if (error || !data?.authorized) {
+      return false;
     }
-    return false;
+
+    setIsAuthenticated(true);
+    localStorage.setItem("verza-auth", "true");
+    localStorage.setItem("verza-email", email);
+    return true;
   };
 
   const logout = () => {
