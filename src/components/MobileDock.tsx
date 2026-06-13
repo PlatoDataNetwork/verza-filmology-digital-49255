@@ -25,6 +25,7 @@ export const MobileDock = () => {
   const dockItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/about", label: "About", icon: Info },
+    { to: "/team", label: "Team", icon: Users },
     { to: "/faq", label: "FAQ", icon: HelpCircle },
     { to: "/#contact", label: "Contact", icon: Mail, onClick: handleContactClick },
     { to: "#", label: "Login", icon: LogIn, onClick: handleLoginClick },
