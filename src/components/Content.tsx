@@ -18,7 +18,7 @@ export const Content = () => {
               Content that connects.
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-              Launched with 80+ Trending serialized stories and micro-dramas.
+              Launched with 80+ Trending serialized stories and micro dramas.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export const Content = () => {
               </div>
               <h3 className="text-base md:text-2xl font-semibold mb-1.5 md:mb-2 text-foreground">Premium drama</h3>
               <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
-                Trending serialized stories and micro-dramas
+                Trending serialized stories and micro dramas
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export const Content = () => {
             <div className="grid md:grid-cols-3 gap-5 md:gap-8 lg:gap-12">
               <div className="text-center space-y-1 md:space-y-2">
                 <div className="text-3xl md:text-5xl font-bold text-foreground tracking-tight">$4.99</div>
-                <div className="text-base md:text-xl font-bold text-muted-foreground">Pay per Micro-Drama</div>
+                <div className="text-base md:text-xl font-bold text-muted-foreground">Pay per Micro Drama</div>
                 <div className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   First 5 episodes free, then $4.99 to finish.
                 </div>

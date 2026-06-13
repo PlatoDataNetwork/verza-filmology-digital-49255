@@ -49,7 +49,7 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Wendy Fishman", title: "VP, Development and Production, Micro-Dramas" },
+    { name: "Wendy Fishman", title: "VP, Development and Production, Micro Dramas" },
     { name: "Darrell Weaver", title: "CTO" },
     { name: "Allison Reichel", title: "" },
   ];
