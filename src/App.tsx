@@ -36,6 +36,7 @@ const App = () => (
               <Sonner />
               <BrowserRouter>
                 <ScrollToTop />
+                <GlobalLoginDialog />
                 <Routes>
                   <Route path="/login" element={<Login />} />
                   <Route path="/" element={<Index />} />
