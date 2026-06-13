@@ -49,9 +49,8 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Wendy Fishman", title: "VP, Development and Production, Micro Dramas" },
-    { name: "Darrell Weaver", title: "CTO" },
-    { name: "Allison Reichel", title: "" },
+    { name: "Debra Baum", title: "SVP Business Development" },
+    { name: "Allison Reichel", title: "Chief of Staff" },
   ];
 
   return (
@@ -75,7 +74,7 @@ const Team = () => {
       {/* Founders Row */}
       <section className="py-6 sm:py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-10 justify-center">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-10 justify-center max-w-2xl mx-auto">
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
@@ -115,31 +114,15 @@ const Team = () => {
               </div>
             </div>
 
-            {/* Pascal Borno */}
-            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full bg-muted flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground">
-                  PB
-                </span>
-              </div>
-              <div className="px-1">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-1">
-                  Pascal Borno
-                </h3>
-                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
-                  Senior Advisor
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
+
       {/* Executive Team */}
       <section className="py-6 sm:py-8 md:py-12 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="container mx-auto px-4 sm:px-6 max-w-2xl">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {executiveTeam.map((member) => (
               <div key={member.name} className="flex flex-col items-center text-center space-y-2 sm:space-y-3">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-muted flex items-center justify-center">
