@@ -23,10 +23,10 @@ const faqCategories: Category[] = [
       {
         question: "What is VERZA TV?",
         answer:
-          "VERZA TV is a mobile-first micro-drama platform featuring premium short-form entertainment, including micro-dramas, reality series, creator content, podcasts, talk shows, and more.",
+          "VERZA TV is a mobile-first micro drama platform featuring premium short-form entertainment, including micro dramas, reality series, creator content, podcasts, talk shows, and more.",
       },
       {
-        question: "What is a micro-drama?",
+        question: "What is a micro drama?",
         answer:
           "Micro-dramas are highly engaging scripted series told in short episodes designed for mobile viewing. Each episode is typically only a few minutes long, making them easy to binge-watch anywhere.",
       },
@@ -103,7 +103,7 @@ const faqCategories: Category[] = [
       {
         question: "What type of content can I upload?",
         answer:
-          "Creators can upload micro-dramas, reality content, talk shows, podcasts, lifestyle content, entertainment content, and creator-led series.",
+          "Creators can upload micro dramas, reality content, talk shows, podcasts, lifestyle content, entertainment content, and creator-led series.",
       },
       {
         question: "Does my content need to be vertical?",
@@ -175,7 +175,7 @@ const faqCategories: Category[] = [
       {
         question: "How many shows are available on VERZA TV?",
         answer:
-          "VERZA TV offers a growing library of micro-dramas, creator content, reality programming, podcasts, and entertainment series.",
+          "VERZA TV offers a growing library of micro dramas, creator content, reality programming, podcasts, and entertainment series.",
       },
       {
         question: "Can I watch shows without creating an account?",
@@ -194,7 +194,7 @@ const faqCategories: Category[] = [
       {
         question: "Does VERZA TV release original content?",
         answer:
-          "Yes. VERZA TV produces and distributes original micro-dramas and exclusive creator content.",
+          "Yes. VERZA TV produces and distributes original micro dramas and exclusive creator content.",
       },
     ],
   },
@@ -290,7 +290,7 @@ const faqCategories: Category[] = [
           "Yes. Brands can work directly with creators and VERZA TV to develop sponsored content and branded storytelling campaigns.",
       },
       {
-        question: "Can products be featured inside micro-dramas?",
+        question: "Can products be featured inside micro dramas?",
         answer:
           "Yes. VERZA TV actively supports product placement and brand integrations within content.",
       },
@@ -317,22 +317,22 @@ const faqCategories: Category[] = [
       {
         question: "How is VERZA TV different from TikTok?",
         answer:
-          "TikTok is primarily focused on short-form social media content. VERZA TV is focused on premium storytelling, serialized micro-dramas, creator-owned channels, and direct monetization opportunities.",
+          "TikTok is primarily focused on short-form social media content. VERZA TV is focused on premium storytelling, serialized micro dramas, creator-owned channels, and direct monetization opportunities.",
       },
       {
         question: "How is VERZA TV different from YouTube?",
         answer:
-          "VERZA TV is purpose-built for micro-dramas, premium entertainment, and creator monetization through a curated entertainment-focused ecosystem.",
+          "VERZA TV is purpose-built for micro dramas, premium entertainment, and creator monetization through a curated entertainment-focused ecosystem.",
       },
       {
-        question: "Why are micro-dramas becoming so popular?",
+        question: "Why are micro dramas becoming so popular?",
         answer:
           "Micro-dramas combine the storytelling depth of traditional television with the convenience of mobile-first viewing, making them ideal for modern audiences.",
       },
       {
-        question: "Is VERZA TV only for micro-dramas?",
+        question: "Is VERZA TV only for micro dramas?",
         answer:
-          "No. While micro-dramas are a core focus, VERZA TV also supports podcasts, reality programming, creator content, talk shows, independent films, and other entertainment formats.",
+          "No. While micro dramas are a core focus, VERZA TV also supports podcasts, reality programming, creator content, talk shows, independent films, and other entertainment formats.",
       },
       {
         question: "What is VERZA TV's mission?",
@@ -351,9 +351,9 @@ const FAQ = () => {
   useMeta({
     title: "FAQ - Frequently Asked Questions - VERZA TV",
     description:
-      "Answers about VERZA TV: micro-dramas, the Creator Program, monetization, viewing, content requirements, technical support, and brand partnerships.",
+      "Answers about VERZA TV: micro dramas, the Creator Program, monetization, viewing, content requirements, technical support, and brand partnerships.",
     keywords:
-      "VERZA TV FAQ, frequently asked questions, micro-drama, creator program, monetization, help, support, partnerships",
+      "VERZA TV FAQ, frequently asked questions, micro drama, creator program, monetization, help, support, partnerships",
     canonical: "https://verzatv.io/faq",
     ogTitle: "FAQ - Frequently Asked Questions - VERZA TV",
     ogDescription:

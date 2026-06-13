@@ -57,7 +57,7 @@ export const Opportunity = () => {
             <Card className="p-6 md:p-8 bg-muted/50 active:bg-muted/70 md:hover:bg-muted/70 transition-all border-0 rounded-2xl touch-manipulation">
               <h3 className="text-4xl md:text-5xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight text-center">150M+</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                Downloads for leading platforms. Global demand for snackable, serialized micro-drama content.
+                Downloads for leading platforms. Global demand for snackable, serialized micro drama content.
               </p>
             </Card>
 
@@ -71,7 +71,7 @@ export const Opportunity = () => {
             <Card className="p-6 md:p-8 bg-muted/50 active:bg-muted/70 md:hover:bg-muted/70 transition-all border-0 rounded-2xl touch-manipulation">
               <h3 className="text-4xl md:text-5xl font-semibold mb-3 md:mb-4 text-foreground tracking-tight text-center">First</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                The first U.S. platform for micro-dramas tailored for Gen Z and Millennials. On the fly mobile entertainment.
+                The first U.S. platform for micro dramas tailored for Gen Z and Millennials. On the fly mobile entertainment.
               </p>
             </Card>
           </div>
@@ -92,11 +92,11 @@ export const Opportunity = () => {
               </div>
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$11B</div>
-                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Current Micro-Drama Apps</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">Current Micro Drama Apps</div>
               </div>
               <div className="space-y-1 md:space-y-2">
                 <div className="text-2xl md:text-5xl font-semibold text-foreground tracking-tight">$23B</div>
-                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">2030 Projection for Micro-Drama Apps</div>
+                <div className="text-[10px] md:text-sm text-muted-foreground leading-tight">2030 Projection for Micro Drama Apps</div>
               </div>
             </div>
           </Card>
