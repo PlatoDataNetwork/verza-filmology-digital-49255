@@ -44,7 +44,7 @@ export const MobileDock = () => {
               to={item.to}
               onClick={item.onClick}
               className={cn(
-                "flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all touch-manipulation min-w-[64px]",
+                "flex flex-col items-center justify-center gap-1 px-2 py-2 rounded-xl transition-all touch-manipulation min-w-[52px]",
                 isActive 
                   ? "text-primary bg-primary/10" 
                   : "text-muted-foreground hover:text-foreground active:bg-muted/50"
