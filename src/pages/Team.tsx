@@ -74,7 +74,7 @@ const Team = () => {
       {/* Founders Row */}
       <section className="py-6 sm:py-8 md:py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-10 justify-center">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-10 justify-center max-w-2xl mx-auto">
             
             {/* Alan Mruvka */}
             <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
