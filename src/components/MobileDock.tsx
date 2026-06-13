@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, HelpCircle, Mail, LogIn } from "lucide-react";
+import { Home, Info, Users, HelpCircle, Mail, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLogin } from "@/contexts/LoginContext";
 
@@ -25,6 +25,7 @@ export const MobileDock = () => {
   const dockItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/about", label: "About", icon: Info },
+    { to: "/team", label: "Team", icon: Users },
     { to: "/faq", label: "FAQ", icon: HelpCircle },
     { to: "/#contact", label: "Contact", icon: Mail, onClick: handleContactClick },
     { to: "#", label: "Login", icon: LogIn, onClick: handleLoginClick },
@@ -32,7 +33,7 @@ export const MobileDock = () => {
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-t border-border/50 pb-safe">
-      <div className="flex items-center justify-around px-2 py-2 max-w-screen-sm mx-auto">
+      <div className="flex items-center justify-around px-1 py-2 max-w-screen-sm mx-auto">
         {dockItems.map((item) => {
           const isActive = location.pathname === item.to;
           const Icon = item.icon;
@@ -43,7 +44,7 @@ export const MobileDock = () => {
               to={item.to}
               onClick={item.onClick}
               className={cn(
-                "flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-xl transition-all touch-manipulation min-w-[64px]",
+                "flex flex-col items-center justify-center gap-1 px-2 py-2 rounded-xl transition-all touch-manipulation min-w-[52px]",
                 isActive 
                   ? "text-primary bg-primary/10" 
                   : "text-muted-foreground hover:text-foreground active:bg-muted/50"
