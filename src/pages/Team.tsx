@@ -114,26 +114,10 @@ const Team = () => {
               </div>
             </div>
 
-            {/* Pascal Borno */}
-            <div className="flex flex-col items-center text-center space-y-3 sm:space-y-4">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full bg-muted flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground">
-                  PB
-                </span>
-              </div>
-              <div className="px-1">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-1">
-                  Pascal Borno
-                </h3>
-                <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
-                  Senior Advisor
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
+
 
       {/* Executive Team */}
       <section className="py-6 sm:py-8 md:py-12 bg-background">
