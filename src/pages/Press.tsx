@@ -99,7 +99,7 @@ const Press = () => {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
-                  <span><strong>Content:</strong> Micro-dramas, reality shows, and premium vertical originals</span>
+                  <span><strong>Content:</strong> Micro dramas, reality shows, and premium vertical originals</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>

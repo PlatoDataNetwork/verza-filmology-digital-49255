@@ -28,7 +28,7 @@ const faqCategories: Category[] = [
       {
         question: "What is a micro drama?",
         answer:
-          "Micro-dramas are highly engaging scripted series told in short episodes designed for mobile viewing. Each episode is typically only a few minutes long, making them easy to binge-watch anywhere.",
+          "Micro dramas are highly engaging scripted series told in short episodes designed for mobile viewing. Each episode is typically only a few minutes long, making them easy to binge-watch anywhere.",
       },
       {
         question: "Is VERZA TV free?",
@@ -327,7 +327,7 @@ const faqCategories: Category[] = [
       {
         question: "Why are micro dramas becoming so popular?",
         answer:
-          "Micro-dramas combine the storytelling depth of traditional television with the convenience of mobile-first viewing, making them ideal for modern audiences.",
+          "Micro dramas combine the storytelling depth of traditional television with the convenience of mobile-first viewing, making them ideal for modern audiences.",
       },
       {
         question: "Is VERZA TV only for micro dramas?",
