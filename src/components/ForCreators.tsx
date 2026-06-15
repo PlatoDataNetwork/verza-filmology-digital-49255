@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const features = [
   "Upload Vertical or Horizontal Content",
   "Set Your Own Pricing",
-  "Revenue Share 75 / 25",
+  "Creator Revenue Share Opportunities",
   "Audience Discovery Tools",
   "Creator Profiles",
   "Analytics & Insights",
