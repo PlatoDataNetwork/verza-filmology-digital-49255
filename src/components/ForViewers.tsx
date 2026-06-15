@@ -9,6 +9,7 @@ const features = [
   "Personalized Discovery",
   "New Episodes Added Regularly",
   "Watch Anywhere, Anytime",
+  "Horizontal Feature Films",
 ];
 
 const popular = ["The Vertical Tea", "Who's Where", "Storage Pirates", "Creator Exclusives"];
