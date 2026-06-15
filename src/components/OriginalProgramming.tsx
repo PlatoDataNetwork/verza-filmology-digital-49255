@@ -4,7 +4,7 @@ const originals = [
   {
     title: "The Vertical Tea",
     description:
-      "A sarcastic take on the world of microdramas.",
+      "From E! entertainment television founders Alan Mruvka and Larry Namer, the creators of the most successful show in E! history (The Soup) comes The Vertical Tea, a sarcastic commentary covering the explosive world of microdramas.",
   },
   {
     title: "Who's Where",
