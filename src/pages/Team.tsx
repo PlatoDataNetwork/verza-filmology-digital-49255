@@ -49,8 +49,8 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Debra Baum", title: "SVP Business Development" },
-    { name: "Allison Reichel", title: "Chief of Staff" },
+    { name: "Debra Baum", title: "SVP Business Development", email: "debra@verzatv.com" },
+    { name: "Allison Reichel", title: "Chief of Staff", email: "info@verzatv.co" },
   ];
 
   return (
