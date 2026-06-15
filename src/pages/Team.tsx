@@ -49,8 +49,8 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Debra Baum", title: "SVP Business Development" },
-    { name: "Allison Reichel", title: "Chief of Staff" },
+    { name: "Debra Baum", title: "SVP Business Development", email: "debra@verzatv.com" },
+    { name: "Allison Reichel", title: "Chief of Staff", email: "info@verzatv.co" },
   ];
 
   return (
@@ -95,6 +95,12 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
                   Co-Founder E! Entertainment Television
                 </p>
+                <a
+                  href="mailto:info@verzatv.co"
+                  className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
+                >
+                  Connect
+                </a>
               </div>
             </div>
 
@@ -117,6 +123,12 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
                   Co-Founder E! Entertainment Television
                 </p>
+                <a
+                  href="mailto:info@verzatv.co"
+                  className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
+                >
+                  Connect
+                </a>
               </div>
             </div>
 
@@ -144,6 +156,14 @@ const Team = () => {
                     <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium leading-tight">
                       {member.title}
                     </p>
+                  )}
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
+                    >
+                      Connect
+                    </a>
                   )}
                 </div>
               </div>
