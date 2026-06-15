@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const opportunities = [
+  "Creator Partnerships",
   "Sponsorships",
   "Product Placement",
   "Branded Entertainment",
-  "Creator Partnerships",
   "In-App Experiences",
   "Original Programming Integrations",
   "Custom Content Campaigns",
