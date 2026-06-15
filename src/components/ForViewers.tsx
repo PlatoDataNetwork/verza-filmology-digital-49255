@@ -38,8 +38,8 @@ export const ForViewers = () => {
               Your Next Obsession Starts Here
             </h2>
             <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-              Discover hundreds of episodes of premium microdramas, romantic dramas, thrillers,
-              mysteries, comedies, reality content, and exclusive originals.
+              Discover hundreds of episodes of premium microdramas, thrillers, mysteries, red carpet,
+              reality, music, podcasts, exclusive originals and more.
             </p>
           </div>
 
