@@ -14,7 +14,7 @@ const originals = [
   {
     title: "Storage Pirates",
     description:
-      "A reality series exploring hidden treasures, unexpected discoveries, and storage unit adventures.",
+      "A self-storage reality series similar to the hit show Storage Wars that covers the world of self-storage auctions and the search for treasures and unexpected discoveries in every unit auctioned.",
   },
 ];
 
