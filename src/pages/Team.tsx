@@ -157,6 +157,14 @@ const Team = () => {
                       {member.title}
                     </p>
                   )}
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
+                    >
+                      Connect
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
