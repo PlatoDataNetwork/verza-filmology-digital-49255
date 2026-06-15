@@ -123,6 +123,12 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
                   Co-Founder E! Entertainment Television
                 </p>
+                <a
+                  href="mailto:info@verzatv.co"
+                  className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
+                >
+                  Connect
+                </a>
               </div>
             </div>
 
