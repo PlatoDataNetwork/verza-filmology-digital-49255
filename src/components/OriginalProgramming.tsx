@@ -4,7 +4,7 @@ const originals = [
   {
     title: "The Vertical Tea",
     description:
-      "From E! entertainment television founders Alan Mruvka and Larry Namer, the creators of the most successful show in E! history (The Soup) comes The Vertical Tea, a sarcastic commentary covering the explosive world of microdramas.",
+      "Industry news, reviews, interviews, and commentary covering the explosive growth of microdramas.",
   },
   {
     title: "Who's Where",
@@ -14,7 +14,7 @@ const originals = [
   {
     title: "Storage Pirates",
     description:
-      "A self-storage reality series similar to the hit show Storage Wars that covers the world of self-storage auctions and the search for treasures and unexpected discoveries in every unit auctioned.",
+      "A reality series exploring hidden treasures, unexpected discoveries, and storage unit adventures.",
   },
 ];
 

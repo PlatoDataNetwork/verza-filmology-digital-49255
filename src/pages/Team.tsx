@@ -49,8 +49,8 @@ const Team = () => {
   }, []);
 
   const executiveTeam = [
-    { name: "Debra Baum", title: "SVP Business Development", email: "debra@verzatv.com" },
-    { name: "Allison Reichel", title: "Chief of Staff", email: "info@verzatv.co" },
+    { name: "Debra Baum", title: "SVP Business Development" },
+    { name: "Allison Reichel", title: "Chief of Staff" },
   ];
 
   return (
@@ -65,7 +65,7 @@ const Team = () => {
               Leadership Team
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4">
-              Meet the visionaries who founded E! Entertainment Television and the innovators building the future of vertical entertainment.
+              Meet the visionaries and innovators building the future of vertical entertainment.
             </p>
           </div>
         </div>
@@ -92,15 +92,6 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
                   Founder & CEO
                 </p>
-                <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
-                  Co-Founder E! Entertainment Television
-                </p>
-                <a
-                  href="mailto:info@verzatv.co"
-                  className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
-                >
-                  Connect
-                </a>
               </div>
             </div>
 
@@ -120,15 +111,6 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
                   Senior Advisor
                 </p>
-                <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
-                  Co-Founder E! Entertainment Television
-                </p>
-                <a
-                  href="mailto:info@verzatv.co"
-                  className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
-                >
-                  Connect
-                </a>
               </div>
             </div>
 
@@ -156,14 +138,6 @@ const Team = () => {
                     <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium leading-tight">
                       {member.title}
                     </p>
-                  )}
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="inline-block mt-2 text-[10px] sm:text-xs md:text-sm text-primary font-medium hover:underline"
-                    >
-                      Connect
-                    </a>
                   )}
                 </div>
               </div>
