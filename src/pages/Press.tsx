@@ -65,12 +65,6 @@ const Press = () => {
                     press@verzatv.com
                   </a>
                 </p>
-                <p className="text-base md:text-lg">
-                  <strong>Phone:</strong>{" "}
-                  <a href="tel:+13105606055" className="text-primary hover:underline">
-                    +1 (310) 560-6055
-                  </a>
-                </p>
               </div>
             </section>
 
