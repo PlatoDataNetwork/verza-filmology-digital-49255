@@ -9,6 +9,7 @@ const opportunities = [
   "In-App Experiences",
   "Original Programming Integrations",
   "Custom Content Campaigns",
+  "Branded Merch Opportunities",
 ];
 
 export const ForBrands = () => {
