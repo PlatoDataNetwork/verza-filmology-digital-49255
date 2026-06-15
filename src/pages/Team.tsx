@@ -114,6 +114,9 @@ const Team = () => {
                 <p className="text-[10px] sm:text-xs md:text-sm text-primary font-medium">
                   Senior Advisor
                 </p>
+                <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground font-medium">
+                  Co-Founder E! Entertainment Television
+                </p>
               </div>
             </div>
 
