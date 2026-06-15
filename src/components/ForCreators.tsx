@@ -3,8 +3,8 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
   "Upload Vertical or Horizontal Content",
-  "Set Your Own Pricing",
   "Creator Revenue Share Opportunities",
+  "Set Your Own Pricing",
   "Audience Discovery Tools",
   "Creator Profiles",
   "Analytics & Insights",
