@@ -65,7 +65,7 @@ const Team = () => {
               Leadership Team
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4">
-              Meet the visionaries and innovators building the future of vertical entertainment.
+              Meet the visionaries who founded E! Entertainment Television and the innovators building the future of vertical entertainment.
             </p>
           </div>
         </div>
