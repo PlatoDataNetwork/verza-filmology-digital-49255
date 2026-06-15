@@ -4,7 +4,7 @@ const originals = [
   {
     title: "The Vertical Tea",
     description:
-      "Industry news, reviews, interviews, and commentary covering the explosive growth of microdramas.",
+      "A sarcastic take on the world of microdramas.",
   },
   {
     title: "Who's Where",
