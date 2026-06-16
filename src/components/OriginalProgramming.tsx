@@ -1,20 +1,40 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import theVerticalTea from "@/assets/posters/the-vertical-tea.png.asset.json";
+import theCarpet from "@/assets/posters/the-carpet.png.asset.json";
+import storagePirates from "@/assets/posters/storage-pirates.jpeg.asset.json";
+import sugarBabiesMiami from "@/assets/posters/sugar-babies-miami.jpeg.asset.json";
+import buySellMiami from "@/assets/posters/buy-sell-miami.png.asset.json";
 
 const originals = [
   {
     title: "The Vertical Tea",
+    image: theVerticalTea.url,
     description:
       "Industry news, reviews, interviews, and commentary covering the explosive growth of microdramas.",
   },
   {
-    title: "Who's Where",
+    title: "The Carpet",
+    image: theCarpet.url,
     description:
-      "Celebrity news, pop culture, and entertainment gossip from the minds behind some of television's most recognizable entertainment programming.",
+      "Real drama. Real people. Unreal stories. An exclusive red carpet series following the stars about to rise.",
   },
   {
     title: "Storage Pirates",
+    image: storagePirates.url,
     description:
-      "A reality series exploring hidden treasures, unexpected discoveries, and storage unit adventures.",
+      "A reality series exploring hidden treasures, unexpected discoveries, and high-stakes storage unit adventures.",
+  },
+  {
+    title: "Sugar Babies Miami",
+    image: sugarBabiesMiami.url,
+    description:
+      "Luxury, ambition, and unfiltered drama collide in the glamorous world of Miami's most talked-about scene.",
+  },
+  {
+    title: "Buy / Sell Miami",
+    image: buySellMiami.url,
+    description:
+      "Million dollar deals. Billion dollar lifestyles. Luxury real estate that's hotter than Miami itself.",
   },
 ];
 
@@ -43,15 +63,28 @@ export const OriginalProgramming = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
             {originals.map((o) => (
-              <div key={o.title} className="bg-background rounded-2xl md:rounded-3xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-3 md:mb-4 tracking-tight">
-                  {o.title}
-                </h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  {o.description}
-                </p>
+              <div
+                key={o.title}
+                className="group bg-background rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-[2/3] overflow-hidden">
+                  <img
+                    src={o.image}
+                    alt={`${o.title} poster`}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-semibold text-foreground mb-2 md:mb-3 tracking-tight">
+                    {o.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {o.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
