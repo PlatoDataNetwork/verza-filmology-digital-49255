@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useFrontendAuth } from "@/contexts/FrontendAuthContext";
 import { useMeta } from "@/hooks/useMeta";
+import { BrandPartnerships } from "@/components/BrandPartnerships";
 import { useOrganizationSchema } from "@/hooks/useOrganizationSchema";
 import verzaLogo from "@/assets/verza-logo.png";
 
@@ -442,8 +443,11 @@ export default function Investors() {
           </div>
         </section>
 
+        {/* Brand Partnership Packages */}
+        <BrandPartnerships />
+
         {/* Founder */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Founded by Alan Mruvka</h2>
