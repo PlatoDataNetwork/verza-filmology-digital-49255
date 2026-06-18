@@ -76,7 +76,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
         <DialogHeader>
           <DialogTitle>Partner Login</DialogTitle>
           <DialogDescription>
-            Enter your email and password to access the investors portal.
+            Enter your email and password to access the partner portal.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
