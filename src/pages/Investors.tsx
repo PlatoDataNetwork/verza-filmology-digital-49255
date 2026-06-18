@@ -74,7 +74,7 @@ export default function Investors() {
             <div className="max-w-5xl mx-auto space-y-6">
               <div className="text-center space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
-                  Investor Overview
+                  Partner Overview
                 </h2>
                 <div className="flex justify-center">
                   <img 
