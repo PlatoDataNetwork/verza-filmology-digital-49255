@@ -85,7 +85,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
             <Input
               id="email"
               type="email"
-              placeholder="investor@example.com"
+              placeholder="partner@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={errors.email ? "border-destructive" : ""}
