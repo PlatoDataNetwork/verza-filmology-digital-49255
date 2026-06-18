@@ -74,7 +74,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Investor Login</DialogTitle>
+          <DialogTitle>Partner Login</DialogTitle>
           <DialogDescription>
             Enter your email and password to access the investors portal.
           </DialogDescription>
