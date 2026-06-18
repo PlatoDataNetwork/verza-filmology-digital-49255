@@ -1,11 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { Home, Info, Users, HelpCircle, Mail, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLogin } from "@/contexts/LoginContext";
 
 export const MobileDock = () => {
   const location = useLocation();
-  const { setLoginOpen } = useLogin();
   
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (location.pathname === "/") {
@@ -17,18 +15,13 @@ export const MobileDock = () => {
     }
   };
 
-  const handleLoginClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setLoginOpen(true);
-  };
-
   const dockItems = [
     { to: "/", label: "Home", icon: Home },
     { to: "/about", label: "About", icon: Info },
     { to: "/team", label: "Team", icon: Users },
     { to: "/faq", label: "FAQ", icon: HelpCircle },
     { to: "/#contact", label: "Contact", icon: Mail, onClick: handleContactClick },
-    { to: "#", label: "Login", icon: LogIn, onClick: handleLoginClick },
+    { to: "/login", label: "Login", icon: LogIn },
   ];
 
   return (
