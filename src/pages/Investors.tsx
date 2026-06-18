@@ -94,25 +94,6 @@ export default function Investors() {
           </div>
         </section>
 
-        {/* The Opportunity */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex items-center gap-3 mb-8">
-                <TrendingUp className="h-8 w-8 text-primary" />
-                <h2 className="text-3xl md:text-4xl font-bold">The Opportunity</h2>
-              </div>
-              <div className="space-y-4 text-lg text-muted-foreground mb-12">
-                <p>The short-form vertical, mobile drama app market has exploded since late 2023, with top platforms generating over $3M/day combined.</p>
-                <p>150M+ downloads for leading platforms like ShortMax; global audiences show insatiable demand for snackable, serialized vertical content.</p>
-                <p>Platforms like TikTok and Instagram Reels have trained users to consume fast-paced, episodic narratives—paving the way for narrative-based video apps and vertical viewing on mobile devices.</p>
-                <p>Our platform captures this momentum with an engaging new format tailored for Gen Z and Millennials, the first to emerge in the U.S. Market.</p>
-                <p>Vertical viewing on mobile devices allows viewers to watch anywhere discretely.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* The Market */}
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
