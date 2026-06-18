@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Home, Info, Users, HelpCircle, Mail, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLogin } from "@/contexts/LoginContext";
 
 export const MobileDock = () => {
   const location = useLocation();
