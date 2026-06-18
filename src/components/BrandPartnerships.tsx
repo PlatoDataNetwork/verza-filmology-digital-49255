@@ -226,26 +226,6 @@ export const BrandPartnerships = () => {
     <section className="py-16 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto mb-12">
-            <p className="text-sm md:text-base text-primary font-semibold uppercase tracking-widest mb-4">
-              Be a part of the fastest growing microdrama app brought to you by the founders of E! Entertainment Television
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              VERZA TV Brand Partnership Packages
-            </h2>
-            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4">
-              Entertainment Meets Commerce
-            </h3>
-            <div className="space-y-3 text-lg text-muted-foreground">
-              <p>
-                VERZA TV helps brands move beyond traditional advertising by integrating products, services, and brand stories directly into premium entertainment content.
-              </p>
-              <p>
-                Whether you're looking to increase awareness, drive engagement, or tell a deeper brand story, VERZA TV offers multiple ways to connect with audiences through the power of storytelling.
-              </p>
-            </div>
-          </div>
-
           <div className="space-y-6 md:space-y-8">
             {packages.map((pkg) => (
               <Card key={pkg.label} className="overflow-hidden">
