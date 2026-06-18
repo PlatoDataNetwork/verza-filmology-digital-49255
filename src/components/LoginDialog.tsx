@@ -55,7 +55,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
     if (success) {
       toast({
         title: "Login successful",
-        description: "Welcome to VERZA TV Investors Portal",
+        description: "Welcome to VERZA TV Partner Portal",
       });
       onOpenChange(false);
       setEmail("");
@@ -76,7 +76,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
         <DialogHeader>
           <DialogTitle>Partner Login</DialogTitle>
           <DialogDescription>
-            Enter your email and password to access the investors portal.
+            Enter your email and password to access the partner portal.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -85,7 +85,7 @@ export const LoginDialog = ({ open, onOpenChange }: LoginDialogProps) => {
             <Input
               id="email"
               type="email"
-              placeholder="investor@example.com"
+              placeholder="partner@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={errors.email ? "border-destructive" : ""}

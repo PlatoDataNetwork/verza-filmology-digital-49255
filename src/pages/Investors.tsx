@@ -20,12 +20,12 @@ export default function Investors() {
   useOrganizationSchema();
 
   useMeta({
-    title: "Investor Information - VERZA TV",
-    description: "Explore VERZA TV's investment opportunity in the $11B short-form vertical content market. Learn about our market strategy, target audience, and growth plans.",
-    keywords: "VERZA TV investors, investment opportunity, vertical content market, micro dramas, short-form video investment",
+    title: "Partner Information - VERZA TV",
+    description: "Explore VERZA TV's partnership opportunity in the $11B short-form vertical content market. Learn about our market strategy, target audience, and growth plans.",
+    keywords: "VERZA TV partners, partnership opportunity, vertical content market, micro dramas, short-form video partnership",
     canonical: "https://verzatv.io/investors",
-    ogTitle: "Investor Information - VERZA TV",
-    ogDescription: "Explore VERZA TV's investment opportunity in the $11B short-form vertical content market.",
+    ogTitle: "Partner Information - VERZA TV",
+    ogDescription: "Explore VERZA TV's partnership opportunity in the $11B short-form vertical content market.",
     ogUrl: "https://verzatv.io/investors",
   });
 
@@ -74,7 +74,7 @@ export default function Investors() {
             <div className="max-w-5xl mx-auto space-y-6">
               <div className="text-center space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">
-                  Investor Overview
+                  Partner Overview
                 </h2>
                 <div className="flex justify-center">
                   <img 
