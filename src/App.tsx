@@ -35,33 +35,39 @@ const App = () => (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <FrontendAuthProvider>
         <AuthProvider>
-          <LoginProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Sonner />
-              <BrowserRouter>
-                <ScrollToTop />
-                <GlobalLoginDialog />
-                <Routes>
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/" element={<Index />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/press" element={<Press />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/careers" element={<Careers />} />
-                  <Route path="/team" element={<Team />} />
-                  <Route path="/legal" element={<Legal />} />
-                  <Route path="/licensing" element={<Licensing />} />
-                  <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
-                  <Route path="/faq" element={<FAQ />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </BrowserRouter>
-            </TooltipProvider>
-          </LoginProvider>
+          <AdminAuthProvider>
+            <LoginProvider>
+              <TooltipProvider>
+                <Toaster />
+                <Sonner />
+                <BrowserRouter>
+                  <ScrollToTop />
+                  <GlobalLoginDialog />
+                  <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/" element={<Index />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/press" element={<Press />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/legal" element={<Legal />} />
+                    <Route path="/licensing" element={<Licensing />} />
+                    <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
+                    <Route path="/faq" element={<FAQ />} />
+                    {/* Admin panel */}
+                    <Route path="/admin/login" element={<AdminLogin />} />
+                    <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
+                    {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </BrowserRouter>
+              </TooltipProvider>
+            </LoginProvider>
+          </AdminAuthProvider>
         </AuthProvider>
       </FrontendAuthProvider>
+
     </ThemeProvider>
   </QueryClientProvider>
 );
