@@ -24,7 +24,10 @@ import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
 import AdminLogin from "./pages/admin/AdminLogin";
+import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import GoogleAnalytics from "./pages/admin/GoogleAnalytics";
+import GoogleGSC from "./pages/admin/GoogleGSC";
 import NotFound from "./pages/NotFound";
 
 
@@ -57,7 +60,18 @@ const App = () => (
                     <Route path="/faq" element={<FAQ />} />
                     {/* Admin panel */}
                     <Route path="/admin/login" element={<AdminLogin />} />
-                    <Route path="/admin" element={<ProtectedAdminRoute><AdminDashboard /></ProtectedAdminRoute>} />
+                    <Route
+                      path="/admin"
+                      element={
+                        <ProtectedAdminRoute>
+                          <AdminLayout />
+                        </ProtectedAdminRoute>
+                      }
+                    >
+                      <Route index element={<AdminDashboard />} />
+                      <Route path="google-analytics" element={<GoogleAnalytics />} />
+                      <Route path="google-gsc" element={<GoogleGSC />} />
+                    </Route>
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                     <Route path="*" element={<NotFound />} />
                   </Routes>
