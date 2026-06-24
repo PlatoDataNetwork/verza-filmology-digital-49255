@@ -24,7 +24,10 @@ import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
 import AdminLogin from "./pages/admin/AdminLogin";
+import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import GoogleAnalytics from "./pages/admin/GoogleAnalytics";
+import GoogleGSC from "./pages/admin/GoogleGSC";
 import NotFound from "./pages/NotFound";
 
 
