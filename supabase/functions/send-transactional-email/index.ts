@@ -2,7 +2,31 @@ import * as React from 'npm:react@18.3.1'
 import { renderAsync } from 'npm:@react-email/components@0.0.22'
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
+import { z } from 'npm:zod@3.23.8'
 import { TEMPLATES } from '../_shared/transactional-email-templates/registry.ts'
+
+// Server-side input validation. The frontend applies its own Zod schema for UX,
+// but any caller with the anon key can invoke this function directly, so these
+// limits are the real security boundary against oversized/abusive payloads.
+const MAX_FIELD_LENGTH = 5000
+const MAX_TEMPLATE_DATA_BYTES = 20000
+
+// Each templateData value must be a primitive; strings are length-capped.
+const templateDataSchema = z
+  .record(
+    z.union([
+      z.string().max(MAX_FIELD_LENGTH),
+      z.number(),
+      z.boolean(),
+      z.null(),
+    ]),
+  )
+  .refine(
+    (data) => JSON.stringify(data).length <= MAX_TEMPLATE_DATA_BYTES,
+    { message: `templateData exceeds ${MAX_TEMPLATE_DATA_BYTES} bytes` },
+  )
+
+const recipientEmailSchema = z.string().trim().email().max(255)
 
 // Configuration baked in at scaffold time — do NOT change these manually.
 // To update, re-run the email domain setup flow.
@@ -61,8 +85,28 @@ Deno.serve(async (req) => {
     recipientEmail = body.recipientEmail || body.recipient_email
     messageId = crypto.randomUUID()
     idempotencyKey = body.idempotencyKey || body.idempotency_key || messageId
-    if (body.templateData && typeof body.templateData === 'object') {
-      templateData = body.templateData
+    if (body.templateData !== undefined && body.templateData !== null) {
+      if (typeof body.templateData !== 'object' || Array.isArray(body.templateData)) {
+        return new Response(
+          JSON.stringify({ error: 'templateData must be an object' }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        )
+      }
+      // Server-side schema validation — rejects oversized/abusive payloads.
+      const parsed = templateDataSchema.safeParse(body.templateData)
+      if (!parsed.success) {
+        return new Response(
+          JSON.stringify({ error: 'Invalid templateData' }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        )
+      }
+      templateData = parsed.data
     }
   } catch {
     return new Response(
@@ -88,11 +132,14 @@ Deno.serve(async (req) => {
   const template = TEMPLATES[templateName]
 
   if (!template) {
-    console.error('Template not found in registry', { templateName })
+    // Do NOT enumerate available templates to the caller — that leaks the
+    // internal API surface. Log the detail server-side only.
+    console.error('Template not found in registry', {
+      templateName,
+      available: Object.keys(TEMPLATES),
+    })
     return new Response(
-      JSON.stringify({
-        error: `Template '${templateName}' not found. Available: ${Object.keys(TEMPLATES).join(', ')}`,
-      }),
+      JSON.stringify({ error: 'Template not found' }),
       {
         status: 404,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -110,6 +157,18 @@ Deno.serve(async (req) => {
       JSON.stringify({
         error: 'recipientEmail is required (unless the template defines a fixed recipient)',
       }),
+      {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+
+  // Validate the effective recipient is a well-formed email before any sending.
+  const recipientCheck = recipientEmailSchema.safeParse(effectiveRecipient)
+  if (!recipientCheck.success) {
+    return new Response(
+      JSON.stringify({ error: 'Invalid recipient email address' }),
       {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
