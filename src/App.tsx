@@ -8,8 +8,10 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { GlobalLoginDialog } from "@/components/GlobalLoginDialog";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { FrontendAuthProvider } from "@/contexts/FrontendAuthContext";
+import { AdminAuthProvider } from "@/contexts/AdminAuthContext";
 import { LoginProvider } from "@/contexts/LoginContext";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import About from "./pages/About";
@@ -21,7 +23,10 @@ import Legal from "./pages/Legal";
 import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
