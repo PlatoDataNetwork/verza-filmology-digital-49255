@@ -85,8 +85,28 @@ Deno.serve(async (req) => {
     recipientEmail = body.recipientEmail || body.recipient_email
     messageId = crypto.randomUUID()
     idempotencyKey = body.idempotencyKey || body.idempotency_key || messageId
-    if (body.templateData && typeof body.templateData === 'object') {
-      templateData = body.templateData
+    if (body.templateData !== undefined && body.templateData !== null) {
+      if (typeof body.templateData !== 'object' || Array.isArray(body.templateData)) {
+        return new Response(
+          JSON.stringify({ error: 'templateData must be an object' }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        )
+      }
+      // Server-side schema validation — rejects oversized/abusive payloads.
+      const parsed = templateDataSchema.safeParse(body.templateData)
+      if (!parsed.success) {
+        return new Response(
+          JSON.stringify({ error: 'Invalid templateData' }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          }
+        )
+      }
+      templateData = parsed.data
     }
   } catch {
     return new Response(
