@@ -38,6 +38,14 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
+    /* Chart palette */
+    --chart-1: 211 100% 55%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 262 70% 60%;
+    --chart-4: 32 95% 55%;
+    --chart-5: 340 75% 55%;
+
+
     /* Apple-style gradients */
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 3%) 100%);
