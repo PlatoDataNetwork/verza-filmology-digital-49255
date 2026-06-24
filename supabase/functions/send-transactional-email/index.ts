@@ -132,11 +132,14 @@ Deno.serve(async (req) => {
   const template = TEMPLATES[templateName]
 
   if (!template) {
-    console.error('Template not found in registry', { templateName })
+    // Do NOT enumerate available templates to the caller — that leaks the
+    // internal API surface. Log the detail server-side only.
+    console.error('Template not found in registry', {
+      templateName,
+      available: Object.keys(TEMPLATES),
+    })
     return new Response(
-      JSON.stringify({
-        error: `Template '${templateName}' not found. Available: ${Object.keys(TEMPLATES).join(', ')}`,
-      }),
+      JSON.stringify({ error: 'Template not found' }),
       {
         status: 404,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -154,6 +157,18 @@ Deno.serve(async (req) => {
       JSON.stringify({
         error: 'recipientEmail is required (unless the template defines a fixed recipient)',
       }),
+      {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+
+  // Validate the effective recipient is a well-formed email before any sending.
+  const recipientCheck = recipientEmailSchema.safeParse(effectiveRecipient)
+  if (!recipientCheck.success) {
+    return new Response(
+      JSON.stringify({ error: 'Invalid recipient email address' }),
       {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
