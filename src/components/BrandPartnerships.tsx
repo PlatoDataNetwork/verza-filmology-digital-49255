@@ -157,7 +157,7 @@ const packages: Package[] = [
   {
     label: "Package 4",
     title: "VERZA TV App Marketplace & Commerce Partnership",
-    price: "Starting at $XX Setup + Revenue Share",
+    price: "Setup Fee + Revenue Share",
     description: [
       "Sell your products on the VERZA TV app marketplace section.",
       "Turn viewers into customers.",
@@ -215,7 +215,7 @@ const packages: Package[] = [
       },
     ],
     startingPrice: {
-      label: "Starting at $XXX setup fee",
+      label: "Setup Fee + Revenue Share",
       note: "Plus revenue share on marketplace sales. Custom enterprise commerce partnerships available.",
     },
   },
