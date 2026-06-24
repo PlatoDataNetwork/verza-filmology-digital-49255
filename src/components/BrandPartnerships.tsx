@@ -14,7 +14,7 @@ const packages: Package[] = [
   {
     label: "Package 1",
     title: "Collaborative Brand-Centered Microdrama",
-    price: "Starting at $250,000",
+    price: "Starting at $400,000",
     description: [
       "Transform your brand into entertainment.",
       "VERZA TV develops, writes, produces, directs, and distributes a custom original microdrama built around your brand, product, service, mission, or customer story.",
@@ -65,7 +65,7 @@ const packages: Package[] = [
       },
     ],
     startingPrice: {
-      label: "$250,000+",
+      label: "$400,000+",
       note: "Pricing varies based on production complexity, cast requirements, locations, and distribution strategy.",
     },
   },
