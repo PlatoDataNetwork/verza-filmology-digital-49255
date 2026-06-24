@@ -1,0 +1,20 @@
+# Verza TV
+
+> Verza TV is a premium micro drama platform pioneering serialized vertical entertainment — short, cinematic episodes built for mobile, created by entertainment industry veterans.
+
+Verza TV produces and distributes premium micro dramas: serialized, story-driven vertical episodes that differ from generic social media clips. The platform connects creators, brands, and viewers around a new category of mobile-first premium entertainment.
+
+## Pages
+
+- [Home](/): Overview of Verza TV and its premium micro drama platform.
+- [About](/about): The company, mission, and vision behind Verza TV.
+- [Team](/team): Leadership and the people building Verza TV.
+- [News](/news): Latest announcements and company updates.
+- [Press](/press): Press coverage and media resources.
+- [Careers](/careers): Open roles and working at Verza TV.
+- [FAQ](/faq): Answers to common questions about the platform.
+
+## Optional
+
+- [Licensing](/licensing): Content licensing information.
+- [Legal](/legal): Legal terms and policies.
