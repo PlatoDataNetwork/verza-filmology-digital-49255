@@ -2,7 +2,31 @@ import * as React from 'npm:react@18.3.1'
 import { renderAsync } from 'npm:@react-email/components@0.0.22'
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors'
+import { z } from 'npm:zod@3.23.8'
 import { TEMPLATES } from '../_shared/transactional-email-templates/registry.ts'
+
+// Server-side input validation. The frontend applies its own Zod schema for UX,
+// but any caller with the anon key can invoke this function directly, so these
+// limits are the real security boundary against oversized/abusive payloads.
+const MAX_FIELD_LENGTH = 5000
+const MAX_TEMPLATE_DATA_BYTES = 20000
+
+// Each templateData value must be a primitive; strings are length-capped.
+const templateDataSchema = z
+  .record(
+    z.union([
+      z.string().max(MAX_FIELD_LENGTH),
+      z.number(),
+      z.boolean(),
+      z.null(),
+    ]),
+  )
+  .refine(
+    (data) => JSON.stringify(data).length <= MAX_TEMPLATE_DATA_BYTES,
+    { message: `templateData exceeds ${MAX_TEMPLATE_DATA_BYTES} bytes` },
+  )
+
+const recipientEmailSchema = z.string().trim().email().max(255)
 
 // Configuration baked in at scaffold time — do NOT change these manually.
 // To update, re-run the email domain setup flow.
