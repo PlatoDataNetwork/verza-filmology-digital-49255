@@ -24,6 +24,7 @@ import Legal from "./pages/Legal";
 import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
+import SugarBabiesMiami from "./pages/SugarBabiesMiami";
 import GADebug from "./pages/GADebug";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./components/admin/AdminLayout";
@@ -62,6 +63,7 @@ const App = () => (
                     <Route path="/licensing" element={<Licensing />} />
                     <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
                     <Route path="/faq" element={<FAQ />} />
+                    <Route path="/sugar-babies-miami" element={<SugarBabiesMiami />} />
                     <Route path="/ga-debug" element={<GADebug />} />
                     {/* Admin panel */}
                     <Route path="/admin/login" element={<AdminLogin />} />
