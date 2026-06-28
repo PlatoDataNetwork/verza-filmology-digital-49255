@@ -301,6 +301,8 @@ Deno.serve(async (req) => {
       return json({ error: 'invalid_credentials', message: 'Service account JSON is invalid.' }, 200)
     }
     if (!creds.client_email || !creds.private_key) {
+      // Safe diagnostic: log key NAMES only, never values.
+      console.error('[ga4-report] service account JSON missing fields. keys present:', Object.keys(creds))
       return json({ error: 'invalid_credentials', message: 'Service account JSON is missing fields.' }, 200)
     }
 
