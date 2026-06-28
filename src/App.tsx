@@ -47,6 +47,7 @@ const App = () => (
                 <Sonner />
                 <BrowserRouter>
                   <ScrollToTop />
+                  <GoogleAnalyticsTag />
                   <GlobalLoginDialog />
                   <Routes>
                     <Route path="/login" element={<Login />} />
