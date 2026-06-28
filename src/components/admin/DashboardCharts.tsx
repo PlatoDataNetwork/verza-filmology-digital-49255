@@ -18,7 +18,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart";
-import type { EngagementSlice, TrafficPoint, UsersPoint } from "@/lib/admin/dashboardData";
+import type { EngagementSlice, TrafficPoint } from "@/lib/admin/dashboardData";
 
 const shortDate = (value: string) =>
   new Date(value).toLocaleDateString("en", { month: "short", day: "numeric" });
