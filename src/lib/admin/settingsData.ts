@@ -88,7 +88,7 @@ export async function saveIntegrationSettings(
   const { error } = await supabase.from("integration_settings").upsert(
     {
       provider,
-      config,
+      config: config as Record<string, string | number | boolean | null>,
       enabled,
       updated_by: auth.user?.id ?? null,
     },
