@@ -307,12 +307,9 @@ Deno.serve(async (req) => {
     }
     if (!creds || typeof creds !== 'object' || !creds.client_email || !creds.private_key) {
       // Safe diagnostic: log key NAMES only, never values.
-      console.error(
-        '[ga4-report] service account JSON missing fields. type:',
-        typeof creds,
-        'keys present:',
-        creds && typeof creds === 'object' ? Object.keys(creds) : '(none)',
-      )
+      const diag =
+        creds && typeof creds === 'object' ? Object.keys(creds).join(',') : `(type=${typeof creds})`
+      console.log('[ga4-report] DIAG service account JSON missing fields. keys=', diag)
       return json({ error: 'invalid_credentials', message: 'Service account JSON is missing fields.' }, 200)
     }
 
