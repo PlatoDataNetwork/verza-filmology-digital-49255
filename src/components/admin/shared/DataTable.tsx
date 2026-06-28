@@ -69,6 +69,13 @@ export function DataTable<T>({
     return copy;
   }, [columns, data, sortKey, asc]);
 
+  const pageCount = pageSize ? Math.max(1, Math.ceil(sorted.length / pageSize)) : 1;
+  const safePage = Math.min(page, pageCount - 1);
+  const visible = useMemo(
+    () => (pageSize ? sorted.slice(safePage * pageSize, safePage * pageSize + pageSize) : sorted),
+    [sorted, pageSize, safePage],
+  );
+
   const toggle = (col: DataTableColumn<T>) => {
     if (col.sortable === false || !col.sortValue) return;
     if (sortKey === col.key) {
