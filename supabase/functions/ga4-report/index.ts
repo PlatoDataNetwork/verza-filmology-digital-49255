@@ -160,20 +160,32 @@ async function runBatch(token: string, propertyId: string, days: number) {
     ],
   }
 
-  const res = await fetch(
-    `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:batchRunReports`,
-    {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    },
-  )
-  const json = await res.json()
-  if (!res.ok) {
-    console.error('[ga4-report] batchRunReports error', json)
-    throw new Error(json?.error?.message || 'GA4 Data API request failed')
+  // GA4 batchRunReports allows a maximum of 5 requests per batch.
+  // Split into chunks of 5 and merge the reports back in their original order.
+  const MAX_PER_BATCH = 5
+  const chunks: (typeof body.requests)[] = []
+  for (let i = 0; i < body.requests.length; i += MAX_PER_BATCH) {
+    chunks.push(body.requests.slice(i, i + MAX_PER_BATCH))
   }
-  return json.reports as { rows?: GaRow[] }[]
+
+  const reports: { rows?: GaRow[] }[] = []
+  for (const requests of chunks) {
+    const res = await fetch(
+      `https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:batchRunReports`,
+      {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ requests }),
+      },
+    )
+    const json = await res.json()
+    if (!res.ok) {
+      console.error('[ga4-report] batchRunReports error', json)
+      throw new Error(json?.error?.message || 'GA4 Data API request failed')
+    }
+    reports.push(...((json.reports as { rows?: GaRow[] }[]) ?? []))
+  }
+  return reports
 }
 
 async function runRealtime(token: string, propertyId: string) {
