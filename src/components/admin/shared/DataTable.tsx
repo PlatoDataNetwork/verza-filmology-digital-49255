@@ -50,9 +50,11 @@ export function DataTable<T>({
   getRowKey,
   initialSortKey,
   initialSortAsc = false,
+  pageSize,
 }: DataTableProps<T>) {
   const [sortKey, setSortKey] = useState<string | undefined>(initialSortKey);
   const [asc, setAsc] = useState(initialSortAsc);
+  const [page, setPage] = useState(0);
 
   const sorted = useMemo(() => {
     const col = columns.find((c) => c.key === sortKey);
