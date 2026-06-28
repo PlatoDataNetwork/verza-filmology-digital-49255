@@ -143,7 +143,7 @@ const Settings = () => {
         description="Configure third-party integrations used across the admin panel."
       />
 
-      {status === "loading" && <LoadingState />}
+      {status === "loading" && <LoadingState cards={0} blocks={2} blockHeight="h-64" />}
       {status === "error" && (
         <ErrorState
           description="We couldn't load your integration settings."
