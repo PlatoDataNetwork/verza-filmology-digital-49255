@@ -35,6 +35,8 @@ export interface DataTableProps<T> {
   /** Initial sort column key. */
   initialSortKey?: string;
   initialSortAsc?: boolean;
+  /** When set, paginate client-side with this many rows per page. */
+  pageSize?: number;
 }
 
 /**
