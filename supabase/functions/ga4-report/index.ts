@@ -295,13 +295,28 @@ Deno.serve(async (req) => {
 
     let creds: { client_email?: string; private_key?: string }
     try {
-      creds = JSON.parse(raw)
+      let parsedCreds: unknown = JSON.parse(raw)
+      // Handle double-encoded JSON (value stored as a quoted JSON string).
+      if (typeof parsedCreds === 'string') {
+        parsedCreds = JSON.parse(parsedCreds)
+      }
+      creds = parsedCreds as { client_email?: string; private_key?: string }
     } catch {
       console.error('[ga4-report] GA4_SERVICE_ACCOUNT_JSON is not valid JSON')
       return json({ error: 'invalid_credentials', message: 'Service account JSON is invalid.' }, 200)
     }
-    if (!creds.client_email || !creds.private_key) {
-      return json({ error: 'invalid_credentials', message: 'Service account JSON is missing fields.' }, 200)
+    if (!creds || typeof creds !== 'object' || !creds.client_email || !creds.private_key) {
+      // Safe diagnostic: log key NAMES only, never values.
+      const keys = creds && typeof creds === 'object' ? Object.keys(creds) : []
+      console.error('[ga4-report] service account JSON missing fields. top-level keys:', keys.join(',') || `(type=${typeof creds})`)
+
+      // Detect the common mistake: an OAuth 2.0 Client ID JSON ({ web: {...} } or { installed: {...} })
+      // was pasted instead of a service account key.
+      const isOAuthClient = keys.includes('web') || keys.includes('installed')
+      const message = isOAuthClient
+        ? 'The saved credential is an OAuth Client ID, not a service account key. Create a Service Account in Google Cloud, download its JSON key (it must contain "client_email" and "private_key"), grant that service account Viewer access on the GA4 property, then save that JSON as the GA4_SERVICE_ACCOUNT_JSON secret.'
+        : 'Service account JSON is missing required fields ("client_email" and "private_key"). Save the full service account key JSON as the GA4_SERVICE_ACCOUNT_JSON secret.'
+      return json({ error: 'invalid_credentials', message }, 200)
     }
 
     const accessToken = await getAccessToken(creds.client_email, creds.private_key.replace(/\\n/g, '\n'))
