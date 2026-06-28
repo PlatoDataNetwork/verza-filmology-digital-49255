@@ -1,4 +1,4 @@
-import { LayoutDashboard, BarChart3, Search } from "lucide-react";
+import { LayoutDashboard, BarChart3, Search, Settings } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -16,6 +16,7 @@ const items = [
   { title: "Dashboard", url: "/admin", icon: LayoutDashboard, end: true },
   { title: "Google Analytics", url: "/admin/google-analytics", icon: BarChart3, end: false },
   { title: "Google GSC", url: "/admin/google-gsc", icon: Search, end: false },
+  { title: "Settings", url: "/admin/settings", icon: Settings, end: false },
 ];
 
 export function AdminSidebar() {

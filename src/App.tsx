@@ -28,6 +28,7 @@ import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import GoogleAnalytics from "./pages/admin/GoogleAnalytics";
 import GoogleGSC from "./pages/admin/GoogleGSC";
+import Settings from "./pages/admin/Settings";
 import NotFound from "./pages/NotFound";
 
 
@@ -71,6 +72,7 @@ const App = () => (
                       <Route index element={<AdminDashboard />} />
                       <Route path="google-analytics" element={<GoogleAnalytics />} />
                       <Route path="google-gsc" element={<GoogleGSC />} />
+                      <Route path="settings" element={<Settings />} />
                     </Route>
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                     <Route path="*" element={<NotFound />} />
