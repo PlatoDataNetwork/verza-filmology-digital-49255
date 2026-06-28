@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { GoogleAnalyticsTag } from "@/components/GoogleAnalyticsTag";
 import { GlobalLoginDialog } from "@/components/GlobalLoginDialog";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { FrontendAuthProvider } from "@/contexts/FrontendAuthContext";
@@ -46,6 +47,7 @@ const App = () => (
                 <Sonner />
                 <BrowserRouter>
                   <ScrollToTop />
+                  <GoogleAnalyticsTag />
                   <GlobalLoginDialog />
                   <Routes>
                     <Route path="/login" element={<Login />} />

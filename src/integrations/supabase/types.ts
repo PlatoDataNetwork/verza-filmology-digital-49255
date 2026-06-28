@@ -189,6 +189,7 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_ga_measurement_id: { Args: never; Returns: string }
       move_to_dlq: {
         Args: {
           dlq_name: string
