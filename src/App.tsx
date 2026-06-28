@@ -72,6 +72,7 @@ const App = () => (
                       <Route index element={<AdminDashboard />} />
                       <Route path="google-analytics" element={<GoogleAnalytics />} />
                       <Route path="google-gsc" element={<GoogleGSC />} />
+                      <Route path="settings" element={<Settings />} />
                     </Route>
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                     <Route path="*" element={<NotFound />} />
