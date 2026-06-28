@@ -105,7 +105,42 @@ const AdminDashboard = () => {
         />
       )}
 
-      {status === "ready" && result && (
+      {/* Search Console overview (independent of GA configuration) */}
+      {gscStatus !== "unavailable" && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-muted-foreground">Search Console · last 28 days</h2>
+            <Button asChild variant="link" size="sm" className="h-auto p-0 text-xs">
+              <Link to="/admin/google-gsc">View details</Link>
+            </Button>
+          </div>
+          {gscStatus === "loading" && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Skeleton key={i} className="h-[116px] rounded-xl" />
+              ))}
+            </div>
+          )}
+          {gscStatus === "ready" && gscMetrics && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {gscMetrics.map((m) => (
+                <StatCard
+                  key={m.key}
+                  label={m.label.replace("Total ", "Search ").replace("Average ", "Avg. ")}
+                  value={formatGscValue(m)}
+                  change={m.change}
+                  changeSuffix={m.format === "position" ? "" : "%"}
+                  icon={m.icon}
+                  lowerIsBetter={m.format === "position"}
+                  caption="vs last period"
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+
         <>
           {/* Stat cards */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
