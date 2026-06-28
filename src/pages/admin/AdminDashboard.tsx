@@ -7,6 +7,7 @@ import { StatCard } from "@/components/admin/shared/StatCard";
 import { EmptyState } from "@/components/admin/shared/EmptyState";
 import { ErrorState } from "@/components/admin/shared/ErrorState";
 import { LoadingState } from "@/components/admin/shared/LoadingState";
+import { Skeleton } from "@/components/ui/skeleton";
 import { RecentActivity } from "@/components/admin/RecentActivity";
 import { EngagementChart, TrafficChart } from "@/components/admin/DashboardCharts";
 import { TopPagesCard } from "@/components/admin/analytics/AnalyticsCharts";
@@ -17,6 +18,11 @@ import {
   formatGaValue,
   type AnalyticsResult,
 } from "@/lib/admin/analyticsData";
+import {
+  fetchGscData,
+  formatGscValue,
+  type GscMetric,
+} from "@/lib/admin/gscData";
 
 type Status = "loading" | "ready" | "error" | "not_configured";
 
