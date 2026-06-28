@@ -146,7 +146,7 @@ const Settings = () => {
       {status === "loading" && <LoadingState />}
       {status === "error" && (
         <ErrorState
-          message="We couldn't load your integration settings."
+          description="We couldn't load your integration settings."
           onRetry={load}
         />
       )}
