@@ -18,6 +18,11 @@ const perfConfig = {
   impressions: { label: "Impressions", color: "hsl(var(--chart-2))" },
 } satisfies ChartConfig;
 
+const ctrPosConfig = {
+  ctr: { label: "CTR (%)", color: "hsl(var(--chart-3))" },
+  position: { label: "Avg. Position", color: "hsl(var(--chart-4))" },
+} satisfies ChartConfig;
+
 export function PerformanceChart({ data }: { data: GscTimePoint[] }) {
   return (
     <ChartCard title="Search Performance" description="Clicks and impressions over time">
