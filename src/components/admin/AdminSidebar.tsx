@@ -1,4 +1,4 @@
-import { LayoutDashboard, BarChart3, Search } from "lucide-react";
+import { LayoutDashboard, BarChart3, Search, Settings } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
