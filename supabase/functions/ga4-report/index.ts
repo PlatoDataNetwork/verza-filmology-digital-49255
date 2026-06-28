@@ -295,14 +295,24 @@ Deno.serve(async (req) => {
 
     let creds: { client_email?: string; private_key?: string }
     try {
-      creds = JSON.parse(raw)
+      let parsedCreds: unknown = JSON.parse(raw)
+      // Handle double-encoded JSON (value stored as a quoted JSON string).
+      if (typeof parsedCreds === 'string') {
+        parsedCreds = JSON.parse(parsedCreds)
+      }
+      creds = parsedCreds as { client_email?: string; private_key?: string }
     } catch {
       console.error('[ga4-report] GA4_SERVICE_ACCOUNT_JSON is not valid JSON')
       return json({ error: 'invalid_credentials', message: 'Service account JSON is invalid.' }, 200)
     }
-    if (!creds.client_email || !creds.private_key) {
+    if (!creds || typeof creds !== 'object' || !creds.client_email || !creds.private_key) {
       // Safe diagnostic: log key NAMES only, never values.
-      console.error('[ga4-report] service account JSON missing fields. keys present:', Object.keys(creds))
+      console.error(
+        '[ga4-report] service account JSON missing fields. type:',
+        typeof creds,
+        'keys present:',
+        creds && typeof creds === 'object' ? Object.keys(creds) : '(none)',
+      )
       return json({ error: 'invalid_credentials', message: 'Service account JSON is missing fields.' }, 200)
     }
 
