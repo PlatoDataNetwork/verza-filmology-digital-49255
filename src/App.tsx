@@ -62,6 +62,7 @@ const App = () => (
                     <Route path="/licensing" element={<Licensing />} />
                     <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
                     <Route path="/faq" element={<FAQ />} />
+                    <Route path="/ga-debug" element={<GADebug />} />
                     {/* Admin panel */}
                     <Route path="/admin/login" element={<AdminLogin />} />
                     <Route
