@@ -31,6 +31,9 @@ const AdminDashboard = () => {
   const [status, setStatus] = useState<Status>("loading");
   const [errorMessage, setErrorMessage] = useState("");
 
+  const [gscMetrics, setGscMetrics] = useState<GscMetric[] | null>(null);
+  const [gscStatus, setGscStatus] = useState<"loading" | "ready" | "unavailable">("loading");
+
   const load = useCallback(async () => {
     setStatus("loading");
     try {
@@ -48,11 +51,26 @@ const AdminDashboard = () => {
     }
   }, []);
 
+  const loadGsc = useCallback(async () => {
+    setGscStatus("loading");
+    try {
+      const res = await fetchGscData({ range: "28d", searchType: "web" });
+      setGscMetrics(res.data.metrics);
+      setGscStatus("ready");
+    } catch (e) {
+      // Search Console is optional on the dashboard — degrade gracefully.
+      console.warn("[AdminDashboard] Search Console unavailable", e);
+      setGscStatus("unavailable");
+    }
+  }, []);
+
   useEffect(() => {
     load();
-  }, [load]);
+    loadGsc();
+  }, [load, loadGsc]);
 
   const activity = getRecentActivity();
+
 
   return (
     <div className="mx-auto max-w-7xl space-y-6">
