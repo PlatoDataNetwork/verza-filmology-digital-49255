@@ -93,14 +93,14 @@ const GoogleGSC = () => {
       <Badge variant="secondary" className="hidden sm:inline-flex">
         {property.type === "DOMAIN" ? "Domain" : "URL prefix"}
       </Badge>
-      <DateRangeFilter
+      <DateRangeFilter<GscSearchType>
         value={searchType}
         onChange={setSearchType}
         options={GSC_SEARCH_TYPES}
         ariaLabel="Search type"
         className="w-[130px]"
       />
-      <DateRangeFilter
+      <DateRangeFilter<GscDateRangeKey>
         value={range}
         onChange={setRange}
         options={GSC_DATE_RANGES}
