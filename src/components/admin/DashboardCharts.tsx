@@ -28,10 +28,6 @@ const trafficConfig = {
   sessions: { label: "Sessions", color: "hsl(var(--chart-2))" },
 } satisfies ChartConfig;
 
-const usersConfig = {
-  newUsers: { label: "New Users", color: "hsl(var(--chart-1))" },
-  returningUsers: { label: "Returning", color: "hsl(var(--chart-3))" },
-} satisfies ChartConfig;
 
 const PIE_COLORS = [
   "hsl(var(--chart-1))",
