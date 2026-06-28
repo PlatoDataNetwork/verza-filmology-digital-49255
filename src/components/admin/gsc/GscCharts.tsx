@@ -70,3 +70,59 @@ export function PerformanceChart({ data }: { data: GscTimePoint[] }) {
     </ChartCard>
   );
 }
+
+export function CtrPositionChart({ data }: { data: GscTimePoint[] }) {
+  return (
+    <ChartCard title="CTR & Average Position" description="Click-through rate and ranking over time">
+      <ChartContainer config={ctrPosConfig} className="h-[300px] w-full">
+        <AreaChart data={data} margin={{ left: 4, right: 4, top: 8 }}>
+          <defs>
+            {(["ctr", "position"] as const).map((k) => (
+              <linearGradient key={k} id={`gsc-fill-${k}`} x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor={`var(--color-${k})`} stopOpacity={0.35} />
+                <stop offset="95%" stopColor={`var(--color-${k})`} stopOpacity={0.03} />
+              </linearGradient>
+            ))}
+          </defs>
+          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <XAxis
+            dataKey="date"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={8}
+            tickFormatter={shortDate}
+            minTickGap={24}
+          />
+          <YAxis yAxisId="left" tickLine={false} axisLine={false} width={40} />
+          <YAxis
+            yAxisId="right"
+            orientation="right"
+            tickLine={false}
+            axisLine={false}
+            width={40}
+            reversed
+          />
+          <ChartTooltip content={<ChartTooltipContent labelFormatter={(v) => shortDate(String(v))} />} />
+          <Area
+            yAxisId="left"
+            dataKey="ctr"
+            type="monotone"
+            stroke="var(--color-ctr)"
+            fill="url(#gsc-fill-ctr)"
+            strokeWidth={2}
+          />
+          <Area
+            yAxisId="right"
+            dataKey="position"
+            type="monotone"
+            stroke="var(--color-position)"
+            fill="url(#gsc-fill-position)"
+            strokeWidth={2}
+          />
+          <ChartLegend content={<ChartLegendContent />} />
+        </AreaChart>
+      </ChartContainer>
+    </ChartCard>
+  );
+}
+
