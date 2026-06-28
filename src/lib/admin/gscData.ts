@@ -5,27 +5,30 @@ import {
   ArrowUpDown,
   type LucideIcon,
 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { getIntegrationSettings } from "@/lib/admin/settingsData";
 
 /**
- * Google Search Console data layer.
+ * Google Search Console data layer (searchConsoleService).
  *
- * Everything here is mock data shaped to mirror what the Search Console
- * Search Analytics API returns (the `searchAnalytics.query` endpoint).
- * When the real integration is built, replace the bodies of the `getGsc*`
- * functions with calls to a secure backend edge function that proxies the
- * GSC API using the server-side OAuth connection.
+ * Real data is fetched through the `gsc-report` Supabase Edge Function, which
+ * holds the Google OAuth connection server-side and proxies the Search Console
+ * Search Analytics API. The frontend never touches Google credentials — it only
+ * calls our own backend and reads the saved Site URL from `integration_settings`.
  *
- * IMPORTANT: GSC credentials / OAuth tokens must live ONLY on the server
- * (edge function + connector gateway). The frontend never holds them — it only
- * ever calls our own backend, which proxies the Search Console API.
+ * All Search Console logic is kept separate from the Google Analytics layer
+ * (`analyticsData.ts`).
  */
 
-export type GscDateRangeKey = "7d" | "28d" | "90d";
+export type GscDateRangeKey = "7d" | "28d" | "90d" | "6m" | "12m" | "custom";
 
 export const GSC_DATE_RANGES: { key: GscDateRangeKey; label: string; days: number }[] = [
   { key: "7d", label: "Last 7 days", days: 7 },
   { key: "28d", label: "Last 28 days", days: 28 },
   { key: "90d", label: "Last 90 days", days: 90 },
+  { key: "6m", label: "Last 6 months", days: 182 },
+  { key: "12m", label: "Last 12 months", days: 365 },
+  { key: "custom", label: "Custom range", days: 0 },
 ];
 
 export type GscSearchType = "web" | "image" | "video" | "news";
@@ -37,27 +40,11 @@ export const GSC_SEARCH_TYPES: { key: GscSearchType; label: string }[] = [
   { key: "news", label: "News" },
 ];
 
-export interface GscProperty {
-  /** Property URL as registered in Search Console, e.g. "https://verzatv.io/". */
-  siteUrl: string;
-  displayName: string;
-  /** "URL-prefix" or "Domain" property type. */
-  type: "URL_PREFIX" | "DOMAIN";
-}
-
-export interface GscConnection {
-  connected: boolean;
-  /** The currently selected property (null when not connected). */
-  property: GscProperty | null;
-  /** Available properties to choose from once an account is linked. */
-  availableProperties: GscProperty[];
-}
-
 export interface GscMetric {
   key: string;
   label: string;
   value: number;
-  /** Percentage change vs. previous period (e.g. 12.4 = +12.4%). */
+  /** Percentage change vs. previous period (e.g. 12.4 = +12.4%). For position this is the raw delta. */
   change: number;
   icon: LucideIcon;
   format: "number" | "compact" | "percent" | "position";
@@ -73,7 +60,7 @@ export interface GscTimePoint {
 
 /** A row from the `searchAnalytics.query` response (a single dimension key). */
 export interface GscRow {
-  key: string; // query text, page url, country, or device
+  key: string; // query text, page url, country, device, or search appearance
   clicks: number;
   impressions: number;
   ctr: number; // 0-100
@@ -87,118 +74,123 @@ export interface GscData {
   pages: GscRow[];
   countries: GscRow[];
   devices: GscRow[];
+  searchAppearance: GscRow[];
 }
 
-const MOCK_PROPERTIES: GscProperty[] = [
-  { siteUrl: "https://verzatv.io/", displayName: "verzatv.io", type: "DOMAIN" },
-  { siteUrl: "https://verza-filmology-digital-49255.lovable.app/", displayName: "verza-filmology-digital (lovable.app)", type: "URL_PREFIX" },
-];
-
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-/**
- * Connection status. Wire this to the real GSC connector state later.
- * Defaults to "not connected" so the connect UI and empty states are visible.
- */
-export async function getGscConnection(): Promise<GscConnection> {
-  await delay(250);
-  return {
-    connected: false,
-    property: null,
-    availableProperties: MOCK_PROPERTIES,
-  };
-}
-
-function rand(min: number, max: number) {
-  return Math.round(min + Math.random() * (max - min));
-}
-
-function buildTimeseries(days: number, typeFactor: number): GscTimePoint[] {
-  const out: GscTimePoint[] = [];
-  for (let i = days - 1; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const impressions = Math.round((4200 + Math.sin(i / 4) * 900 + rand(0, 1100)) * typeFactor);
-    const clicks = Math.round(impressions * (0.04 + Math.random() * 0.03));
-    out.push({
-      date: d.toISOString().slice(0, 10),
-      clicks,
-      impressions,
-      ctr: +((clicks / impressions) * 100).toFixed(2),
-      position: +(6 + Math.random() * 8).toFixed(1),
-    });
+/** Raised when the Search Console Site URL is not saved in Admin Settings. */
+export class GscNotConfiguredError extends Error {
+  constructor(
+    message = "Google Search Console has not been configured. Please complete the setup in Admin → Settings.",
+  ) {
+    super(message);
+    this.name = "GscNotConfiguredError";
   }
-  return out;
 }
 
-function sum<T>(rows: T[], pick: (r: T) => number) {
-  return rows.reduce((acc, r) => acc + pick(r), 0);
+/** Raised when the connected account lacks access to the configured property. */
+export class GscPermissionError extends Error {
+  constructor(message = "Access denied for this Search Console property.") {
+    super(message);
+    this.name = "GscPermissionError";
+  }
 }
 
-const QUERY_SAMPLES = [
-  "verza tv", "verzatv app", "micro drama streaming", "alan mruvka", "larry namer",
-  "vertical video app", "watch micro dramas", "verza originals", "buy sell miami show",
-  "storage pirates show", "sugar babies miami", "creator revenue share app", "the vertical tea",
-  "digital theatre app", "verza tv download",
-];
+// ---------------------------------------------------------------------------
+// Edge function shape
+// ---------------------------------------------------------------------------
 
-const PAGE_SAMPLES = [
-  "/", "/investors", "/about", "/team", "/faq", "/news", "/login", "/contact",
-];
+interface GscReportResponse {
+  error?: string;
+  message?: string;
+  siteUrl?: string;
+  totals?: { clicks: number; impressions: number; ctr: number; position: number };
+  changes?: { clicks: number; impressions: number; ctr: number; position: number };
+  timeseries?: GscTimePoint[];
+  queries?: GscRow[];
+  pages?: GscRow[];
+  countries?: GscRow[];
+  devices?: GscRow[];
+  searchAppearance?: GscRow[];
+}
 
-function buildRows(samples: string[], scale: number, typeFactor: number): GscRow[] {
-  return samples
-    .map((key) => {
-      const impressions = Math.round(rand(400, 9000) * scale * typeFactor);
-      const clicks = Math.round(impressions * (0.02 + Math.random() * 0.08));
-      return {
-        key,
-        clicks,
-        impressions,
-        ctr: +((clicks / impressions) * 100).toFixed(2),
-        position: +(1 + Math.random() * 24).toFixed(1),
-      };
-    })
-    .sort((a, b) => b.clicks - a.clicks);
+export interface GscResult {
+  siteUrl: string;
+  data: GscData;
+}
+
+export interface GscFetchArgs {
+  range: GscDateRangeKey;
+  searchType: GscSearchType;
+  /** Required when range === "custom". */
+  startDate?: string;
+  endDate?: string;
+}
+
+/** Reads the saved Site URL (non-sensitive) from integration settings. */
+export async function getSavedSiteUrl(): Promise<string | null> {
+  const settings = await getIntegrationSettings();
+  const gsc = settings.google_search_console;
+  const siteUrl = (gsc?.config as { siteUrl?: string } | undefined)?.siteUrl;
+  if (gsc && gsc.enabled === false) return null;
+  return siteUrl && siteUrl.trim() ? siteUrl.trim() : null;
 }
 
 /**
- * Main report fetch. Replace with a secure backend call that proxies the GSC
- * `searchAnalytics.query` endpoint for the given range / search type.
+ * Fetch Search Console data via the secure edge function.
+ * Throws GscNotConfiguredError / GscPermissionError for those states.
  */
-export async function getGscData(range: GscDateRangeKey, searchType: GscSearchType): Promise<GscData> {
-  await delay(600);
-  const def = GSC_DATE_RANGES.find((r) => r.key === range) ?? GSC_DATE_RANGES[1];
-  const typeFactor = searchType === "web" ? 1 : searchType === "image" ? 0.45 : searchType === "video" ? 0.2 : 0.12;
-  const timeseries = buildTimeseries(def.days, typeFactor);
+export async function fetchGscData(args: GscFetchArgs): Promise<GscResult> {
+  const siteUrl = await getSavedSiteUrl();
+  if (!siteUrl) {
+    throw new GscNotConfiguredError();
+  }
 
-  const totalClicks = sum(timeseries, (t) => t.clicks);
-  const totalImpressions = sum(timeseries, (t) => t.impressions);
-  const avgCtr = totalImpressions ? +((totalClicks / totalImpressions) * 100).toFixed(2) : 0;
-  const avgPosition = +(sum(timeseries, (t) => t.position) / timeseries.length).toFixed(1);
+  const { data, error } = await supabase.functions.invoke<GscReportResponse>("gsc-report", {
+    body: args,
+  });
+
+  if (error) {
+    console.error("[gsc] gsc-report invocation failed", error);
+    throw new Error(error.message || "Failed to load Search Console data");
+  }
+  if (!data) {
+    throw new Error("No response from Search Console service");
+  }
+  if (data.error) {
+    if (data.error === "not_configured") throw new GscNotConfiguredError(data.message);
+    if (data.error === "permission_error") throw new GscPermissionError(data.message);
+    console.error("[gsc] gsc-report returned error", data.error, data.message);
+    throw new Error(data.message || "Google Search Console request failed");
+  }
+
+  return { siteUrl: data.siteUrl ?? siteUrl, data: toGscData(data) };
+}
+
+function toGscData(res: GscReportResponse): GscData {
+  const t = res.totals ?? { clicks: 0, impressions: 0, ctr: 0, position: 0 };
+  const c = res.changes ?? { clicks: 0, impressions: 0, ctr: 0, position: 0 };
 
   const metrics: GscMetric[] = [
-    { key: "clicks", label: "Total Clicks", value: totalClicks, change: 9.2, icon: MousePointerClick, format: "compact" },
-    { key: "impressions", label: "Total Impressions", value: totalImpressions, change: 4.7, icon: Eye, format: "compact" },
-    { key: "ctr", label: "Average CTR", value: avgCtr, change: 1.4, icon: Percent, format: "percent" },
-    { key: "position", label: "Average Position", value: avgPosition, change: -0.6, icon: ArrowUpDown, format: "position" },
+    { key: "clicks", label: "Total Clicks", value: t.clicks, change: c.clicks, icon: MousePointerClick, format: "compact" },
+    { key: "impressions", label: "Total Impressions", value: t.impressions, change: c.impressions, icon: Eye, format: "compact" },
+    { key: "ctr", label: "Average CTR", value: t.ctr, change: c.ctr, icon: Percent, format: "percent" },
+    { key: "position", label: "Average Position", value: t.position, change: c.position, icon: ArrowUpDown, format: "position" },
   ];
 
   return {
     metrics,
-    timeseries,
-    queries: buildRows(QUERY_SAMPLES, 1, typeFactor),
-    pages: buildRows(PAGE_SAMPLES, 1.4, typeFactor),
-    countries: buildRows(
-      ["United States", "United Kingdom", "Canada", "Australia", "Germany", "India"],
-      1.6,
-      typeFactor,
-    ),
-    devices: buildRows(["Mobile", "Desktop", "Tablet"], 3.2, typeFactor),
+    timeseries: res.timeseries ?? [],
+    queries: res.queries ?? [],
+    pages: res.pages ?? [],
+    countries: res.countries ?? [],
+    devices: res.devices ?? [],
+    searchAppearance: res.searchAppearance ?? [],
   };
 }
+
+// ---------------------------------------------------------------------------
+// Formatting helpers
+// ---------------------------------------------------------------------------
 
 export function formatGscValue(metric: GscMetric): string {
   switch (metric.format) {

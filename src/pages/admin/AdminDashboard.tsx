@@ -7,6 +7,7 @@ import { StatCard } from "@/components/admin/shared/StatCard";
 import { EmptyState } from "@/components/admin/shared/EmptyState";
 import { ErrorState } from "@/components/admin/shared/ErrorState";
 import { LoadingState } from "@/components/admin/shared/LoadingState";
+import { Skeleton } from "@/components/ui/skeleton";
 import { RecentActivity } from "@/components/admin/RecentActivity";
 import { EngagementChart, TrafficChart } from "@/components/admin/DashboardCharts";
 import { TopPagesCard } from "@/components/admin/analytics/AnalyticsCharts";
@@ -17,6 +18,11 @@ import {
   formatGaValue,
   type AnalyticsResult,
 } from "@/lib/admin/analyticsData";
+import {
+  fetchGscData,
+  formatGscValue,
+  type GscMetric,
+} from "@/lib/admin/gscData";
 
 type Status = "loading" | "ready" | "error" | "not_configured";
 
@@ -24,6 +30,9 @@ const AdminDashboard = () => {
   const [result, setResult] = useState<AnalyticsResult | null>(null);
   const [status, setStatus] = useState<Status>("loading");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const [gscMetrics, setGscMetrics] = useState<GscMetric[] | null>(null);
+  const [gscStatus, setGscStatus] = useState<"loading" | "ready" | "unavailable">("loading");
 
   const load = useCallback(async () => {
     setStatus("loading");
@@ -42,11 +51,26 @@ const AdminDashboard = () => {
     }
   }, []);
 
+  const loadGsc = useCallback(async () => {
+    setGscStatus("loading");
+    try {
+      const res = await fetchGscData({ range: "28d", searchType: "web" });
+      setGscMetrics(res.data.metrics);
+      setGscStatus("ready");
+    } catch (e) {
+      // Search Console is optional on the dashboard — degrade gracefully.
+      console.warn("[AdminDashboard] Search Console unavailable", e);
+      setGscStatus("unavailable");
+    }
+  }, []);
+
   useEffect(() => {
     load();
-  }, [load]);
+    loadGsc();
+  }, [load, loadGsc]);
 
   const activity = getRecentActivity();
+
 
   return (
     <div className="mx-auto max-w-7xl space-y-6">
@@ -79,6 +103,41 @@ const AdminDashboard = () => {
           description={errorMessage || "Something went wrong fetching analytics data."}
           onRetry={load}
         />
+      )}
+
+      {/* Search Console overview (independent of GA configuration) */}
+      {gscStatus !== "unavailable" && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-muted-foreground">Search Console · last 28 days</h2>
+            <Button asChild variant="link" size="sm" className="h-auto p-0 text-xs">
+              <Link to="/admin/google-gsc">View details</Link>
+            </Button>
+          </div>
+          {gscStatus === "loading" && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Skeleton key={i} className="h-[116px] rounded-xl" />
+              ))}
+            </div>
+          )}
+          {gscStatus === "ready" && gscMetrics && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {gscMetrics.map((m) => (
+                <StatCard
+                  key={m.key}
+                  label={m.label.replace("Total ", "Search ").replace("Average ", "Avg. ")}
+                  value={formatGscValue(m)}
+                  change={m.change}
+                  changeSuffix={m.format === "position" ? "" : "%"}
+                  icon={m.icon}
+                  lowerIsBetter={m.format === "position"}
+                  caption="vs last period"
+                />
+              ))}
+            </div>
+          )}
+        </div>
       )}
 
       {status === "ready" && result && (

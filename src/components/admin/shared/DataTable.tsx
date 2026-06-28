@@ -35,6 +35,8 @@ export interface DataTableProps<T> {
   /** Initial sort column key. */
   initialSortKey?: string;
   initialSortAsc?: boolean;
+  /** When set, paginate client-side with this many rows per page. */
+  pageSize?: number;
 }
 
 /**
@@ -48,9 +50,11 @@ export function DataTable<T>({
   getRowKey,
   initialSortKey,
   initialSortAsc = false,
+  pageSize,
 }: DataTableProps<T>) {
   const [sortKey, setSortKey] = useState<string | undefined>(initialSortKey);
   const [asc, setAsc] = useState(initialSortAsc);
+  const [page, setPage] = useState(0);
 
   const sorted = useMemo(() => {
     const col = columns.find((c) => c.key === sortKey);
@@ -65,6 +69,13 @@ export function DataTable<T>({
     return copy;
   }, [columns, data, sortKey, asc]);
 
+  const pageCount = pageSize ? Math.max(1, Math.ceil(sorted.length / pageSize)) : 1;
+  const safePage = Math.min(page, pageCount - 1);
+  const visible = useMemo(
+    () => (pageSize ? sorted.slice(safePage * pageSize, safePage * pageSize + pageSize) : sorted),
+    [sorted, pageSize, safePage],
+  );
+
   const toggle = (col: DataTableColumn<T>) => {
     if (col.sortable === false || !col.sortValue) return;
     if (sortKey === col.key) {
@@ -76,62 +87,91 @@ export function DataTable<T>({
   };
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          {columns.map((col, i) => {
-            const isSortable = col.sortable !== false && !!col.sortValue;
-            const right = col.align === "right";
-            return (
-              <TableHead
-                key={col.key}
-                className={cn(right && "text-right", i === 0 && "pl-6", i === columns.length - 1 && "pr-6")}
-              >
-                {isSortable ? (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => toggle(col)}
-                    className={cn("-mx-2 h-8 px-2 font-medium", right && "ml-auto")}
-                  >
-                    {col.header}
-                    {sortKey === col.key ? (
-                      asc ? (
-                        <ChevronUp className="ml-1 h-3.5 w-3.5" />
+    <div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            {columns.map((col, i) => {
+              const isSortable = col.sortable !== false && !!col.sortValue;
+              const right = col.align === "right";
+              return (
+                <TableHead
+                  key={col.key}
+                  className={cn(right && "text-right", i === 0 && "pl-6", i === columns.length - 1 && "pr-6")}
+                >
+                  {isSortable ? (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => toggle(col)}
+                      className={cn("-mx-2 h-8 px-2 font-medium", right && "ml-auto")}
+                    >
+                      {col.header}
+                      {sortKey === col.key ? (
+                        asc ? (
+                          <ChevronUp className="ml-1 h-3.5 w-3.5" />
+                        ) : (
+                          <ChevronDown className="ml-1 h-3.5 w-3.5" />
+                        )
                       ) : (
-                        <ChevronDown className="ml-1 h-3.5 w-3.5" />
-                      )
-                    ) : (
-                      <ArrowUpDown className="ml-1 h-3.5 w-3.5 opacity-40" />
-                    )}
-                  </Button>
-                ) : (
-                  col.header
-                )}
-              </TableHead>
-            );
-          })}
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {sorted.map((row) => (
-          <TableRow key={getRowKey(row)}>
-            {columns.map((col, i) => (
-              <TableCell
-                key={col.key}
-                className={cn(
-                  col.align === "right" && "text-right tabular-nums",
-                  i === 0 && "pl-6",
-                  i === columns.length - 1 && "pr-6",
-                  col.cellClassName,
-                )}
-              >
-                {col.cell(row)}
-              </TableCell>
-            ))}
+                        <ArrowUpDown className="ml-1 h-3.5 w-3.5 opacity-40" />
+                      )}
+                    </Button>
+                  ) : (
+                    col.header
+                  )}
+                </TableHead>
+              );
+            })}
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {visible.map((row) => (
+            <TableRow key={getRowKey(row)}>
+              {columns.map((col, i) => (
+                <TableCell
+                  key={col.key}
+                  className={cn(
+                    col.align === "right" && "text-right tabular-nums",
+                    i === 0 && "pl-6",
+                    i === columns.length - 1 && "pr-6",
+                    col.cellClassName,
+                  )}
+                >
+                  {col.cell(row)}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+
+      {pageSize && pageCount > 1 && (
+        <div className="flex items-center justify-between gap-2 px-6 py-3 text-sm text-muted-foreground">
+          <span>
+            {safePage * pageSize + 1}–{Math.min(sorted.length, safePage * pageSize + pageSize)} of {sorted.length}
+          </span>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setPage((p) => Math.max(0, p - 1))}
+              disabled={safePage === 0}
+            >
+              Previous
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
+              disabled={safePage >= pageCount - 1}
+            >
+              Next
+            </Button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
+
