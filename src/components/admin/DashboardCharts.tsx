@@ -1,8 +1,6 @@
 import {
   Area,
   AreaChart,
-  Bar,
-  BarChart,
   CartesianGrid,
   Cell,
   Pie,
@@ -18,7 +16,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart";
-import type { EngagementSlice, TrafficPoint, UsersPoint } from "@/lib/admin/dashboardData";
+import type { EngagementSlice, TrafficPoint } from "@/lib/admin/dashboardData";
 
 const shortDate = (value: string) =>
   new Date(value).toLocaleDateString("en", { month: "short", day: "numeric" });
@@ -28,10 +26,6 @@ const trafficConfig = {
   sessions: { label: "Sessions", color: "hsl(var(--chart-2))" },
 } satisfies ChartConfig;
 
-const usersConfig = {
-  newUsers: { label: "New Users", color: "hsl(var(--chart-1))" },
-  returningUsers: { label: "Returning", color: "hsl(var(--chart-3))" },
-} satisfies ChartConfig;
 
 const PIE_COLORS = [
   "hsl(var(--chart-1))",
@@ -93,35 +87,6 @@ export function TrafficChart({ data }: { data: TrafficPoint[] }) {
   );
 }
 
-export function UsersChart({ data }: { data: UsersPoint[] }) {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-base">New vs Returning Users</CardTitle>
-        <CardDescription>Daily user breakdown</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer config={usersConfig} className="h-[260px] w-full">
-          <BarChart data={data} margin={{ left: 4, right: 4, top: 8 }}>
-            <CartesianGrid vertical={false} strokeDasharray="3 3" />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={shortDate}
-              minTickGap={24}
-            />
-            <ChartTooltip content={<ChartTooltipContent labelFormatter={(v) => shortDate(String(v))} />} />
-            <Bar dataKey="newUsers" fill="var(--color-newUsers)" radius={[4, 4, 0, 0]} stackId="u" />
-            <Bar dataKey="returningUsers" fill="var(--color-returningUsers)" radius={[4, 4, 0, 0]} stackId="u" />
-            <ChartLegend content={<ChartLegendContent />} />
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
-  );
-}
 
 export function EngagementChart({ data }: { data: EngagementSlice[] }) {
   const config = Object.fromEntries(
