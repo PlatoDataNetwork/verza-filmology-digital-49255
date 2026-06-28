@@ -307,10 +307,16 @@ Deno.serve(async (req) => {
     }
     if (!creds || typeof creds !== 'object' || !creds.client_email || !creds.private_key) {
       // Safe diagnostic: log key NAMES only, never values.
-      const diag =
-        creds && typeof creds === 'object' ? Object.keys(creds).join(',') : `(type=${typeof creds})`
-      console.log('[ga4-report] DIAG service account JSON missing fields. keys=', diag)
-      return json({ error: 'invalid_credentials', message: 'Service account JSON is missing fields.' }, 200)
+      const keys = creds && typeof creds === 'object' ? Object.keys(creds) : []
+      console.error('[ga4-report] service account JSON missing fields. top-level keys:', keys.join(',') || `(type=${typeof creds})`)
+
+      // Detect the common mistake: an OAuth 2.0 Client ID JSON ({ web: {...} } or { installed: {...} })
+      // was pasted instead of a service account key.
+      const isOAuthClient = keys.includes('web') || keys.includes('installed')
+      const message = isOAuthClient
+        ? 'The saved credential is an OAuth Client ID, not a service account key. Create a Service Account in Google Cloud, download its JSON key (it must contain "client_email" and "private_key"), grant that service account Viewer access on the GA4 property, then save that JSON as the GA4_SERVICE_ACCOUNT_JSON secret.'
+        : 'Service account JSON is missing required fields ("client_email" and "private_key"). Save the full service account key JSON as the GA4_SERVICE_ACCOUNT_JSON secret.'
+      return json({ error: 'invalid_credentials', message }, 200)
     }
 
     const accessToken = await getAccessToken(creds.client_email, creds.private_key.replace(/\\n/g, '\n'))
