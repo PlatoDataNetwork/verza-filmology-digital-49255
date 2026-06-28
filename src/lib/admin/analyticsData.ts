@@ -7,18 +7,16 @@ import {
   Timer,
   type LucideIcon,
 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { getIntegrationSettings } from "@/lib/admin/settingsData";
 
 /**
  * Google Analytics (GA4) data layer.
  *
- * Everything here is mock data shaped to mirror what the Google Analytics
- * Data API (GA4) returns. When the real integration is built, replace the
- * bodies of the `getAnalytics*` functions with calls to a secure backend edge
- * function (e.g. `supabase.functions.invoke("ga4-report", { body: { ... } })`).
- *
- * IMPORTANT: Google API credentials / service-account keys must live ONLY on
- * the server (edge function secrets). The frontend should never hold them — it
- * only ever calls our own backend, which proxies the GA4 Data API.
+ * Real data is fetched through the `ga4-report` Supabase Edge Function, which
+ * holds the Google service-account credentials server-side and proxies the GA4
+ * Data API. The frontend never touches Google credentials — it only calls our
+ * own backend and reads the saved Property ID from `integration_settings`.
  */
 
 export type DateRangeKey = "7d" | "28d" | "90d";
@@ -28,22 +26,6 @@ export const DATE_RANGES: { key: DateRangeKey; label: string; days: number }[] =
   { key: "28d", label: "Last 28 days", days: 28 },
   { key: "90d", label: "Last 90 days", days: 90 },
 ];
-
-export interface GaProperty {
-  /** GA4 property id, e.g. "properties/123456789". */
-  id: string;
-  displayName: string;
-  /** Measurement ID, e.g. "G-XXXXXXXXXX". */
-  measurementId: string;
-}
-
-export interface GaConnection {
-  connected: boolean;
-  /** The currently selected property (null when not connected). */
-  property: GaProperty | null;
-  /** Available properties to choose from once an account is linked. */
-  availableProperties: GaProperty[];
-}
 
 export interface GaMetric {
   key: string;
@@ -65,7 +47,6 @@ export interface GaTimePoint {
 export interface GaDimensionRow {
   label: string;
   value: number;
-  /** Optional secondary value (e.g. sessions vs users). */
   secondary?: number;
 }
 
@@ -78,9 +59,7 @@ export interface GaTopPage {
 
 export interface GaRealtime {
   activeUsers: number;
-  /** Active users per minute for the last 30 minutes. */
   perMinute: { minute: number; users: number }[];
-  /** Active users by top pages right now. */
   topPages: { path: string; users: number }[];
 }
 
@@ -93,125 +72,143 @@ export interface AnalyticsData {
   countries: GaDimensionRow[];
 }
 
-const MOCK_PROPERTIES: GaProperty[] = [
-  { id: "properties/318401234", displayName: "Verza TV — Web", measurementId: "G-VERZA01TV" },
-  { id: "properties/318405678", displayName: "Verza TV — App", measurementId: "G-VERZA02AP" },
-];
+/** Shape returned by the ga4-report edge function. */
+export interface Ga4ReportResponse {
+  propertyId?: string;
+  totals?: {
+    sessions: number;
+    users: number;
+    newUsers: number;
+    pageViews: number;
+    engagementRate: number;
+    avgSession: number;
+  };
+  changes?: {
+    sessions: number;
+    users: number;
+    newUsers: number;
+    pageViews: number;
+    engagementRate: number;
+    avgSession: number;
+  };
+  timeseries?: GaTimePoint[];
+  trafficSources?: GaDimensionRow[];
+  topPages?: GaTopPage[];
+  devices?: GaDimensionRow[];
+  countries?: GaDimensionRow[];
+  realtime?: GaRealtime;
+  error?: string;
+  message?: string;
+}
+
+export interface AnalyticsResult {
+  data: AnalyticsData;
+  realtime: GaRealtime;
+  propertyId: string;
+}
+
+/** Raised when the GA4 Property ID is not saved in Admin Settings. */
+export class AnalyticsNotConfiguredError extends Error {
+  constructor(message = "Google Analytics Property ID is not configured. Please add it in Admin Settings.") {
+    super(message);
+    this.name = "AnalyticsNotConfiguredError";
+  }
+}
+
+/** Reads the saved GA4 Property ID (non-sensitive) from integration settings. */
+export async function getSavedPropertyId(): Promise<string | null> {
+  const settings = await getIntegrationSettings();
+  const ga = settings.google_analytics;
+  const propertyId = (ga?.config as { propertyId?: string } | undefined)?.propertyId;
+  if (import.meta.env.DEV) {
+    console.log("[analytics] saved GA4 propertyId:", propertyId ?? "(none)", "enabled:", ga?.enabled);
+  }
+  return propertyId && propertyId.trim() ? propertyId.trim() : null;
+}
 
 /**
- * Connection status. Wire this to real OAuth / connector state later.
- * Defaults to "not connected" so the connect UI and empty states are visible.
+ * Fetch GA4 data via the secure edge function for the given date range.
+ * Throws AnalyticsNotConfiguredError when no Property ID is configured.
  */
-export async function getAnalyticsConnection(): Promise<GaConnection> {
-  await delay(250);
+export async function fetchAnalytics(range: DateRangeKey): Promise<AnalyticsResult> {
+  const propertyId = await getSavedPropertyId();
+  if (!propertyId) {
+    throw new AnalyticsNotConfiguredError();
+  }
+
+  if (import.meta.env.DEV) {
+    console.log("[analytics] invoking ga4-report edge function", { range });
+  }
+
+  const { data, error } = await supabase.functions.invoke<Ga4ReportResponse>("ga4-report", {
+    body: { range },
+  });
+
+  if (error) {
+    console.error("[analytics] ga4-report invocation failed", error);
+    throw new Error(error.message || "Failed to load analytics data");
+  }
+  if (!data) {
+    throw new Error("No response from analytics service");
+  }
+  if (data.error) {
+    if (data.error === "not_configured") {
+      throw new AnalyticsNotConfiguredError(data.message);
+    }
+    console.error("[analytics] ga4-report returned error", data.error, data.message);
+    throw new Error(data.message || "Google Analytics request failed");
+  }
+
+  if (import.meta.env.DEV) {
+    console.log("[analytics] ga4-report response received", {
+      sessions: data.totals?.sessions,
+      timeseriesPoints: data.timeseries?.length,
+      realtimeActive: data.realtime?.activeUsers,
+    });
+  }
+
   return {
-    connected: false,
-    property: null,
-    availableProperties: MOCK_PROPERTIES,
+    propertyId: data.propertyId ?? propertyId,
+    data: toAnalyticsData(data),
+    realtime:
+      data.realtime ?? { activeUsers: 0, perMinute: [], topPages: [] },
   };
 }
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function buildTimeseries(days: number): GaTimePoint[] {
-  const out: GaTimePoint[] = [];
-  for (let i = days - 1; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const base = 6000 + Math.round(Math.sin(i / 3) * 1400);
-    const sessions = base + Math.round(Math.random() * 1800);
-    out.push({
-      date: d.toISOString().slice(0, 10),
-      sessions,
-      users: Math.round(sessions * 0.72) + Math.round(Math.random() * 400),
-      pageViews: Math.round(sessions * 2.4) + Math.round(Math.random() * 1200),
-    });
-  }
-  return out;
-}
-
-function sum<T>(rows: T[], pick: (r: T) => number) {
-  return rows.reduce((acc, r) => acc + pick(r), 0);
-}
-
-/**
- * Main report fetch. Replace with a secure backend call that proxies the GA4
- * Data API `runReport` endpoint using server-side credentials.
- */
-export async function getAnalyticsData(range: DateRangeKey): Promise<AnalyticsData> {
-  await delay(600);
-  const def = DATE_RANGES.find((r) => r.key === range) ?? DATE_RANGES[1];
-  const timeseries = buildTimeseries(def.days);
-
-  const totalSessions = sum(timeseries, (t) => t.sessions);
-  const totalUsers = sum(timeseries, (t) => t.users);
-  const totalViews = sum(timeseries, (t) => t.pageViews);
+function toAnalyticsData(res: Ga4ReportResponse): AnalyticsData {
+  const t = res.totals ?? {
+    sessions: 0,
+    users: 0,
+    newUsers: 0,
+    pageViews: 0,
+    engagementRate: 0,
+    avgSession: 0,
+  };
+  const c = res.changes ?? {
+    sessions: 0,
+    users: 0,
+    newUsers: 0,
+    pageViews: 0,
+    engagementRate: 0,
+    avgSession: 0,
+  };
 
   const metrics: GaMetric[] = [
-    { key: "sessions", label: "Sessions", value: totalSessions, change: 8.4, icon: Activity, format: "compact" },
-    { key: "users", label: "Users", value: totalUsers, change: 5.1, icon: Users, format: "compact" },
-    { key: "newUsers", label: "New Users", value: Math.round(totalUsers * 0.41), change: 11.2, icon: UserCheck, format: "compact" },
-    { key: "pageViews", label: "Page Views", value: totalViews, change: -1.8, icon: Eye, format: "compact" },
-    { key: "engagementRate", label: "Engagement Rate", value: 62.7, change: 3.4, icon: MousePointerClick, format: "percent" },
-    { key: "avgSession", label: "Avg. Session", value: 134, change: 2.2, icon: Timer, format: "duration" },
+    { key: "sessions", label: "Sessions", value: t.sessions, change: c.sessions, icon: Activity, format: "compact" },
+    { key: "users", label: "Users", value: t.users, change: c.users, icon: Users, format: "compact" },
+    { key: "newUsers", label: "New Users", value: t.newUsers, change: c.newUsers, icon: UserCheck, format: "compact" },
+    { key: "pageViews", label: "Page Views", value: t.pageViews, change: c.pageViews, icon: Eye, format: "compact" },
+    { key: "engagementRate", label: "Engagement Rate", value: t.engagementRate, change: c.engagementRate, icon: MousePointerClick, format: "percent" },
+    { key: "avgSession", label: "Avg. Session", value: t.avgSession, change: c.avgSession, icon: Timer, format: "duration" },
   ];
 
   return {
     metrics,
-    timeseries,
-    trafficSources: [
-      { label: "Organic Search", value: 42 },
-      { label: "Direct", value: 24 },
-      { label: "Social", value: 16 },
-      { label: "Referral", value: 11 },
-      { label: "Email", value: 5 },
-      { label: "Paid Search", value: 2 },
-    ],
-    topPages: [
-      { path: "/", title: "Home", pageViews: 48210, avgTime: 96 },
-      { path: "/investors", title: "Investors", pageViews: 21940, avgTime: 184 },
-      { path: "/about", title: "About", pageViews: 15320, avgTime: 72 },
-      { path: "/team", title: "Team", pageViews: 9870, avgTime: 65 },
-      { path: "/faq", title: "FAQ", pageViews: 7640, avgTime: 112 },
-      { path: "/news", title: "News", pageViews: 6210, avgTime: 58 },
-    ],
-    devices: [
-      { label: "Mobile", value: 58 },
-      { label: "Desktop", value: 35 },
-      { label: "Tablet", value: 7 },
-    ],
-    countries: [
-      { label: "United States", value: 38450 },
-      { label: "United Kingdom", value: 12300 },
-      { label: "Canada", value: 8910 },
-      { label: "Germany", value: 6740 },
-      { label: "Australia", value: 5120 },
-      { label: "India", value: 4830 },
-    ],
-  };
-}
-
-/**
- * Realtime active users. Replace with a backend call proxying the GA4
- * `runRealtimeReport` endpoint.
- */
-export async function getAnalyticsRealtime(): Promise<GaRealtime> {
-  await delay(400);
-  const perMinute = Array.from({ length: 30 }).map((_, i) => ({
-    minute: i,
-    users: 30 + Math.round(Math.abs(Math.sin(i / 4)) * 70) + Math.round(Math.random() * 20),
-  }));
-  return {
-    activeUsers: 248,
-    perMinute,
-    topPages: [
-      { path: "/", users: 96 },
-      { path: "/investors", users: 54 },
-      { path: "/about", users: 38 },
-      { path: "/faq", users: 22 },
-    ],
+    timeseries: res.timeseries ?? [],
+    trafficSources: res.trafficSources ?? [],
+    topPages: res.topPages ?? [],
+    devices: res.devices ?? [],
+    countries: res.countries ?? [],
   };
 }
 
