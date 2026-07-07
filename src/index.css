@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Suppress the default Google Translate banner so it doesn't push the page down */
+.goog-te-banner-frame,
+.skiptranslate iframe {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
