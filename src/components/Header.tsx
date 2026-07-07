@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { LanguageSelector } from "@/components/LanguageSelector";
 import verzaLogo from "@/assets/verza-logo.png";
 import {
   NavigationMenu,
@@ -71,7 +72,7 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Login & Theme Toggle */}
+          {/* Right Side - Login, Language & Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
@@ -81,6 +82,7 @@ export const Header = () => {
             >
               <Link to="/login">Login</Link>
             </Button>
+            <LanguageSelector />
             <ThemeToggle />
           </div>
         </div>
