@@ -72,7 +72,7 @@ export const Header = () => {
             </NavigationMenu>
           </div>
 
-          {/* Right Side - Login & Theme Toggle */}
+          {/* Right Side - Login, Language & Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
@@ -82,6 +82,7 @@ export const Header = () => {
             >
               <Link to="/login">Login</Link>
             </Button>
+            <LanguageSelector />
             <ThemeToggle />
           </div>
         </div>
