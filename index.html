@@ -122,6 +122,23 @@
     }
     </script>
 
+    <!-- Structured Data: Person (Founder) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alan Mruvka",
+      "jobTitle": "Founder",
+      "description": "Creator of E! Entertainment Television and founder of Verza TV.",
+      "worksFor": { "@type": "Organization", "name": "Verza TV" },
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Alan_Mruvka",
+        "https://www.imdb.com/name/nm2985972/"
+      ]
+    }
+    </script>
+
+
     <!-- Structured Data: FAQPage -->
     <script type="application/ld+json">
     {
@@ -170,6 +187,18 @@
       <!-- Static content for AI crawlers and no-JS clients. Replaced by the React app on load. -->
       <main>
         <h1>Verza TV — The Next Generation of Vertical Shorts</h1>
+
+        <form role="search" action="/" method="get" aria-label="Search Verza TV"
+              data-toolname="search_verza_tv"
+              data-tooldescription="Search Verza TV micro drama series, genres, and news by keyword.">
+          <label for="site-search">Search Verza TV micro dramas</label>
+          <input type="search" id="site-search" name="q"
+                 placeholder="Search series, genres, or news"
+                 aria-label="Search Verza TV micro dramas" />
+          <button type="submit" aria-label="Submit search">Search</button>
+        </form>
+
+
 
         <p>
           <strong>Verza TV is the first U.S. platform for premium short-form entertainment
