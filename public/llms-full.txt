@@ -1,0 +1,47 @@
+# Verza TV
+
+> Verza TV is the first U.S. platform for premium short-form vertical entertainment — serialized, cinematic "micro dramas" told in bite-sized full-screen episodes made for smartphones. Founded in 2024 by Alan Mruvka, creator of E! Entertainment Television. A Filmology Labs company.
+
+## What Verza TV is
+
+Verza TV produces and distributes premium micro dramas: serialized, story-driven episodes shot in full-screen portrait format and released as short installments, typically one to three minutes each. Unlike generic social clips, every series delivers a complete narrative arc with a clear beginning, middle, and end. Episodes are produced in true 1080×1920 resolution for full-screen mobile playback.
+
+The company connects three audiences around an emerging category of entertainment:
+
+- Viewers: addictive, cinematic series across romance, thriller, and drama, available on demand.
+- Creators: a premium studio and distribution home for serialized short-form storytelling.
+- Brands: native integration and partnership opportunities inside premium micro drama content.
+
+## Key facts
+
+- First U.S. platform dedicated to premium short-form vertical entertainment.
+- Founded in 2024 by Alan Mruvka, creator of E! Entertainment Television (a network that reached over 90 million U.S. households).
+- Operates as a Filmology Labs company.
+- Short-form portrait video accounts for more than 60% of mobile viewing time (industry viewing data as of 2025).
+- Content is produced in true 1080×1920 vertical resolution.
+
+## Frequently asked questions
+
+- What is Verza TV? The first U.S. platform dedicated to premium short-form entertainment, delivering serialized micro dramas optimized for mobile viewing.
+- Who founded it? Alan Mruvka, the entrepreneur who created E! Entertainment Television, founded the company in 2024.
+- How is it different? It is purpose-built for premium micro dramas, delivering complete stories in short full-screen episodes rather than repackaging horizontal or social-media content.
+
+## Pages
+
+- [Home](/): Overview of Verza TV and its premium micro drama platform.
+- [About](/about): The company, mission, and vision behind Verza TV.
+- [Team](/team): Leadership and the people building Verza TV.
+- [News](/news): Latest announcements and company updates.
+- [Careers](/careers): Open roles and working at Verza TV.
+- [FAQ](/faq): Answers to common questions about the platform.
+
+## Machine-readable resources
+
+- [AI summary](/ai/summary.json): Structured overview of the company for AI agents.
+- [AI FAQ](/ai/faq.json): Structured question-and-answer data.
+- [AI service description](/ai/service.json): Structured description of offerings.
+- [RSS feed](/rss.xml): Latest updates.
+
+## Contact
+
+- Email: info@verzatv.com
