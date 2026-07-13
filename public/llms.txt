@@ -18,3 +18,14 @@ Verza TV produces and distributes premium micro dramas: serialized, story-driven
 
 - [Licensing](/licensing): Content licensing information.
 - [Legal](/legal): Legal terms and policies.
+
+## Full documentation
+
+- [Full site summary for AI](/llms-full.txt): Extended overview, key facts, and FAQ.
+
+## Machine-readable resources
+
+- [AI summary](/ai/summary.json): Structured company overview.
+- [AI FAQ](/ai/faq.json): Structured Q&A data.
+- [AI service description](/ai/service.json): Structured description of offerings.
+- [RSS feed](/rss.xml): Latest updates.
