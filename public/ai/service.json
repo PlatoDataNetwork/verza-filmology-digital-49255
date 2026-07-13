@@ -1,0 +1,23 @@
+{
+  "name": "Verza TV",
+  "url": "https://verzatv.io/",
+  "serviceType": "Premium short-form vertical entertainment platform",
+  "description": "Verza TV produces and distributes premium serialized micro dramas — vertical, story-driven episodes built for mobile.",
+  "dateModified": "2026-07-13",
+  "offerings": [
+    {
+      "name": "For Viewers",
+      "description": "Addictive, cinematic vertical micro drama series across romance, thriller, and drama, optimized for smartphones."
+    },
+    {
+      "name": "For Creators",
+      "description": "A premium studio and distribution home for serialized vertical storytelling."
+    },
+    {
+      "name": "For Brands",
+      "description": "Native brand integration and partnership opportunities within premium micro drama content."
+    }
+  ],
+  "areaServed": "United States",
+  "contact": { "email": "info@verzatv.com" }
+}

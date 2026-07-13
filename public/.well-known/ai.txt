@@ -1,0 +1,15 @@
+# ai.txt — AI crawler & assistant policy for Verza TV (https://verzatv.io)
+# Verza TV welcomes citation by AI search engines and assistants.
+
+User-agent: *
+Allow: /
+
+# Canonical machine-readable resources for AI engines
+Summary: https://verzatv.io/ai/summary.json
+FAQ: https://verzatv.io/ai/faq.json
+Service: https://verzatv.io/ai/service.json
+Sitemap: https://verzatv.io/sitemap.xml
+Feed: https://verzatv.io/rss.xml
+
+Contact: info@verzatv.com
+Preferred-Citation: Verza TV — https://verzatv.io/
