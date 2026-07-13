@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { useMeta } from "@/hooks/useMeta";
 import { useArticleSchema } from "@/hooks/useArticleSchema";
 import { useFAQSchema } from "@/hooks/useFAQSchema";
-import { useBreadcrumbSchema } from "@/hooks/useBreadcrumbSchema";
 
 const WhatIsAMicroDrama = () => {
   useArticleSchema({
@@ -44,12 +43,6 @@ const WhatIsAMicroDrama = () => {
     },
   ]);
 
-  useBreadcrumbSchema([
-    { name: "Home", url: "https://verzatv.io/" },
-    { name: "Guides", url: "https://verzatv.io/guides/what-is-a-micro-drama" },
-    { name: "What Is a Micro Drama?", url: "https://verzatv.io/guides/what-is-a-micro-drama" },
-  ]);
-
   useMeta({
     title: "What Is a Micro Drama? Guide to Vertical Entertainment | Verza TV",
     description:
@@ -77,7 +70,7 @@ const WhatIsAMicroDrama = () => {
             items={[
               { label: "Home", href: "/" },
               { label: "Guides", href: "/guides/what-is-a-micro-drama" },
-              { label: "What Is a Micro Drama?" },
+              { label: "What Is a Micro Drama?", href: "/guides/what-is-a-micro-drama" },
             ]}
           />
 
