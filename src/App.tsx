@@ -25,6 +25,7 @@ import Licensing from "./pages/Licensing";
 import Investors from "./pages/Investors";
 import FAQ from "./pages/FAQ";
 import SugarBabiesMiami from "./pages/SugarBabiesMiami";
+import WhatIsAMicroDrama from "./pages/WhatIsAMicroDrama";
 import GADebug from "./pages/GADebug";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminLayout from "./components/admin/AdminLayout";
@@ -64,6 +65,7 @@ const App = () => (
                     <Route path="/investors" element={<ProtectedRoute><Investors /></ProtectedRoute>} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/sugar-babies-miami" element={<SugarBabiesMiami />} />
+                    <Route path="/guides/what-is-a-micro-drama" element={<WhatIsAMicroDrama />} />
                     <Route path="/ga-debug" element={<GADebug />} />
                     {/* Admin panel */}
                     <Route path="/admin/login" element={<AdminLogin />} />
