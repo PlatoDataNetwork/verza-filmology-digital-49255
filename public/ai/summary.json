@@ -1,0 +1,26 @@
+{
+  "name": "Verza TV",
+  "url": "https://verzatv.io/",
+  "tagline": "The Next Generation of Vertical Shorts",
+  "description": "Verza TV is the first U.S. platform for premium short-form vertical entertainment. Founded by Alan Mruvka, the creator of E! Entertainment Television, Verza TV produces and distributes serialized micro dramas — story-driven vertical episodes built for mobile. It is a Filmology Labs company.",
+  "founder": {
+    "name": "Alan Mruvka",
+    "note": "Creator of E! Entertainment Television"
+  },
+  "category": "Entertainment / Streaming / Short-form vertical video",
+  "audiences": ["viewers", "creators", "brands"],
+  "keyFacts": [
+    "First U.S. platform dedicated to premium short-form vertical entertainment.",
+    "Specializes in serialized micro dramas produced in vertical 1080x1920 format.",
+    "Founded by Alan Mruvka, creator of E! Entertainment Television."
+  ],
+  "contact": { "email": "info@verzatv.com" },
+  "sameAs": [
+    "https://twitter.com/verzatv",
+    "https://www.tiktok.com/@verzatv",
+    "https://www.instagram.com/verzatv",
+    "https://www.facebook.com/verzatv",
+    "https://www.linkedin.com/company/verzatv"
+  ],
+  "dateModified": "2026-07-13"
+}

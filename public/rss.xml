@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verza TV News</title>
+    <link>https://verzatv.io/</link>
+    <atom:link href="https://verzatv.io/rss.xml" rel="self" type="application/rss+xml" />
+    <description>News and announcements from Verza TV — premium short-form vertical entertainment and serialized micro dramas.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Verza TV: The First U.S. Platform for Premium Vertical Micro Dramas</title>
+      <link>https://verzatv.io/about</link>
+      <guid>https://verzatv.io/about</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Founded by Alan Mruvka, creator of E! Entertainment Television, Verza TV is building the next generation of premium short-form vertical entertainment.</description>
+    </item>
+  </channel>
+</rss>

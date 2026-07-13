@@ -16,7 +16,11 @@
     <meta name="author" content="Filmology Labs" />
     <meta name="keywords" content="short-form video, vertical content, mobile entertainment, streaming platform, Verza TV, micro dramas, vertical entertainment">
     <link rel="canonical" href="https://verzatv.io/" />
-    
+
+    <!-- AI / LLM discovery -->
+    <link rel="alternate" type="application/rss+xml" title="Verza TV News" href="https://verzatv.io/rss.xml" />
+    <link rel="alternate" type="application/json" title="Verza TV AI Summary" href="https://verzatv.io/ai/summary.json" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://verzatv.io/" />
@@ -38,23 +42,33 @@
     <meta name="twitter:description" content="From the founder of E! Entertainment Television. The first U.S. platform for premium short-form vertical entertainment.">
     <meta name="twitter:image" content="https://verzatv.io/og-image.png">
     <meta name="twitter:image:alt" content="Verza TV - Premium Vertical Entertainment Platform" />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Structured Data -->
+
+    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Verza TV",
-      "description": "The first U.S. platform for premium short-form vertical entertainment",
+      "legalName": "Verza TV, a Filmology Labs Company",
+      "description": "The first U.S. platform for premium short-form vertical entertainment and serialized micro dramas.",
       "url": "https://verzatv.io/",
       "logo": "https://verzatv.io/og-image.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Alan Mruvka",
+        "description": "Creator of E! Entertainment Television and founder of Verza TV."
+      },
       "sameAs": [
-        "https://twitter.com/verzatv"
+        "https://twitter.com/verzatv",
+        "https://www.tiktok.com/@verzatv",
+        "https://www.instagram.com/verzatv",
+        "https://www.facebook.com/verzatv",
+        "https://www.linkedin.com/company/verzatv"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -63,10 +77,141 @@
       }
     }
     </script>
+
+    <!-- Structured Data: WebSite + SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Verza TV",
+      "url": "https://verzatv.io/",
+      "description": "Premium short-form vertical entertainment and serialized micro dramas built for mobile.",
+      "inLanguage": "en-US",
+      "publisher": { "@type": "Organization", "name": "Verza TV" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://verzatv.io/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Verza TV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verza TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, creator of E! Entertainment Television, it delivers serialized micro dramas optimized for mobile viewing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who founded Verza TV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verza TV was founded by Alan Mruvka, the entrepreneur who created E! Entertainment Television, bringing decades of entertainment media experience to vertical short-form content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What type of content does Verza TV offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verza TV specializes in premium vertical micro dramas designed for mobile-first audiences, with complete stories across romance, thriller, and drama told in bite-sized episodes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Verza TV different from other streaming platforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verza TV is purpose-built for premium vertical micro dramas, unlike traditional streaming platforms. Each series delivers complete storytelling in short episodes designed for smartphones."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static content for AI crawlers and no-JS clients. Replaced by the React app on load. -->
+      <main>
+        <h1>Verza TV — The Next Generation of Vertical Shorts</h1>
+        <p>
+          Verza TV is the first U.S. platform for premium short-form vertical entertainment.
+          Founded by Alan Mruvka, the creator of E! Entertainment Television, Verza TV produces
+          and distributes serialized micro dramas: story-driven vertical episodes built for
+          mobile, not generic social clips. It is a Filmology Labs company.
+        </p>
+
+        <blockquote>
+          "We are building a premium home for vertical storytelling — cinematic micro dramas
+          made for the way people actually watch today." — Alan Mruvka, Founder, Verza TV
+        </blockquote>
+
+        <h2>What is Verza TV?</h2>
+        <p>
+          Verza TV is a mobile-first entertainment platform focused on premium micro dramas —
+          serialized, vertical episodes that deliver complete stories in bite-sized formats.
+          The platform connects three audiences around a new category of entertainment:
+          viewers, creators, and brands. Short-form vertical video now accounts for the
+          majority of mobile watch time, and Verza TV is purpose-built for that shift.
+        </p>
+
+        <h2>Who Verza TV serves</h2>
+        <ul>
+          <li><strong>For viewers:</strong> addictive, cinematic vertical series across romance, thriller, and drama, optimized for smartphones.</li>
+          <li><strong>For creators:</strong> a premium studio and distribution home for serialized vertical storytelling.</li>
+          <li><strong>For brands:</strong> native integration and partnership opportunities inside premium micro drama content.</li>
+        </ul>
+
+        <h2>By the numbers</h2>
+        <ul>
+          <li>Founded by the creator of E! Entertainment Television, a network that reached over 90 million U.S. households.</li>
+          <li>Short-form vertical video makes up more than 60% of mobile viewing time.</li>
+          <li>Episodes are produced in true vertical 1080×1920 format for full-screen mobile playback.</li>
+        </ul>
+
+        <h2>Frequently asked questions</h2>
+        <h3>What is Verza TV?</h3>
+        <p>
+          Verza TV is the first U.S. platform dedicated to premium short-form vertical
+          entertainment, delivering serialized micro dramas optimized for mobile viewing.
+        </p>
+        <h3>Who founded Verza TV?</h3>
+        <p>
+          Verza TV was founded by Alan Mruvka, the entrepreneur who created E! Entertainment
+          Television.
+        </p>
+        <h3>How is Verza TV different from other streaming platforms?</h3>
+        <p>
+          Verza TV is purpose-built for premium vertical micro dramas, delivering complete
+          stories in short episodes designed for smartphones rather than repackaging
+          horizontal or social-media content.
+        </p>
+
+        <h2>Explore Verza TV</h2>
+        <ul>
+          <li><a href="/about">About Verza TV</a></li>
+          <li><a href="/team">Leadership team</a></li>
+          <li><a href="/news">News and announcements</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/faq">Frequently asked questions</a></li>
+        </ul>
+
+        <p>Contact: <a href="mailto:info@verzatv.com">info@verzatv.com</a></p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

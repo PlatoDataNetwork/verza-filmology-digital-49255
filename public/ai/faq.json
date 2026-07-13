@@ -1,0 +1,27 @@
+{
+  "name": "Verza TV FAQ",
+  "url": "https://verzatv.io/faq",
+  "dateModified": "2026-07-13",
+  "faqs": [
+    {
+      "question": "What is Verza TV?",
+      "answer": "Verza TV is the first U.S. platform dedicated to premium short-form vertical entertainment. Founded by Alan Mruvka, creator of E! Entertainment Television, it delivers serialized micro dramas optimized for mobile viewing."
+    },
+    {
+      "question": "Who founded Verza TV?",
+      "answer": "Verza TV was founded by Alan Mruvka, the entrepreneur who created E! Entertainment Television, bringing decades of entertainment media experience to vertical short-form content."
+    },
+    {
+      "question": "What type of content does Verza TV offer?",
+      "answer": "Verza TV specializes in premium vertical micro dramas designed for mobile-first audiences, with complete stories across romance, thriller, and drama told in bite-sized episodes."
+    },
+    {
+      "question": "How is Verza TV different from other streaming platforms?",
+      "answer": "Verza TV is purpose-built for premium vertical micro dramas, unlike traditional streaming platforms. Each series delivers complete storytelling in short episodes designed for smartphones."
+    },
+    {
+      "question": "Is Verza TV available now?",
+      "answer": "Verza TV is in development. Contact info@verzatv.com to learn about launch plans and partnership opportunities."
+    }
+  ]
+}
