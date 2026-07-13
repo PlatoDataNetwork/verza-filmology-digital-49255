@@ -152,7 +152,7 @@ const SugarBabiesMiami = () => {
       {/* Final CTA */}
       <section className="py-16 md:py-28 bg-[#150512] text-center">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white/50 mb-4">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white/70 mb-4">
             Only On
           </p>
           <img src={verzaLogo} alt="VERZA TV" className="h-10 md:h-14 w-auto mx-auto mb-8" />
@@ -189,7 +189,7 @@ const SugarBabiesMiami = () => {
           <div className="mt-12">
             <Link
               to="/"
-              className="text-sm text-white/50 hover:text-white transition-colors"
+              className="text-sm text-white/70 hover:text-white transition-colors"
             >
               ← Back to VERZA TV
             </Link>
